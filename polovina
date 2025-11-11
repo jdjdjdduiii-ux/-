@@ -1,0 +1,3013 @@
+# 1. y = 3x² + sin(x + 2)
+print("1. y = 3x² + sin(x + 2)")
+x = 2  # возьмем x = 2 для примера
+y1 = 3*x*x + math.sin(x + 2)
+print(f"Если x = {x}, то y = {y1:.2f}")
+print()
+
+# 2. y = ax² + cos(2x + 1)
+print("2. y = ax² + cos(2x + 1)")
+a = 3  # возьмем a = 3
+x = 1  # возьмем x = 1
+y2 = a*x*x + math.cos(2*x + 1)
+print(f"Если a = {a} и x = {x}, то y = {y2:.2f}")
+print()
+
+# 3. y = ax + b*sin(2x + 2)
+print("3. y = ax + b*sin(2x + 2)")
+a = 2
+b = 4
+x = 1
+y3 = a*x + b*math.sin(2*x + 2)
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y3:.2f}")
+print()
+
+# 4. y = ax³ + cos(3x + 1)
+print("4. y = ax³ + cos(3x + 1)")
+a = 2
+x = 1
+y4 = a*x*x*x + math.cos(3*x + 1)
+print(f"Если a = {a}, x = {x}, то y = {y4:.2f}")
+print()
+
+# 5. y = x²a + cos(2x - 1)
+print("5. y = x²a + cos(2x - 1)")
+a = 3
+x = 2
+y5 = x*x*a + math.cos(2*x - 1)
+print(f"Если a = {a}, x = {x}, то y = {y5:.2f}")
+print()
+
+# 6. y = xa + 2x²
+print("6. y = xa + 2x²")
+a = 4
+x = 2
+y6 = x*a + 2*x*x
+print(f"Если a = {a}, x = {x}, то y = {y6:.2f}")
+print()
+
+# 7. y = 3x² - 2x + 1
+print("7. y = 3x² - 2x + 1")
+x = 3
+y7 = 3*x*x - 2*x + 1
+print(f"Если x = {x}, то y = {y7:.2f}")
+print()
+
+# 8. y = 12x² - 3x + 1
+print("8. y = 12x² - 3x + 1")
+x = 2
+y8 = 12*x*x - 3*x + 1
+print(f"Если x = {x}, то y = {y8:.2f}")
+print()
+
+# 9. y = 1/(x² + 1) - a
+print("9. y = 1/(x² + 1) - a")
+a = 2
+x = 1
+y9 = 1/(x*x + 1) - a
+print(f"Если a = {a}, x = {x}, то y = {y9:.2f}")
+print()
+
+# 10. y = a/(x² + 1) - cos(2x - 1)
+print("10. y = a/(x² + 1) - cos(2x - 1)")
+a = 3
+x = 2
+y10 = a/(x*x + 1) - math.cos(2*x - 1)
+print(f"Если a = {a}, x = {x}, то y = {y10:.2f}")
+print()
+
+# 11. y = x³ - 2x² + 4
+print("11. y = x³ - 2x² + 4")
+x = 2
+y11 = x*x*x - 2*x*x + 4
+print(f"Если x = {x}, то y = {y11:.2f}")
+print()
+
+# 12. y = ax² + bx³ - 8
+print("12. y = ax² + bx³ - 8")
+a = 2
+b = 3
+x = 1
+y12 = a*x*x + b*x*x*x - 8
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y12:.2f}")
+print()
+
+# 13. y = √(ax² + 4) - b
+print("13. y = √(ax² + 4) - b")
+a = 3
+b = 2
+x = 2
+y13 = math.sqrt(a*x*x + 4) - b
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y13:.2f}")
+print()
+
+# 14. y = cos(2x - 1) + sin(x)
+print("14. y = cos(2x - 1) + sin(x)")
+x = 1
+y14 = math.cos(2*x - 1) + math.sin(x)
+print(f"Если x = {x}, то y = {y14:.2f}")
+print()
+
+# 15. y = a√x + bx²
+print("15. y = a√x + bx²")
+a = 4
+b = 2
+x = 9  # возьмем 9, чтобы корень был красивый
+y15 = a*math.sqrt(x) + b*x*x
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y15:.2f}")
+print()
+
+
+import math
+# 1. Прямоугольный параллелепипед
+print("1. Прямоугольный параллелепипед")
+a = 5
+b = 3
+c = 4
+V = a * b * c
+S = 2 * (a*b + b*c + a*c)
+print(f"Если a = {a}, b = {b}, c = {c}")
+print(f"То объем V = {V}")
+print(f"Площадь поверхности S = {S}")
+print()
+
+# 2. Длина окружности и площадь круга
+print("2. Окружность и круг")
+R = 7
+L = 2 * math.pi * R
+S_circle = math.pi * R * R
+print(f"Если радиус R = {R}")
+print(f"То длина окружности L = {L:.2f}")
+print(f"Площадь круга S = {S_circle:.2f}")
+print()
+
+# 3. Прямоугольный треугольник
+print("3. Прямоугольный треугольник")
+a_triangle = 3
+b_triangle = 4
+c_triangle = math.sqrt(a_triangle*a_triangle + b_triangle*b_triangle)
+P_triangle = a_triangle + b_triangle + c_triangle
+print(f"Если катеты a = {a_triangle}, b = {b_triangle}")
+print(f"То гипотенуза c = {c_triangle:.2f}")
+print(f"Периметр P = {P_triangle:.2f}")
+print()
+
+# 4. Два круга и кольцо
+print("4. Два круга и кольцо")
+R1 = 8
+R2 = 5
+S1 = math.pi * R1 * R1
+S2 = math.pi * R2 * R2
+S3 = S1 - S2
+print(f"Если радиусы R1 = {R1}, R2 = {R2}")
+print(f"То площадь большого круга S1 = {S1:.2f}")
+print(f"Площадь малого круга S2 = {S2:.2f}")
+print(f"Площадь кольца S3 = {S3:.2f}")
+print()
+
+# 5. Прямоугольник по координатам
+print("5. Прямоугольник по координатам")
+x1, y1 = 1, 1
+x2, y2 = 4, 5
+width = abs(x2 - x1)
+height = abs(y2 - y1)
+P_rect = 2 * (width + height)
+S_rect = width * height
+print(f"Если вершины ({x1},{y1}) и ({x2},{y2})")
+print(f"То ширина = {width}, высота = {height}")
+print(f"Периметр P = {P_rect}")
+print(f"Площадь S = {S_rect}")
+print()
+
+# 6. Расстояние между точками
+print("6. Расстояние между точками")
+x1, y1 = 2, 3
+x2, y2 = 5, 7
+distance = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+print(f"Если точки A({x1},{y1}) и B({x2},{y2})")
+print(f"То расстояние между ними = {distance:.2f}")
+print()
+
+# 7. Треугольник по координатам вершин
+print("7. Треугольник по координатам")
+x1, y1 = 1, 1
+x2, y2 = 4, 5
+x3, y3 = 6, 2
+
+# Находим длины сторон
+a_side = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+b_side = math.sqrt((x3-x2)**2 + (y3-y2)**2)
+c_side = math.sqrt((x1-x3)**2 + (y1-y3)**2)
+
+P_tri = a_side + b_side + c_side
+p = P_tri / 2  # полупериметр
+S_tri = math.sqrt(p * (p - a_side) * (p - b_side) * (p - c_side))
+
+print(f"Если вершины: A({x1},{y1}), B({x2},{y2}), C({x3},{y3})")
+print(f"Стороны: a = {a_side:.2f}, b = {b_side:.2f}, c = {c_side:.2f}")
+print(f"Периметр P = {P_tri:.2f}")
+print(f"Площадь S = {S_tri:.2f}")
+print()
+
+# 8. Перевод температуры
+print("8. Перевод температуры")
+TF = 95  # градусов Фаренгейта
+TC = (TF - 32) * 5 / 9
+print(f"Если температура {TF}°F")
+print(f"То в Цельсиях это {TC:.1f}°C")
+print()
+
+# 9. Стоимость конфет
+print("9. Стоимость конфет")
+X = 2  # кг шоколадных конфет
+A = 800  # рублей
+Y = 3  # кг ирисок
+B = 300  # рублей
+
+price_chocolate = A / X
+price_caramel = B / Y
+ratio = price_chocolate / price_caramel
+
+print(f"Шоколадные: {X} кг за {A} руб")
+print(f"Ириски: {Y} кг за {B} руб")
+print(f"1 кг шоколадных = {price_chocolate:.1f} руб")
+print(f"1 кг ирисок = {price_caramel:.1f} руб")
+print(f"Шоколадные дороже в {ratio:.1f} раз")
+print()
+
+# 10. Система уравнений
+print("10. Система уравнений")
+A1, B1, C1 = 2, 3, 7
+A2, B2, C2 = 1, -1, 1
+
+D = A1 * B2 - A2 * B1
+x = (C1 * B2 - C2 * B1) / D
+y = (A1 * C2 - A2 * C1) / D
+
+print(f"Система: {A1}x + {B1}y = {C1}")
+print(f"         {A2}x + {B2}y = {C2}")
+print(f"Решение: x = {x}, y = {y}")
+print()
+
+# 11. Перевод угла в радианы
+print("11. Перевод угла в радианы")
+alpha_degrees = 60
+alpha_radians = alpha_degrees * math.pi / 180
+print(f"Угол {alpha_degrees}°")
+print(f"В радианах = {alpha_radians:.2f}")
+print()
+
+# 12. Расстояние между автомобилями
+print("12. Автомобили")
+V1 = 60  # км/ч
+V2 = 80  # км/ч
+S_start = 100  # км
+T = 2  # часов
+
+S_end = S_start + (V1 + V2) * T
+print(f"Скорости: {V1} км/ч и {V2} км/ч")
+print(f"Начальное расстояние: {S_start} км")
+print(f"Через {T} часов расстояние = {S_end} км")
+print()
+
+# 13. Отрезки на числовой оси
+print("13. Отрезки на числовой оси")
+A = 2
+B = 7
+C = 5
+
+AC = abs(C - A)
+BC = abs(C - B)
+sum_AC_BC = AC + BC
+
+print(f"Точки: A={A}, B={B}, C={C}")
+print(f"Длина AC = {AC}")
+print(f"Длина BC = {BC}")
+print(f"Сумма длин = {sum_AC_BC}")
+print()
+
+# 14. Операции с квадратами чисел
+print("14. Операции с квадратами")
+num1 = 4
+num2 = 3
+
+sum_squares = num1*num1 + num2*num2
+diff_squares = num1*num1 - num2*num2
+prod_squares = (num1*num1) * (num2*num2)
+div_squares = (num1*num1) / (num2*num2)
+
+print(f"Числа: {num1} и {num2}")
+print(f"Сумма квадратов = {sum_squares}")
+print(f"Разность квадратов = {diff_squares}")
+print(f"Произведение квадратов = {prod_squares}")
+print(f"Частное квадратов = {div_squares:.2f}")
+print()
+
+# 15. Путь лодки
+print("15. Путь лодки")
+V = 12  # км/ч - скорость лодки
+U = 3   # км/ч - скорость течения
+T1 = 2  # часов - по озеру
+T2 = 3  # часов - против течения
+
+path_lake = V * T1
+path_river = (V - U) * T2
+total_path = path_lake + path_river
+
+print(f"Скорость лодки: {V} км/ч")
+print(f"Скорость течения: {U} км/ч")
+print(f"По озеру: {T1} часов = {path_lake} км")
+print(f"Против течения: {T2} часов = {path_river} км")
+print(f"Общий путь: {total_path} км")
+print()
+
+
+import math
+
+# 1. Функция 1
+print("1. y = { ax² + 1, если x > 0; ax - 1, если x ≤ 0 }")
+a = 2
+x = 3
+if x > 0:
+    y = a * x * x + 1
+else:
+    y = a * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 2. Функция 2
+print("2. y = { ax + 1, если x ≥ 1; x² - 1, если x < 1 }")
+a = 3
+x = 2
+if x >= 1:
+    y = a * x + 1
+else:
+    y = x * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 3. Функция 3
+print("3. y = { 3a², если x < 0; 4ax - 1, если x ≥ 0 }")
+a = 2
+x = -1
+if x < 0:
+    y = 3 * a * a
+else:
+    y = 4 * a * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 4. Функция 4
+print("4. y = { 2a², если x > 4; 3x - 1, если x ≤ 4 }")
+a = 3
+x = 5
+if x > 4:
+    y = 2 * a * a
+else:
+    y = 3 * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 5. Функция 5
+print("5. y = { 2ax - 2, если x > 2; 3a² - 2x, если x ≤ 2 }")
+a = 2
+x = 3
+if x > 2:
+    y = 2 * a * x - 2
+else:
+    y = 3 * a * a - 2 * x
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 6. Функция 6
+print("6. y = { 2ax² - 1, если x > 1; x, если x ≤ 1 }")
+a = 4
+x = 2
+if x > 1:
+    y = 2 * a * x * x - 1
+else:
+    y = x
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 7. Функция 7
+print("7. y = { x², если x > 2; 2a - 1, если x ≤ 2 }")
+a = 5
+x = 3
+if x > 2:
+    y = x * x
+else:
+    y = 2 * a - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 8. Функция 8
+print("8. y = { cos(2x - 1), если x > 2; sin(3x + 1), если x ≤ 2 }")
+x = 1
+if x > 2:
+    y = math.cos(2 * x - 1)
+else:
+    y = math.sin(3 * x + 1)
+print(f"При x = {x}: y = {y:.2f}")
+print()
+
+# 9. Функция 9
+print("9. y = { 2x³ - 2x - 1, если x > 2; 3x² - 2x + 1, если x ≤ 2 }")
+x = 3
+if x > 2:
+    y = 2 * x * x * x - 2 * x - 1
+else:
+    y = 3 * x * x - 2 * x + 1
+print(f"При x = {x}: y = {y}")
+print()
+
+# 10. Функция 10
+print("10. y = { 2ax² - 1, если x > 1; 1/a, если x ≤ 1 }")
+a = 2
+x = 0.5
+if x > 1:
+    y = 2 * a * x * x - 1
+else:
+    y = 1 / a
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 11. Функция 11
+print("11. y = { √(ax) + 1, если x ≥ 0; ax - 1, если x < 0 }")
+a = 4
+x = 9
+if x >= 0:
+    y = math.sqrt(a * x) + 1
+else:
+    y = a * x - 1
+print(f"При a = {a}, x = {x}: y = {y:.2f}")
+print()
+
+# 12. Функция 12
+print("12. y = { √x + a, если x ≥ 0; a/x - 1, если x < 0 }")
+a = 3
+x = 16
+if x >= 0:
+    y = math.sqrt(x) + a
+else:
+    y = a / x - 1
+print(f"При a = {a}, x = {x}: y = {y:.2f}")
+print()
+
+# 13. Функция 13
+print("13. y = { 1/x + a, если x > 0; x² - 1, если x ≤ 0 }")
+a = 2
+x = 4
+if x > 0:
+    y = 1 / x + a
+else:
+    y = x * x - 1
+print(f"При a = {a}, x = {x}: y = {y:.2f}")
+print()
+
+# 14. Функция 14
+print("14. y = { cos x, если x > π/2; sin x, если x ≤ π/2 }")
+x = math.pi / 4  # 45 градусов
+if x > math.pi / 2:
+    y = math.cos(x)
+else:
+    y = math.sin(x)
+print(f"При x = π/4: y = {y:.2f}")
+print()
+
+# 15. Функция 15
+print("15. y = { √(x - 2), если x > 2; (x - 2)² + 1, если x ≤ 2 }")
+x = 6
+if x > 2:
+    y = math.sqrt(x - 2)
+else:
+    y = (x - 2) ** 2 + 1
+print(f"При x = {x}: y = {y:.2f}")
+print()
+
+
+# 1. Вывести N раз число K
+print("1. Вывести N раз число K")
+K = 7
+N = 5
+print(f"K = {K}, N = {N}")
+for i in range(N):
+    print(K, end=" ")
+print("\n")
+
+# 2. Числа от A до B в порядке возрастания (включая A и B)
+print("2. Числа от A до B в порядке возрастания")
+A = 3
+B = 8
+print(f"A = {A}, B = {B}")
+count = 0
+for i in range(A, B + 1):
+    print(i, end=" ")
+    count += 1
+print(f"\nКоличество чисел: {count}")
+print()
+
+# 3. Числа от A до B в порядке убывания (не включая A и B)
+print("3. Числа от A до B в порядке убывания")
+A = 2
+B = 9
+print(f"A = {A}, B = {B}")
+count = 0
+for i in range(B - 1, A, -1):
+    print(i, end=" ")
+    count += 1
+print(f"\nКоличество чисел: {count}")
+print()
+
+# 4. Таблица стоимости товара
+print("4. Таблица стоимости товара")
+price = 20.4
+print(f"Цена за 1 шт: {price} руб")
+print("Количество | Стоимость")
+for i in range(1, 11):
+    cost = i * price
+    print(f"{i:9} | {cost:8.1f} руб")
+print()
+
+# 5. Квадраты чисел от A до B с шагом H
+print("5. Квадраты чисел от A до B с шагом H")
+A = 1
+B = 10
+H = 2
+print(f"A = {A}, B = {B}, H = {H}")
+for i in range(A, B + 1, H):
+    square = i * i
+    print(f"{i}² = {square}")
+print()
+
+# 6. Положительные числа от A до B с шагом H
+print("6. Положительные числа от A до B с шагом H")
+A = -5
+B = 8
+H = 2
+print(f"A = {A}, B = {B}, H = {H}")
+print("Положительные числа:")
+for i in range(A, B + 1, H):
+    if i > 0:
+        print(i, end=" ")
+print("\n")
+
+# 7. Сумма чисел от A до B
+print("7. Сумма чисел от A до B")
+A = 1
+B = 5
+print(f"A = {A}, B = {B}")
+total = 0
+for i in range(A, B + 1):
+    total += i
+print(f"Сумма = {total}")
+print()
+
+# 8. Произведение чисел от A до B
+print("8. Произведение чисел от A до B")
+A = 1
+B = 5
+print(f"A = {A}, B = {B}")
+product = 1
+for i in range(A, B + 1):
+    product *= i
+print(f"Произведение = {product}")
+print()
+
+# 9. Сумма квадратов чисел от A до B
+print("9. Сумма квадратов чисел от A до B")
+A = 1
+B = 3
+print(f"A = {A}, B = {B}")
+sum_squares = 0
+for i in range(A, B + 1):
+    sum_squares += i * i
+print(f"Сумма квадратов = {sum_squares}")
+print()
+
+# 10. Стоимость конфет от 1.2 до 2 кг
+print("10. Стоимость конфет")
+price_per_kg = 150.5
+print(f"Цена за 1 кг: {price_per_kg} руб")
+print("Вес (кг) | Стоимость")
+weight = 1.2
+while weight <= 2:
+    cost = weight * price_per_kg
+    print(f"{weight:7.1f} | {cost:8.1f} руб")
+    weight += 0.2
+print()
+
+# 11. Квадрат числа как сумма нечетных чисел
+print("11. Квадрат числа как сумма нечетных чисел")
+N = 5
+print(f"N = {N}")
+square = 0
+for i in range(1, 2 * N, 2):
+    square += i
+    print(f"+{i}", end=" ")
+print(f"= {square}")
+print(f"Проверка: {N}² = {N * N}")
+print()
+
+# 12. Степени числа A от 1 до N
+print("12. Степени числа A от 1 до N")
+A = 2
+N = 5
+print(f"A = {A}, N = {N}")
+for i in range(1, N + 1):
+    power = A ** i
+    print(f"{A}^{i} = {power}")
+print()
+
+# 13. Наибольшее K, где K² ≤ N
+print("13. Наибольшее K, где K² ≤ N")
+N = 20
+print(f"N = {N}")
+K = 0
+while (K + 1) ** 2 <= N:
+    K += 1
+print(f"K = {K}, т.к. {K}² = {K*K} ≤ {N}")
+print()
+
+# 14. Наибольшее K, где 3K < N
+print("14. Наибольшее K, где 3K < N")
+N = 20
+print(f"N = {N}")
+K = 0
+while 3 * (K + 1) < N:
+    K += 1
+print(f"K = {K}, т.к. 3×{K} = {3*K} < {N}")
+print()
+
+# 15. Разбиение отрезка на N равных частей
+print("15. Разбиение отрезка на N равных частей")
+N = 5
+A = 0
+B = 10
+print(f"A = {A}, B = {B}, N = {N}")
+H = (B - A) / N
+print(f"Длина каждого отрезка H = {H:.1f}")
+print("Точки разбиения:")
+for i in range(N + 1):
+    point = A + i * H
+    print(f"{point:.1f}", end=" ")
+print("\n")
+
+
+import math
+# 1. Сумма 1/2 + 1/2² + 1/2³ + ... + 1/2ⁿ
+print("1. Сумма: 1/2 + 1/2² + 1/2³ + ... + 1/2ⁿ")
+n = 5
+total = 0
+for i in range(1, n + 1):
+    term = 1 / (2 ** i)
+    total += term
+    print(f"1/2^{i} = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 2. Сумма: cos(x)/1 + cos(2x)/2 + ... + cos(nx)/n
+print("2. Сумма: cos(x)/1 + cos(2x)/2 + ... + cos(nx)/n")
+n = 4
+x = math.pi / 4
+total = 0
+for i in range(1, n + 1):
+    term = math.cos(i * x) / i
+    total += term
+    print(f"cos({i}*π/4)/{i} = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 3. Сумма: 1 - 3 + 3² - 3³ + ... + (-1)ⁿ·3ⁿ
+print("3. Сумма: 1 - 3 + 3² - 3³ + ... + (-1)ⁿ·3ⁿ")
+n = 4
+total = 0
+for i in range(n + 1):
+    term = ((-1) ** i) * (3 ** i)
+    total += term
+    print(f"{' - ' if i % 2 == 1 and i > 0 else ' + ' if i > 0 else ''}{3 ** i}", end="")
+print(f" = {total}")
+print()
+
+# 4. Сумма: 1/sin(1) + 1/sin(2) + ... + 1/sin(n)
+print("4. Сумма: 1/sin(1) + 1/sin(2) + ... + 1/sin(n)")
+n = 3
+total = 0
+for i in range(1, n + 1):
+    term = 1 / math.sin(i)
+    total += term
+    print(f"1/sin({i}) = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 5. Сумма: 1 - 2³ + 3³ - ... + (-1)ⁿ⁺¹·n³
+print("5. Сумма: 1 - 2³ + 3³ - ... + (-1)ⁿ⁺¹·n³")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    term = ((-1) ** (i + 1)) * (i ** 3)
+    total += term
+    sign = "+" if ((-1) ** (i + 1)) > 0 else "-"
+    print(f"{sign} {i}³", end=" ")
+print(f"= {total}")
+print()
+
+# 6. Сумма: cos(1) - cos(2) + cos(3) - ... + (-1)ⁿ⁺¹·cos(n)
+print("6. Сумма: cos(1) - cos(2) + cos(3) - ... + (-1)ⁿ⁺¹·cos(n)")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    term = ((-1) ** (i + 1)) * math.cos(i)
+    total += term
+    sign = "+" if ((-1) ** (i + 1)) > 0 else "-"
+    print(f"{sign} cos({i})", end=" ")
+print(f"= {total:.4f}")
+print()
+
+# 7. Сумма: x - x²/2 + x³/3 - ... + (-1)ⁿ⁻¹·xⁿ/n
+print("7. Сумма: x - x²/2 + x³/3 - ... + (-1)ⁿ⁻¹·xⁿ/n")
+n = 5
+x = 0.5
+total = 0
+for i in range(1, n + 1):
+    term = ((-1) ** (i - 1)) * (x ** i) / i
+    total += term
+    print(f"{' - ' if i % 2 == 0 and i > 1 else ' + ' if i > 1 else ''}{x}^{i}/{i}", end="")
+print(f" = {total:.4f}")
+print()
+
+# 8. Сумма: 1! - 2! + 3! - ... + (-1)ⁿ⁺¹·n!
+print("8. Сумма: 1! - 2! + 3! - ... + (-1)ⁿ⁺¹·n!")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    factorial = math.factorial(i)
+    term = ((-1) ** (i + 1)) * factorial
+    total += term
+    sign = "+" if ((-1) ** (i + 1)) > 0 else "-"
+    print(f"{sign} {i}!", end=" ")
+print(f"= {total}")
+print()
+
+# 9. Сумма: sin(x) + sin(x²) + sin(x³) + ... + sin(xⁿ)
+print("9. Сумма: sin(x) + sin(x²) + sin(x³) + ... + sin(xⁿ)")
+n = 4
+x = math.pi / 6
+total = 0
+for i in range(1, n + 1):
+    term = math.sin(x ** i)
+    total += term
+    print(f"sin((π/6)^{i}) = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 10. Сумма: 1 + 1/2! + 1/3! + ... + 1/n!
+print("10. Сумма: 1 + 1/2! + 1/3! + ... + 1/n!")
+n = 5
+total = 0
+for i in range(1, n + 1):
+    term = 1 / math.factorial(i)
+    total += term
+    print(f"1/{i}! = {term:.6f}")
+print(f"Общая сумма: {total:.6f}")
+print()
+
+# 11. Сумма: n² + (n+1)² + (n+2)² + ... + (2n)²
+print("11. Сумма: n² + (n+1)² + (n+2)² + ... + (2n)²")
+n = 3
+total = 0
+for i in range(n, 2 * n + 1):
+    term = i ** 2
+    total += term
+    print(f"{i}²", end=" + " if i < 2 * n else "")
+print(f" = {total}")
+print()
+
+# 12. Сумма: 1! + 2! + 3! + ... + n!
+print("12. Сумма: 1! + 2! + 3! + ... + n!")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    factorial = math.factorial(i)
+    total += factorial
+    print(f"{i}!", end=" + " if i < n else "")
+print(f" = {total}")
+print()
+
+# 13. Сумма: 1 + x + x²/2! + x³/3! + ... + xⁿ/n!
+print("13. Сумма: 1 + x + x²/2! + x³/3! + ... + xⁿ/n!")
+n = 4
+x = 1
+total = 0
+for i in range(n + 1):
+    if i == 0:
+        term = 1
+    else:
+        term = (x ** i) / math.factorial(i)
+    total += term
+    if i == 0:
+        print("1", end="")
+    else:
+        print(f" + {x}^{i}/{i}!", end="")
+print(f" = {total:.4f}")
+print()
+
+# 14. Сумма: 1 - x + x² - x³ + ... + (-1)ⁿ·xⁿ
+print("14. Сумма: 1 - x + x² - x³ + ... + (-1)ⁿ·xⁿ")
+n = 4
+x = 0.5
+total = 0
+for i in range(n + 1):
+    term = ((-1) ** i) * (x ** i)
+    total += term
+    if i == 0:
+        print("1", end="")
+    else:
+        sign = " - " if i % 2 == 1 else " + "
+        print(f"{sign}{x}^{i}", end="")
+print(f" = {total:.4f}")
+print()
+
+# 15. Сумма: x - x³/3 + x⁵/5 - ... + (-1)ⁿ·x²ⁿ⁺¹/(2n+1)
+print("15. Сумма: x - x³/3 + x⁵/5 - ... + (-1)ⁿ·x²ⁿ⁺¹/(2n+1)")
+n = 4
+x = 0.5
+total = 0
+for i in range(n + 1):
+    term = ((-1) ** i) * (x ** (2 * i + 1)) / (2 * i + 1)
+    total += term
+    if i == 0:
+        print(f"{x}", end="")
+    else:
+        sign = " - " if i % 2 == 1 else " + "
+        print(f"{sign}{x}^{2*i+1}/{2*i+1}", end="")
+print(f" = {total:.6f}")
+print()
+
+
+
+import math
+# 1. Среднее арифметическое элементов с номерами от K до L
+print("1. Среднее арифметическое элементов с номерами от K до L")
+numbers = [10, 20, 30, 40, 50, 60, 70]
+K = 2
+L = 5
+print(f"Список: {numbers}")
+print(f"K = {K}, L = {L}")
+
+selected_numbers = numbers[K-1:L]  # K-1 потому что индексы с 0
+average = sum(selected_numbers) / len(selected_numbers)
+print(f"Элементы с {K} по {L}: {selected_numbers}")
+print(f"Среднее арифметическое: {average:.2f}")
+print()
+
+# 2. Сумма всех элементов, кроме элементов с K по L
+print("2. Сумма всех элементов, кроме элементов с K по L")
+numbers = [10, 20, 30, 40, 50, 60, 70]
+K = 3
+L = 5
+print(f"Список: {numbers}")
+print(f"K = {K}, L = {L}")
+
+# Берем элементы до K и после L
+sum_total = sum(numbers[:K-1]) + sum(numbers[L:])
+print(f"Элементы кроме {K}-{L}: {numbers[:K-1]} + {numbers[L:]}")
+print(f"Сумма: {sum_total}")
+print()
+
+# 3. Среднее арифметическое всех элементов, кроме элементов с K по L
+print("3. Среднее арифметическое всех элементов, кроме элементов с K по L")
+numbers = [10, 20, 30, 40, 50, 60, 70]
+K = 2
+L = 4
+print(f"Список: {numbers}")
+print(f"K = {K}, L = {L}")
+
+remaining_numbers = numbers[:K-1] + numbers[L:]
+average = sum(remaining_numbers) / len(remaining_numbers)
+print(f"Элементы кроме {K}-{L}: {remaining_numbers}")
+print(f"Среднее арифметическое: {average:.2f}")
+print()
+
+# 4. Четные числа по возрастанию индексов, нечетные по убыванию
+print("4. Четные и нечетные числа в разном порядке")
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+print(f"Список: {numbers}")
+
+even_numbers = []
+odd_numbers = []
+
+for i, num in enumerate(numbers):
+    if num % 2 == 0:
+        even_numbers.append(num)
+    else:
+        odd_numbers.append(num)
+
+print("Четные числа (по возрастанию индексов):", even_numbers)
+print("Нечетные числа (по убыванию индексов):", odd_numbers[::-1])
+print()
+
+# 5. Элементы с четными и нечетными номерами
+print("5. Элементы с четными и нечетными номерами")
+numbers = [10, 20, 30, 40, 50, 60, 70, 80]
+print(f"Список: {numbers}")
+
+even_index = []
+odd_index = []
+
+for i in range(len(numbers)):
+    if (i + 1) % 2 == 0:  # i+1 потому что номера с 1
+        even_index.append(numbers[i])
+    else:
+        odd_index.append(numbers[i])
+
+print("Элементы с четными номерами:", even_index)
+print("Элементы с нечетными номерами:", odd_index)
+print()
+
+# 6. Произведение элементов справа от максимального
+print("6. Произведение элементов справа от максимального")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Список: {numbers}")
+
+max_index = numbers.index(max(numbers))
+print(f"Максимальный элемент: {numbers[max_index]} на позиции {max_index + 1}")
+
+if max_index < len(numbers) - 1:
+    right_elements = numbers[max_index + 1:]
+    product = math.prod(right_elements)
+    print(f"Элементы справа: {right_elements}")
+    print(f"Произведение: {product}")
+else:
+    print("Максимальный элемент последний, справа элементов нет")
+print()
+
+# 7. Сумма между минимальным и максимальным элементами
+print("7. Сумма между минимальным и максимальным элементами")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Список: {numbers}")
+
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+
+start = min(min_index, max_index)
+end = max(min_index, max_index)
+
+between_elements = numbers[start:end + 1]
+total_sum = sum(between_elements)
+
+print(f"Минимальный: {numbers[min_index]}, максимальный: {numbers[max_index]}")
+print(f"Элементы между ними: {between_elements}")
+print(f"Сумма: {total_sum}")
+print()
+
+# 8. Обнулить элементы между минимальным и максимальным
+print("8. Обнулить элементы между минимальным и максимальным")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Исходный список: {numbers}")
+
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+
+start = min(min_index, max_index) + 1
+end = max(min_index, max_index)
+
+for i in range(start, end):
+    numbers[i] = 0
+
+print(f"После обнуления: {numbers}")
+print()
+
+# 9. Увеличить четные числа на заданное число
+print("9. Увеличить четные числа на заданное число")
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+increase_by = 10
+print(f"Исходный список: {numbers}")
+print(f"Увеличиваем на: {increase_by}")
+
+has_even = False
+for i in range(len(numbers)):
+    if numbers[i] % 2 == 0:
+        numbers[i] += increase_by
+        has_even = True
+
+if has_even:
+    print(f"После увеличения: {numbers}")
+else:
+    print("Четных чисел нет, список без изменений")
+print()
+
+# 10. Обнулить нечетные числа
+print("10. Обнулить нечетные числа")
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+print(f"Исходный список: {numbers}")
+
+has_odd = False
+for i in range(len(numbers)):
+    if numbers[i] % 2 == 1:
+        numbers[i] = 0
+        has_odd = True
+
+if has_odd:
+    print(f"После обнуления: {numbers}")
+else:
+    print("Нечетных чисел нет, список без изменений")
+print()
+
+# 11. Минимальный элемент с четными номерами
+print("11. Минимальный элемент с четными номерами")
+numbers = [10, 5, 8, 3, 12, 7, 9, 4]
+print(f"Список: {numbers}")
+
+even_index_numbers = []
+for i in range(1, len(numbers), 2):  # индексы 1, 3, 5... (номера 2, 4, 6...)
+    even_index_numbers.append(numbers[i])
+
+if even_index_numbers:
+    min_even = min(even_index_numbers)
+    print(f"Элементы с четными номерами: {even_index_numbers}")
+    print(f"Минимальный: {min_even}")
+else:
+    print("Нет элементов с четными номерами")
+print()
+
+# 12. Элементы больше правого соседа
+print("12. Элементы больше правого соседа")
+numbers = [5, 3, 8, 6, 4, 9, 2, 7]
+print(f"Список: {numbers}")
+
+greater_indices = []
+count = 0
+
+for i in range(len(numbers) - 1):
+    if numbers[i] > numbers[i + 1]:
+        greater_indices.append(i + 1)  # +1 для номера (не индекса)
+        count += 1
+
+print(f"Номера элементов больше правого соседа: {greater_indices}")
+print(f"Количество таких элементов: {count}")
+print()
+
+# 13. Два соседних элемента с максимальной суммой
+print("13. Два соседних элемента с максимальной суммой")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Список: {numbers}")
+
+max_sum = 0
+max_pair = (0, 0)
+
+for i in range(len(numbers) - 1):
+    current_sum = numbers[i] + numbers[i + 1]
+    if current_sum > max_sum:
+        max_sum = current_sum
+        max_pair = (numbers[i], numbers[i + 1])
+
+print(f"Пара с максимальной суммой: {max_pair}")
+print(f"Их сумма: {max_sum}")
+print()
+
+# 14. Поменять местами минимальный и максимальный элементы
+print("14. Поменять местами минимальный и максимальный элементы")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Исходный список: {numbers}")
+
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+
+numbers[min_index], numbers[max_index] = numbers[max_index], numbers[min_index]
+
+print(f"После замены: {numbers}")
+print(f"Поменяли местами элементы на позициях {min_index + 1} и {max_index + 1}")
+print()
+
+# 15. Список где каждый следующий равен сумме предыдущих
+print("15. Список где каждый следующий равен сумме предыдущих")
+N = 6
+A = 2
+B = 3
+print(f"N = {N}, A = {A}, B = {B}")
+
+result = [A, B]
+for i in range(2, N):
+    next_element = sum(result)
+    result.append(next_element)
+
+print(f"Полученный список: {result}")
+print()
+
+
+
+print("1. Все нечетные числа по убыванию")
+numbers = [7, 2, 9, 4, 5, 1, 8, 3, 6]
+print(f"Список: {numbers}")
+
+odd_numbers = [num for num in numbers if num % 2 == 1]
+odd_numbers.sort(reverse=True)
+print(f"Нечетные числа: {odd_numbers}")
+print(f"По убыванию: {odd_numbers}")
+print()
+
+# 2. Все положительные числа по возрастанию
+print("2. Все положительные числа по возрастанию")
+numbers = [5, -2, 8, -1, 3, -7, 4, -9, 6]
+print(f"Список: {numbers}")
+
+positive_numbers = [num for num in numbers if num > 0]
+positive_numbers.sort()
+print(f"Положительные числа: {positive_numbers}")
+print(f"По возрастанию: {positive_numbers}")
+print()
+
+# 3. Все положительные числа по убыванию
+print("3. Все положительные числа по убыванию")
+numbers = [5, -2, 8, -1, 3, -7, 4, -9, 6]
+print(f"Список: {numbers}")
+
+positive_numbers = [num for num in numbers if num > 0]
+positive_numbers.sort(reverse=True)
+print(f"Положительные числа: {positive_numbers}")
+print(f"По убыванию: {positive_numbers}")
+print()
+
+# 4. Все четные числа по возрастанию
+print("4. Все четные числа по возрастанию")
+numbers = [7, 2, 9, 4, 5, 1, 8, 3, 6]
+print(f"Список: {numbers}")
+
+even_numbers = [num for num in numbers if num % 2 == 0]
+even_numbers.sort()
+print(f"Четные числа: {even_numbers}")
+print(f"По возрастанию: {even_numbers}")
+print()
+
+# 5. Все числа больше k по убыванию
+print("5. Все числа больше k по убыванию")
+numbers = [3, 8, 1, 12, 5, 9, 4, 15, 7]
+k = 6
+print(f"Список: {numbers}")
+print(f"k = {k}")
+
+greater_than_k = [num for num in numbers if num > k]
+greater_than_k.sort(reverse=True)
+print(f"Числа больше {k}: {greater_than_k}")
+print(f"По убыванию: {greater_than_k}")
+print()
+
+# 6. Все числа больше 10 по возрастанию
+print("6. Все числа больше 10 по возрастанию")
+numbers = [15, 5, 12, 8, 18, 3, 20, 9, 11]
+print(f"Список: {numbers}")
+
+greater_than_10 = [num for num in numbers if num > 10]
+greater_than_10.sort()
+print(f"Числа больше 10: {greater_than_10}")
+print(f"По возрастанию: {greater_than_10}")
+print()
+
+# 7. Все числа кратные 5 по убыванию
+print("7. Все числа кратные 5 по убыванию")
+numbers = [15, 7, 25, 12, 30, 8, 20, 3, 10]
+print(f"Список: {numbers}")
+
+multiples_of_5 = [num for num in numbers if num % 5 == 0]
+multiples_of_5.sort(reverse=True)
+print(f"Числа кратные 5: {multiples_of_5}")
+print(f"По убыванию: {multiples_of_5}")
+print()
+
+# 8. Все числа меньше k по возрастанию
+print("8. Все числа меньше k по возрастанию")
+numbers = [3, 8, 1, 12, 5, 9, 4, 15, 7]
+k = 7
+print(f"Список: {numbers}")
+print(f"k = {k}")
+
+less_than_k = [num for num in numbers if num < k]
+less_than_k.sort()
+print(f"Числа меньше {k}: {less_than_k}")
+print(f"По возрастанию: {less_than_k}")
+print()
+
+# 9. Все числа меньше 15 по убыванию
+print("9. Все числа меньше 15 по убыванию")
+numbers = [15, 5, 12, 8, 18, 3, 20, 9, 11, 14]
+print(f"Список: {numbers}")
+
+less_than_15 = [num for num in numbers if num < 15]
+less_than_15.sort(reverse=True)
+print(f"Числа меньше 15: {less_than_15}")
+print(f"По убыванию: {less_than_15}")
+print()
+
+# 10. Все числа кратные 3 по возрастанию
+print("10. Все числа кратные 3 по возрастанию")
+numbers = [9, 4, 15, 7, 12, 2, 18, 5, 21, 8]
+print(f"Список: {numbers}")
+
+multiples_of_3 = [num for num in numbers if num % 3 == 0]
+multiples_of_3.sort()
+print(f"Числа кратные 3: {multiples_of_3}")
+print(f"По возрастанию: {multiples_of_3}")
+print()
+
+# 11. Все числа кратные k по убыванию
+print("11. Все числа кратные k по убыванию")
+numbers = [12, 5, 18, 7, 24, 3, 30, 8, 15, 9]
+k = 6
+print(f"Список: {numbers}")
+print(f"k = {k}")
+
+multiples_of_k = [num for num in numbers if num % k == 0]
+multiples_of_k.sort(reverse=True)
+print(f"Числа кратные {k}: {multiples_of_k}")
+print(f"По убыванию: {multiples_of_k}")
+print()
+
+# 12. Все отрицательные числа по возрастанию
+print("12. Все отрицательные числа по возрастанию")
+numbers = [5, -2, 8, -7, 3, -1, -9, 4, -5, 6]
+print(f"Список: {numbers}")
+
+negative_numbers = [num for num in numbers if num < 0]
+negative_numbers.sort()
+print(f"Отрицательные числа: {negative_numbers}")
+print(f"По возрастанию: {negative_numbers}")
+print()
+
+# 13. Все числа на нечетных позициях по убыванию
+print("13. Все числа на нечетных позициях по убыванию")
+numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+print(f"Список: {numbers}")
+
+odd_positions = []
+for i in range(len(numbers)):
+    if (i + 1) % 2 == 1:  # +1 потому что позиции с 1
+        odd_positions.append(numbers[i])
+
+odd_positions.sort(reverse=True)
+print(f"Числа на нечетных позициях: {odd_positions}")
+print(f"По убыванию: {odd_positions}")
+print()
+
+# 14. Все двузначные числа по возрастанию
+print("14. Все двузначные числа по возрастанию")
+numbers = [5, 23, 8, 45, 123, 12, 78, 3, 56, 9, 34]
+print(f"Список: {numbers}")
+
+two_digit_numbers = [num for num in numbers if 10 <= num <= 99]
+two_digit_numbers.sort()
+print(f"Двузначные числа: {two_digit_numbers}")
+print(f"По возрастанию: {two_digit_numbers}")
+print()
+
+# 15. Все числа на четных позициях по возрастанию
+print("15. Все числа на четных позициях по возрастанию")
+numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+print(f"Список: {numbers}")
+
+even_positions = []
+for i in range(len(numbers)):
+    if (i + 1) % 2 == 0:  # +1 потому что позиции с 1
+        even_positions.append(numbers[i])
+
+even_positions.sort()
+print(f"Числа на четных позициях: {even_positions}")
+print(f"По возрастанию: {even_positions}")
+print()
+
+
+
+import copy
+# 1. Найти номер первого столбца с только нечетными числами
+print("1. Найти номер первого столбца с только нечетными числами")
+matrix = [
+    [1, 2, 3, 5],
+    [3, 4, 7, 9],
+    [5, 6, 9, 1]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+found_column = 0
+for j in range(len(matrix[0])):
+    all_odd = True
+    for i in range(len(matrix)):
+        if matrix[i][j] % 2 == 0:
+            all_odd = False
+            break
+    if all_odd:
+        found_column = j + 1
+        break
+
+print(f"Первый столбец с только нечетными числами: {found_column}")
+print()
+
+# 2. Поменять местами min и max в каждой строке
+print("2. Поменять местами min и max в каждой строке")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+for i in range(len(matrix)):
+    min_val = min(matrix[i])
+    max_val = max(matrix[i])
+    min_index = matrix[i].index(min_val)
+    max_index = matrix[i].index(max_val)
+    matrix[i][min_index], matrix[i][max_index] = matrix[i][max_index], matrix[i][min_index]
+
+print("После замены min и max в каждой строке:")
+for row in matrix:
+    print(row)
+print()
+
+# 3. Поменять местами строки с min и max элементами
+print("3. Поменять местами строки с min и max элементами")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+min_val = min(min(row) for row in matrix)
+max_val = max(max(row) for row in matrix)
+
+min_row = -1
+max_row = -1
+
+for i in range(len(matrix)):
+    if min_val in matrix[i]:
+        min_row = i
+    if max_val in matrix[i]:
+        max_row = i
+
+if min_row != -1 and max_row != -1:
+    matrix[min_row], matrix[max_row] = matrix[max_row], matrix[min_row]
+
+print("После замены строк с min и max элементами:")
+for row in matrix:
+    print(row)
+print()
+
+# 4. Зеркальное отражение относительно горизонтальной оси
+print("4. Зеркальное отражение относительно горизонтальной оси")
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [10, 11, 12]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+matrix.reverse()
+
+print("После горизонтального отражения:")
+for row in matrix:
+    print(row)
+print()
+
+# 5. Удалить строку с минимальным элементом
+print("5. Удалить строку с минимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+min_val = min(min(row) for row in matrix)
+min_row_index = -1
+
+for i in range(len(matrix)):
+    if min_val in matrix[i]:
+        min_row_index = i
+        break
+
+if min_row_index != -1:
+    del matrix[min_row_index]
+
+print("После удаления строки с минимальным элементом:")
+for row in matrix:
+    print(row)
+print()
+
+# 6. Удалить столбец с максимальным элементом
+print("6. Удалить столбец с максимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+max_val = max(max(row) for row in matrix)
+max_col_index = -1
+
+for j in range(len(matrix[0])):
+    for i in range(len(matrix)):
+        if matrix[i][j] == max_val:
+            max_col_index = j
+            break
+    if max_col_index != -1:
+        break
+
+if max_col_index != -1:
+    for i in range(len(matrix)):
+        del matrix[i][max_col_index]
+
+print("После удаления столбца с максимальным элементом:")
+for row in matrix:
+    print(row)
+print()
+
+# 7. Зеркальное отражение относительно вертикальной оси
+print("7. Зеркальное отражение относительно вертикальной оси")
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+for i in range(len(matrix)):
+    matrix[i].reverse()
+
+print("После вертикального отражения:")
+for row in matrix:
+    print(row)
+print()
+
+# 8. Продублировать строку с максимальным элементом
+print("8. Продублировать строку с максимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+max_val = max(max(row) for row in matrix)
+max_row_index = -1
+
+for i in range(len(matrix)):
+    if max_val in matrix[i]:
+        max_row_index = i
+        break
+
+if max_row_index != -1:
+    matrix.insert(max_row_index + 1, matrix[max_row_index].copy())
+
+print("После дублирования строки с максимальным элементом:")
+for row in matrix:
+    print(row)
+print()
+
+# 9. Количество элементов больше среднего в каждом столбце
+print("9. Количество элементов больше среднего в каждом столбце")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5],
+    [2, 3, 8]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+for j in range(len(matrix[0])):
+    column = [matrix[i][j] for i in range(len(matrix))]
+    avg = sum(column) / len(column)
+    count = sum(1 for num in column if num > avg)
+    print(f"Столбец {j+1}: среднее = {avg:.2f}, элементов больше среднего = {count}")
+print()
+
+# 10. Поменять местами левую верхнюю и правую нижнюю четверти
+print("10. Поменять местами левую верхнюю и правую нижнюю четверти")
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+M = len(matrix)
+N = len(matrix[0])
+half_M = M // 2
+half_N = N // 2
+
+for i in range(half_M):
+    for j in range(half_N):
+        matrix[i][j], matrix[i + half_M][j + half_N] = matrix[i + half_M][j + half_N], matrix[i][j]
+
+print("После замены четвертей:")
+for row in matrix:
+    print(row)
+print()
+
+# 11. Среднее арифметическое для нечетных строк
+print("11. Среднее арифметическое для нечетных строк")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5],
+    [2, 3, 8]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+for i in range(0, len(matrix), 2):  # 0, 2, 4... (нечетные строки: 1, 3, 5...)
+    avg = sum(matrix[i]) / len(matrix[i])
+    print(f"Строка {i+1}: среднее = {avg:.2f}")
+print()
+
+# 12. Строка с наибольшей суммой элементов
+print("12. Строка с наибольшей суммой элементов")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5],
+    [2, 3, 8]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+max_sum = -1
+max_row_index = -1
+
+for i in range(len(matrix)):
+    row_sum = sum(matrix[i])
+    if row_sum > max_sum:
+        max_sum = row_sum
+        max_row_index = i
+
+print(f"Строка с наибольшей суммой: {max_row_index + 1}")
+print(f"Сумма элементов: {max_sum}")
+print()
+
+# 13. Вставить строку из нулей перед строкой с минимальным элементом
+print("13. Вставить строку из нулей перед строкой с минимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+min_val = min(min(row) for row in matrix)
+min_row_index = -1
+
+for i in range(len(matrix)):
+    if min_val in matrix[i]:
+        min_row_index = i
+        break
+
+if min_row_index != -1:
+    zeros_row = [0] * len(matrix[0])
+    matrix.insert(min_row_index, zeros_row)
+
+print("После вставки строки из нулей:")
+for row in matrix:
+    print(row)
+print()
+
+# 14. Найти номер последней строки с только четными числами
+print("14. Найти номер последней строки с только четными числами")
+matrix = [
+    [2, 4, 6],
+    [3, 5, 7],
+    [8, 2, 4],
+    [1, 3, 5]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+last_even_row = 0
+for i in range(len(matrix)):
+    all_even = True
+    for num in matrix[i]:
+        if num % 2 != 0:
+            all_even = False
+            break
+    if all_even:
+        last_even_row = i + 1
+
+print(f"Последняя строка с только четными числами: {last_even_row}")
+print()
+
+# 15. Поменять местами первый и последний положительный столбец
+print("15. Поменять местами первый и последний положительный столбец")
+matrix = [
+    [3, -2, 7, 4],
+    [1, -5, 8, 2],
+    [4, -1, 6, 9]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+positive_columns = []
+for j in range(len(matrix[0])):
+    all_positive = True
+    for i in range(len(matrix)):
+        if matrix[i][j] <= 0:
+            all_positive = False
+            break
+    if all_positive:
+        positive_columns.append(j)
+
+if len(positive_columns) >= 2:
+    first_pos_col = positive_columns[0]
+    last_pos_col = positive_columns[-1]
+    
+    for i in range(len(matrix)):
+        matrix[i][first_pos_col], matrix[i][last_pos_col] = matrix[i][last_pos_col], matrix[i][first_pos_col]
+    
+    print("После замены столбцов:")
+    for row in matrix:
+        print(row)
+else:
+    print("Требуемых столбцов нет, матрица без изменений")
+    for row in matrix:
+        print(row)
+print()
+
+
+
+
+# 1. Количество слов в строке
+print("1. Количество слов в строке")
+s = "Привет   как    дела    у   тебя"
+print(f"Строка: '{s}'")
+words = s.split()
+count = len(words)
+print(f"Количество слов: {count}")
+print()
+
+# 2. Слова, начинающиеся и заканчивающиеся одной буквой
+print("2. Слова, начинающиеся и заканчивающиеся одной буквой")
+s = "ПОТОП РАДУГА ШАЛАШ МОЛОКО"
+print(f"Строка: '{s}'")
+words = s.split()
+count = 0
+for word in words:
+    if word[0] == word[-1]:
+        count += 1
+        print(f"Слово '{word}' начинается и заканчивается на '{word[0]}'")
+print(f"Всего таких слов: {count}")
+print()
+
+# 3. Слова, содержащие букву 'А'
+print("3. Слова, содержащие букву 'А'")
+s = "МАМА ПАПА КОТ СОБАКА АНАНАС"
+print(f"Строка: '{s}'")
+words = s.split()
+count = 0
+for word in words:
+    if 'А' in word:
+        count += 1
+        print(f"Слово '{word}' содержит букву 'А'")
+print(f"Всего таких слов: {count}")
+print()
+
+# 4. Длина самого короткого слова
+print("4. Длина самого короткого слова")
+s = "кот собака слон жираф мышь"
+print(f"Строка: '{s}'")
+words = s.split()
+min_length = min(len(word) for word in words)
+print(f"Длина самого короткого слова: {min_length}")
+for word in words:
+    if len(word) == min_length:
+        print(f"Самое короткое слово: '{word}'")
+print()
+
+# 5. Слова в обратном порядке
+print("5. Слова в обратном порядке")
+s = "один два три четыре пять"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+reversed_words = ' '.join(words[::-1])
+print(f"Слова в обратном порядке: '{reversed_words}'")
+print()
+
+# 6. Слова в алфавитном порядке
+print("6. Слова в алфавитном порядке")
+s = "ЯБЛОКО ГРУША АПЕЛЬСИН БАНАН ВИНОГРАД"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+sorted_words = ' '.join(sorted(words))
+print(f"Слова в алфавитном порядке: '{sorted_words}'")
+print()
+
+# 7. Вставка строки перед символом
+print("7. Вставка строки перед символом")
+C = 'а'
+S = "мама мыла раму"
+S0 = "***"
+print(f"Символ C: '{C}'")
+print(f"Строка S: '{S}'")
+print(f"Строка S0: '{S0}'")
+
+result = ""
+for char in S:
+    if char == C:
+        result += S0
+    result += char
+
+print(f"Результат: '{result}'")
+print()
+
+# 8. Удаление лишних пробелов
+print("8. Удаление лишних пробелов")
+s = "Удалить    лишние    пробелы    между    словами"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+result = ' '.join(words)
+print(f"Результат: '{result}'")
+print()
+
+# 9. Количество строчных букв
+print("9. Количество строчных букв")
+s = "Hello мир Привет world"
+print(f"Строка: '{s}'")
+
+count_latin = 0
+count_russian = 0
+
+for char in s:
+    if 'a' <= char <= 'z':
+        count_latin += 1
+    elif 'а' <= char <= 'я':
+        count_russian += 1
+
+print(f"Строчных латинских букв: {count_latin}")
+print(f"Строчных русских букв: {count_russian}")
+print(f"Всего строчных букв: {count_latin + count_russian}")
+print()
+
+# 10. Длина самого длинного слова
+print("10. Длина самого длинного слова")
+s = "кот собака слон жираф антилопа"
+print(f"Строка: '{s}'")
+words = s.split()
+max_length = max(len(word) for word in words)
+print(f"Длина самого длинного слова: {max_length}")
+for word in words:
+    if len(word) == max_length:
+        print(f"Самое длинное слово: '{word}'")
+print()
+
+# 11. Шифрование строки
+print("11. Шифрование строки")
+s = "Программа"
+print(f"Исходная строка: '{s}'")
+
+even_chars = s[1::2]  # символы на четных позициях (индексы 1, 3, 5...)
+odd_chars = s[0::2]   # символы на нечетных позициях (индексы 0, 2, 4...)
+odd_chars_reversed = odd_chars[::-1]  # нечетные символы в обратном порядке
+
+result = even_chars + odd_chars_reversed
+print(f"Зашифрованная строка: '{result}'")
+print()
+
+# 12. Вставка звездочек между символами
+print("12. Вставка звездочек между символами")
+S = "Python"
+N = 3
+print(f"Строка S: '{S}'")
+print(f"Число N: {N}")
+
+stars = '*' * N
+result = stars.join(S)
+
+print(f"Результат: '{result}'")
+print()
+
+# 13. Разделение слов точками
+print("13. Разделение слов точками")
+s = "один два три четыре пять"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+result = '.'.join(words)
+print(f"Результат: '{result}'")
+print()
+
+# 14. Выделение имени файла без расширения
+print("14. Выделение имени файла без расширения")
+file_path = r"d:\ivanov\primer\prog.py"
+print(f"Полный путь: '{file_path}'")
+
+# Разделяем путь по обратным слешам
+parts = file_path.split('\\')
+# Берем последнюю часть (имя файла с расширением)
+filename_with_ext = parts[-1]
+# Разделяем имя файла и расширение
+filename = filename_with_ext.split('.')[0]
+
+print(f"Имя файла без расширения: '{filename}'")
+print()
+
+# 15. Самое длинное слово (последнее из самых длинных)
+print("15. Самое длинное слово (последнее из самых длинных)")
+s = "кот собака слон жираф антилопа бегемот"
+print(f"Строка: '{s}'")
+words = s.split()
+
+max_length = 0
+longest_word = ""
+
+for word in words:
+    if len(word) >= max_length:
+        max_length = len(word)
+        longest_word = word
+
+print(f"Самое длинное слово: '{longest_word}'")
+print(f"Его длина: {max_length}")
+print()
+
+
+
+
+print("1. Подсчет частоты символов")
+s = "программирование"
+print(f"Строка: '{s}'")
+char_count = {}
+for char in s:
+    char_count[char] = char_count.get(char, 0) + 1
+
+print("Частота символов:")
+for char, count in char_count.items():
+    print(f"  '{char}': {count}")
+print()
+
+# 2. Первые два и последние два символа
+print("2. Первые два и последние два символа")
+s = "программирование"
+print(f"Строка: '{s}'")
+if len(s) >= 2:
+    result = s[:2] + s[-2:]
+    print(f"Результат: '{result}'")
+else:
+    print("Длина строки меньше двух символов")
+print()
+
+# 3. Замена первого символа на $ (кроме самого первого)
+print("3. Замена первого символа на $ (кроме самого первого)")
+s = "программирование программиста"
+print(f"Строка: '{s}'")
+first_char = s[0]
+result = first_char + s[1:].replace(first_char, '$')
+print(f"Результат: '{result}'")
+print()
+
+# 4. Обмен первыми двумя символами двух строк
+print("4. Обмен первыми двумя символами двух строк")
+s1 = "привет"
+s2 = "мир"
+print(f"Строка 1: '{s1}'")
+print(f"Строка 2: '{s2}'")
+
+if len(s1) >= 2 and len(s2) >= 2:
+    new_s1 = s2[:2] + s1[2:]
+    new_s2 = s1[:2] + s2[2:]
+    result = new_s1 + " " + new_s2
+    print(f"Результат: '{result}'")
+else:
+    print("Одна из строк слишком короткая")
+print()
+
+# 5. Добавление ing/ly
+print("5. Добавление ing/ly")
+s = "read"
+print(f"Строка: '{s}'")
+if len(s) >= 3:
+    if s.endswith('ing'):
+        result = s + 'ly'
+    else:
+        result = s + 'ing'
+    print(f"Результат: '{result}'")
+else:
+    print(f"Строка слишком короткая: '{s}'")
+print()
+
+# 6. Удаление каждого n-го символа
+print("6. Удаление каждого n-го символа")
+s = "программирование"
+n = 3
+print(f"Строка: '{s}'")
+print(f"n = {n}")
+result = ""
+for i in range(len(s)):
+    if (i + 1) % n != 0:  # i+1 потому что начинаем с первого символа
+        result += s[i]
+print(f"Результат: '{result}'")
+print()
+
+# 7. Поменять местами первый и последний символы
+print("7. Поменять местами первый и последний символы")
+s = "программирование"
+print(f"Строка: '{s}'")
+if len(s) > 1:
+    result = s[-1] + s[1:-1] + s[0]
+    print(f"Результат: '{result}'")
+else:
+    print(f"Строка слишком короткая: '{s}'")
+print()
+
+# 8. Удалить символы с нечетными индексами
+print("8. Удалить символы с нечетными индексами")
+s = "программирование"
+print(f"Строка: '{s}'")
+result = ""
+for i in range(len(s)):
+    if i % 2 == 0:  # четные индексы (0, 2, 4...)
+        result += s[i]
+print(f"Результат: '{result}'")
+print()
+
+# 9. Подсчет вхождений слов
+print("9. Подсчет вхождений слов")
+s = "кот собака кот птица собака кот"
+print(f"Предложение: '{s}'")
+words = s.split()
+word_count = {}
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+print("Количество вхождений слов:")
+for word, count in word_count.items():
+    print(f"  '{word}': {count}")
+print()
+
+# 10. Перевернуть строку, если длина кратна 4
+print("10. Перевернуть строку, если длина кратна 4")
+s = "программирование"  # 16 символов
+print(f"Строка: '{s}'")
+print(f"Длина строки: {len(s)}")
+if len(s) % 4 == 0:
+    result = s[::-1]
+    print(f"Результат: '{result}'")
+else:
+    print("Длина строки не кратна 4")
+print()
+
+# 11. Верхний регистр, если в первых 4 символах >= 2 заглавных
+print("11. Верхний регистр, если в первых 4 символах >= 2 заглавных")
+s = "ПроГраммирование"
+print(f"Строка: '{s}'")
+first_four = s[:4]
+upper_count = sum(1 for char in first_four if char.isupper())
+print(f"Заглавных букв в первых 4 символах: {upper_count}")
+
+if upper_count >= 2:
+    result = s.upper()
+    print(f"Результат: '{result}'")
+else:
+    print("Недостаточно заглавных букв в начале")
+print()
+
+# 12. Шифрование циклической заменой букв
+print("12. Шифрование циклической заменой букв")
+s = "Hello World! zZ"
+print(f"Строка: '{s}'")
+
+result = ""
+for char in s:
+    if char.isalpha():
+        if char.islower():
+            # Для 'z' переходим к 'a'
+            result += chr((ord(char) - ord('a') + 1) % 26 + ord('a'))
+        else:
+            # Для 'Z' переходим к 'A'
+            result += chr((ord(char) - ord('A') + 1) % 26 + ord('A'))
+    else:
+        result += char
+
+print(f"Зашифрованная строка: '{result}'")
+print()
+
+# 13. Первый неповторяющийся символ
+print("13. Первый неповторяющийся символ")
+s = "программирование"
+print(f"Строка: '{s}'")
+
+char_count = {}
+for char in s:
+    char_count[char] = char_count.get(char, 0) + 1
+
+found = None
+for char in s:
+    if char_count[char] == 1:
+        found = char
+        break
+
+if found:
+    print(f"Первый неповторяющийся символ: '{found}'")
+else:
+    print("Все символы повторяются")
+print()
+
+# 14. Верхний регистр для первой и последней буквы каждого слова
+print("14. Верхний регистр для первой и последней буквы каждого слова")
+s = "привет мир программирование"
+print(f"Строка: '{s}'")
+
+words = s.split()
+result_words = []
+for word in words:
+    if len(word) > 1:
+        new_word = word[0].upper() + word[1:-1] + word[-1].upper()
+    else:
+        new_word = word.upper()
+    result_words.append(new_word)
+
+result = ' '.join(result_words)
+print(f"Результат: '{result}'")
+print()
+
+# 15. Проверка упорядоченности букв по алфавиту
+print("15. Проверка упорядоченности букв по алфавиту")
+s = "abcde123"  # упорядоченная строка
+# s = "abdce123"  # неупорядоченная строка
+print(f"Строка: '{s}'")
+
+# Извлекаем только буквы
+letters = [char for char in s if char.isalpha()]
+
+if len(letters) < 2:
+    print("0 (мало букв для проверки)")
+else:
+    # Проверяем упорядоченность
+    is_ordered = True
+    first_wrong_index = -1
+    
+    for i in range(len(letters) - 1):
+        if letters[i] > letters[i + 1]:
+            is_ordered = False
+            # Находим позицию в исходной строке
+            for j in range(len(s)):
+                if s[j] == letters[i + 1]:
+                    first_wrong_index = j + 1
+                    break
+            break
+    
+    if is_ordered:
+        print("0 (буквы упорядочены по алфавиту)")
+    else:
+        print(f"Позиция первого нарушения: {first_wrong_index}")
+print()
+
+
+import itertools
+print("1. Сортировка словаря по значениям")
+my_dict = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+print(f"Исходный словарь: {my_dict}")
+
+# Сортировка по возрастанию значений
+sorted_asc = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+print(f"По возрастанию: {sorted_asc}")
+
+# Сортировка по убыванию значений
+sorted_desc = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+print(f"По убыванию: {sorted_desc}")
+
+# Объединение словарей с суммированием значений
+dict1 = {1: 2, 3: 4}
+dict2 = {3: 5, 6: 7}
+merged_dict = dict1.copy()
+for key, value in dict2.items():
+    merged_dict[key] = merged_dict.get(key, 0) + value
+print(f"Объединенный словарь: {merged_dict}")
+
+# Проверка наличия ключей
+keys_to_check = [1, 3]
+all_present = all(key in my_dict for key in keys_to_check)
+print(f"Все ключи {keys_to_check} присутствуют: {all_present}")
+print()
+
+# 2. Работа с уникальными значениями и подсчет элементов
+print("2. Работа с уникальными значениями")
+my_dict = {1: 2, 3: 4}
+print(f"Исходный словарь: {my_dict}")
+
+# Добавление нового ключа
+my_dict[5] = 6
+print(f"После добавления ключа 5: {my_dict}")
+
+# Уникальные значения
+dict_with_duplicates = {1: 2, 3: 4, 5: 2}
+unique_values = set(dict_with_duplicates.values())
+print(f"Уникальные значения: {unique_values}")
+
+# Подсчет элементов в списках-значениях
+dict_with_lists = {1: [2, 3, 4], 3: [5, 6, 7], 5: [8, 9, 0]}
+total_elements = sum(len(lst) for lst in dict_with_lists.values())
+print(f"Всего элементов в списках: {total_elements}")
+print()
+
+# 3. Объединение словарей и очистка списков
+print("3. Объединение словарей")
+dicts_to_merge = [{1: 2}, {3: 4}, {5: 6}]
+merged = {}
+for d in dicts_to_merge:
+    merged.update(d)
+print(f"Объединенный словарь: {merged}")
+
+# Очистка списков в словаре
+dict_with_lists = {1: [2, 3, 4], 3: [5, 6, 7], 5: [8, 9, 0]}
+for key in dict_with_lists:
+    dict_with_lists[key] = []
+print(f"После очистки списков: {dict_with_lists}")
+print()
+
+# 4. Генерация комбинаций и замена на средние значения
+print("4. Генерация комбинаций букв")
+my_dict = {1: 'abc', 2: 'def'}
+key_to_use = 1
+if key_to_use in my_dict:
+    combinations = [''.join(perm) for perm in itertools.permutations(my_dict[key_to_use])]
+    print(f"Комбинации для ключа {key_to_use}: {combinations}")
+
+# Замена на средние значения
+dict_with_number_lists = {1: [2, 3, 4], 3: [5, 6, 7], 5: [8, 9, 0]}
+averages_dict = {key: mean(values) for key, values in dict_with_number_lists.items()}
+print(f"Средние значения: {averages_dict}")
+print()
+
+# 5. Три наибольших значения и сравнение словарей
+print("5. Три наибольших значения")
+my_dict = {1: 2, 3: 4, 5: 6, 2: 8, 4: 1}
+print(f"Словарь: {my_dict}")
+
+# Три наибольших значения
+three_largest = sorted(my_dict.values(), reverse=True)[:3]
+print(f"Три наибольших значения: {three_largest}")
+
+# Сравнение двух словарей
+dict1 = {1: 2, 3: 4}
+dict2 = {1: 3, 3: 4}
+comparison = {key: (dict1.get(key), dict2.get(key)) for key in set(dict1) | set(dict2)}
+print(f"Сравнение значений: {comparison}")
+print()
+
+# 6. Создание словаря квадратов и удаление пустых элементов
+print("6. Создание словаря квадратов")
+n = 5
+squares_dict = {i: i**2 for i in range(1, n+1)}
+print(f"Квадраты чисел от 1 до {n}: {squares_dict}")
+
+# Объединение значений из списка словарей
+dict_list = [{1: 2}, {3: 4}, {5: 6}]
+values_list = [list(d.values())[0] for d in dict_list]
+print(f"Объединенные значения: {values_list}")
+
+# Удаление пустых элементов
+dict_with_empty = {1: '', 2: 'abc', 3: None, 4: [], 5: 'hello'}
+cleaned_dict = {k: v for k, v in dict_with_empty.items() if v not in ['', None, []]}
+print(f"После удаления пустых: {cleaned_dict}")
+print()
+
+# 7. Частота символов и фильтрация словаря
+print("7. Частота символов в строке")
+text = "hello world"
+char_freq = {}
+for char in text:
+    char_freq[char] = char_freq.get(char, 0) + 1
+print(f"Частота символов в '{text}': {char_freq}")
+
+# Фильтрация словаря
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+filtered_dict = {k: v for k, v in my_dict.items() if v > 2}
+print(f"Отфильтрованный словарь: {filtered_dict}")
+print()
+
+# 8. Объединение словарей и вывод в виде таблицы
+print("8. Вывод словаря в виде таблицы")
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+merged = {**dict1, **dict2}
+print(f"Объединенный словарь: {merged}")
+
+print("Содержимое словаря:")
+for key, value in merged.items():
+    print(f"{key} {value}")
+
+# Преобразование списков в словарь
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+lists_dict = {'key1': list1, 'key2': list2}
+print(f"Словарь из списков: {lists_dict}")
+print()
+
+# 9. Сумма значений по ключу и фильтрация данных
+print("9. Сумма значений по ключу")
+dict_list = [{'a': 1}, {'a': 2}, {'a': 3}, {'b': 1}]
+key_to_sum = 'a'
+total = sum(d.get(key_to_sum, 0) for d in dict_list)
+print(f"Сумма значений по ключу '{key_to_sum}': {total}")
+
+# Фильтрация данных учащихся
+students = {
+    'Иван': {'рост': 170, 'вес': 70},
+    'Михаил': {'рост': 180, 'вес': 75}
+}
+filtered_students = {name: {'рост': data['рост']} for name, data in students.items()}
+print(f"Только рост студентов: {filtered_students}")
+print()
+
+# 10. Сумма и произведение значений, проверка одинаковости
+print("10. Сумма и произведение значений")
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+values_sum = sum(my_dict.values())
+values_product = 1
+for value in my_dict.values():
+    values_product *= value
+print(f"Сумма значений: {values_sum}")
+print(f"Произведение значений: {values_product}")
+
+# Проверка одинаковости значений
+dict_same = {'a': 1, 'b': 1, 'c': 1}
+dict_different = {'a': 1, 'b': 2, 'c': 1}
+all_same = len(set(dict_same.values())) == 1
+all_same2 = len(set(dict_different.values())) == 1
+print(f"Все значения одинаковы в dict_same: {all_same}")
+print(f"Все значения одинаковы в dict_different: {all_same2}")
+print()
+
+# 11. Сортировка значений и группировка
+print("11. Сортировка значений в словаре")
+dict_with_lists = {'a': ['c', 'b', 'a'], 'b': ['c', 'b', 'a']}
+for key in dict_with_lists:
+    dict_with_lists[key].sort()
+print(f"После сортировки: {dict_with_lists}")
+
+# Группировка пар ключ-значение
+pairs = [('a', 1), ('b', 2), ('a', 3), ('b', 4)]
+grouped_dict = {}
+for key, value in pairs:
+    if key not in grouped_dict:
+        grouped_dict[key] = []
+    grouped_dict[key].append(value)
+print(f"Сгруппированный словарь: {grouped_dict}")
+print()
+
+# 12. Удаление ключей и преобразование словаря
+print("12. Удаление ключей")
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+key_to_remove = 'b'
+if key_to_remove in my_dict:
+    del my_dict[key_to_remove]
+print(f"После удаления ключа '{key_to_remove}': {my_dict}")
+
+# Удаление пробелов из ключей
+dict_with_spaces = {' a ': 1, ' b ': 2, ' c ': 3}
+cleaned_keys_dict = {key.strip(): value for key, value in dict_with_spaces.items()}
+print(f"После удаления пробелов: {cleaned_keys_dict}")
+
+# Преобразование словаря списков в список словарей
+dict_of_lists = {'a': [1, 2], 'b': [3, 4]}
+list_of_dicts = []
+for key, values in dict_of_lists.items():
+    for value in values:
+        list_of_dicts.append({key: value})
+print(f"Список словарей: {list_of_dicts}")
+print()
+
+# 13. Создание словаря из списков и поиск дорогих товаров
+print("13. Создание словаря из списков")
+keys = ['a', 'b', 'c']
+values = [1, 2, 3]
+new_dict = dict(zip(keys, values))
+print(f"Словарь из списков: {new_dict}")
+
+# Три самых дорогих товара
+items = [
+    {'name': 'item1', 'price': 10},
+    {'name': 'item2', 'price': 50},
+    {'name': 'item3', 'price': 30},
+    {'name': 'item4', 'price': 40}
+]
+top_three = sorted(items, key=lambda x: x['price'], reverse=True)[:3]
+print("Три самых дорогих товара:")
+for item in top_three:
+    print(f"  {item['name']}: {item['price']} руб")
+print()
+
+# 14. Сортировка по ключам и преобразование типов
+print("14. Сортировка по ключам")
+unsorted_dict = {'b': 1, 'a': 2, 'c': 3}
+sorted_by_key = dict(sorted(unsorted_dict.items()))
+print(f"Отсортированный по ключам: {sorted_by_key}")
+
+# Преобразование строковых значений в числа
+str_dict = {'a': '1', 'b': '2', 'c': '3.0'}
+numeric_dict = {}
+for key, value in str_dict.items():
+    try:
+        if '.' in value:
+            numeric_dict[key] = float(value)
+        else:
+            numeric_dict[key] = int(value)
+    except ValueError:
+        numeric_dict[key] = value
+print(f"После преобразования в числа: {numeric_dict}")
+print()
+
+# 15. Максимальные/минимальные значения и доступ к элементам
+print("15. Максимальные и минимальные значения")
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+max_val = max(my_dict.values())
+min_val = min(my_dict.values())
+print(f"Максимальное значение: {max_val}")
+print(f"Минимальное значение: {min_val}")
+
+# Словарь с списками значений
+complex_dict = {
+    'x': list(range(11, 21)),
+    'y': list(range(21, 31)),
+    'z': list(range(31, 41))
+}
+print("Пятые элементы каждого списка:")
+for key, values in complex_dict.items():
+    print(f"  {key}: {values[4]}")  # Индекс 4 - пятый элемент
+
+
+
+import random
+# 1. Создание кортежа из строк и преобразование в словарь
+print("1. Кортеж из строк и словарь длин")
+# а) Создаем кортеж из строк
+user_strings = ("ПРИВЕТ", "Мир", "PYTHON", "программирование", "CODE")
+print(f"Кортеж строк: {user_strings}")
+
+# б) Преобразуем в словарь (только буквы верхнего регистра)
+length_dict = {}
+for string in user_strings:
+    # Считаем только буквы верхнего регистра
+    upper_count = sum(1 for char in string if char.isupper())
+    length_dict[string] = upper_count
+
+print(f"Словарь длин (только верхний регистр): {length_dict}")
+print()
+
+# 2. Кортеж с разными типами данных и распаковка
+print("2. Кортеж с разными типами данных")
+# а) Создаем кортеж с разными типами
+mixed_tuple = ("строка", 42, [1, 2, 3], 3.14, {"ключ": "значение"}, True)
+print(f"Смешанный кортеж: {mixed_tuple}")
+
+# б) Распаковка списка кортежей по типам данных
+tuple_list = [("текст",), (123,), ([4, 5],), (7.89,), (False,)]
+strings = []
+numbers = []
+lists = []
+floats = []
+booleans = []
+
+for tup in tuple_list:
+    for item in tup:
+        if isinstance(item, str):
+            strings.append(item)
+        elif isinstance(item, int):
+            numbers.append(item)
+        elif isinstance(item, list):
+            lists.append(item)
+        elif isinstance(item, float):
+            floats.append(item)
+        elif isinstance(item, bool):
+            booleans.append(item)
+
+print("Распакованные по типам:")
+print(f"  Строки: {strings}")
+print(f"  Целые числа: {numbers}")
+print(f"  Списки: {lists}")
+print(f"  Вещественные числа: {floats}")
+print(f"  Логические: {booleans}")
+print()
+
+# 3. Кортеж чисел и работа с ним
+print("3. Кортеж чисел")
+# а) Создаем кортеж из чисел
+numbers_tuple = (10, 25, 30, 45, 60, 75, 90)
+print(f"Кортеж чисел: {numbers_tuple}")
+print(f"Первый элемент: {numbers_tuple[0]}")
+
+# б) Переворачиваем и удаляем кратные 3
+reversed_tuple = numbers_tuple[::-1]
+filtered_tuple = tuple(num for num in reversed_tuple if num % 3 != 0)
+print(f"Перевернутый без кратных 3: {filtered_tuple}")
+print()
+
+# 4. Распаковка кортежа и преобразование в словарь
+print("4. Распаковка кортежа")
+# а) Распаковываем кортеж в переменные
+person_tuple = ("Иван", 25, "инженер", "Москва")
+name, age, profession, city = person_tuple
+print(f"Имя: {name}")
+print(f"Возраст: {age}")
+print(f"Профессия: {profession}")
+print(f"Город: {city}")
+
+# б) Преобразуем список кортежей в словарь
+tuple_pairs = [("яблоко", 50), ("банан", 30), ("апельсин", 70)]
+result_dict = dict(tuple_pairs)
+sorted_dict = dict(sorted(result_dict.items(), key=lambda x: x[1]))
+print(f"Отсортированный словарь: {sorted_dict}")
+print()
+
+# 5. Добавление элемента и форматирование
+print("5. Добавление элемента в кортеж")
+# а) Добавляем элемент (создаем новый кортеж)
+original_tuple = (1, 2, 3)
+new_element = 4
+new_tuple = original_tuple + (new_element,)
+print(f"Исходный кортеж: {original_tuple}")
+print(f"С добавленным элементом: {new_tuple}")
+
+# б) Форматируем кортеж с обратной последовательностью символов
+string_tuple = ("привет", "мир", "python")
+reversed_strings = tuple(string[::-1] for string in string_tuple)
+print(f"Строки в обратном порядке: {reversed_strings}")
+print()
+
+# 6. Преобразование в строку и замена элементов
+print("6. Преобразование кортежа в строку")
+# а) Преобразуем кортеж в строку с разделителем
+words_tuple = ("я", "учу", "Python")
+separator = "-"
+result_string = separator.join(words_tuple)
+print(f"Кортеж как строка: {result_string}")
+
+# б) Заменяем последние элементы в кортежах
+tuple_list = [(1, 2, 3), ("a", "b", 5), (7, 8, 9.5)]
+new_value = 100
+for i in range(len(tuple_list)):
+    if isinstance(tuple_list[i][-1], (int, float)):
+        tuple_list[i] = tuple_list[i][:-1] + (new_value,)
+print(f"После замены последних элементов: {tuple_list}")
+print()
+
+# 7. Работа с элементами кортежа
+print("7. Четвертый элемент и удаление пустых кортежей")
+# а) Выводим четвертый элемент с начала и с конца
+sample_tuple = (10, 20, 30, 40, 50, 60, 70, 80)
+print(f"Кортеж: {sample_tuple}")
+if len(sample_tuple) >= 4:
+    print(f"4-й элемент с начала: {sample_tuple[3]}")
+    print(f"4-й элемент с конца: {sample_tuple[-4]}")
+
+# б) Удаляем пустые кортежи
+mixed_tuples = [(), (1, 2), (), (3, 4, 5), (), (6,)]
+filtered_tuples = [tup if tup else tuple([random.randint(1, 100)]) for tup in mixed_tuples]
+print(f"После замены пустых кортежей: {filtered_tuples}")
+print()
+
+# 8. Кортеж словарей и сортировка
+print("8. Кортеж словарей и сортировка")
+# а) Создаем кортеж словарей
+dict_tuple = (
+    {"name": "Иван", "age": 25, "score": 85.5},
+    {"name": "Мария", "age": 30, "score": 92.3},
+    {"name": "Петр", "age": 22, "score": 78.9}
+)
+print("Кортеж словарей:")
+for d in dict_tuple:
+    print(f"  {d}")
+
+# б) Сортируем по score в обратном порядке
+sorted_tuple = tuple(sorted(dict_tuple, key=lambda x: x["score"], reverse=True))
+print("Отсортированный по score:")
+for d in sorted_tuple:
+    print(f"  {d}")
+print()
+
+# 9. Поиск повторяющихся элементов и подсчет
+print("9. Поиск повторяющихся элементов")
+# а) Ищем повторяющиеся элементы
+numbers_tuple = (1, 2, 3, 2, 4, 5, 3, 6, 2)
+seen = set()
+duplicates = set()
+for num in numbers_tuple:
+    if num in seen:
+        duplicates.add(num)
+    else:
+        seen.add(num)
+print(f"Повторяющиеся элементы: {duplicates}")
+
+# б) Подсчитываем элементы до кортежа
+mixed_list = [1, 2, 3, "текст", [4, 5], (6, 7), 8, 9]
+count = 0
+total = 0
+for item in mixed_list:
+    if isinstance(item, tuple):
+        break
+    if isinstance(item, (int, float)):
+        count += 1
+        total += item
+print(f"Элементов до кортежа: {count}, сумма: {total}")
+print()
+
+# 10. Проверка наличия элемента и удаление дубликатов
+print("10. Проверка наличия элемента")
+# а) Проверяем наличие элемента
+test_tuple = (1, 2, 3, 2, 4, 5, 2, 6)
+element_to_find = 2
+if element_to_find in test_tuple:
+    count = test_tuple.count(element_to_find)
+    print(f"Элемент {element_to_find} встречается {count} раз(а)")
+else:
+    print(f"Элемент {element_to_find} не найден")
+
+# б) Удаляем повторяющиеся элементы из списка строк
+string_list = ["яблоко", "банан", "яблоко", "апельсин", "банан", "вишня"]
+unique_tuple = tuple(set(string_list))
+print(f"Кортеж без дубликатов: {unique_tuple}")
+print()
+
+# 11. Преобразование списка в кортеж и умножение чисел
+print("11. Преобразование списка в кортеж")
+# а) Преобразуем список в кортеж
+number_list = [2, 3, 4, 5, 6, 7, 8]
+number_tuple = tuple(number_list)
+print(f"Кортеж из списка: {number_tuple}")
+
+# б) Перемножаем четные числа
+product = 1
+even_numbers = [num for num in number_tuple if num % 2 == 0]
+for num in even_numbers:
+    product *= num
+print(f"Произведение четных чисел: {product}")
+print()
+
+# 12. Удаление элемента и вычисление среднего
+print("12. Удаление элемента из кортежа")
+# а) Удаляем элемент (создаем новый кортеж)
+original = (10, 20, 30, 40, 50)
+element_to_remove = 30
+new_tuple = tuple(x for x in original if x != element_to_remove)
+print(f"Исходный: {original}")
+print(f"Без элемента {element_to_remove}: {new_tuple}")
+
+# б) Вычисляем среднее в кортежах
+tuple_of_tuples = ((1, 6, 7, 8), (2, 3, 9, 10), (4, 5, 6, 11))
+averages = []
+for tup in tuple_of_tuples:
+    numbers_gt_5 = [num for num in tup if num > 5]
+    if numbers_gt_5:
+        avg = sum(numbers_gt_5) / len(numbers_gt_5)
+        averages.append(avg)
+print(f"Средние значения (числа > 5): {averages}")
+print()
+
+# 13. Срез кортежа и преобразование типов
+print("13. Срез кортежа и преобразование типов")
+# а) Делаем срез без строк
+mixed_tuple = (1, "текст", 3, 4.5, "еще текст", 6, 7.8)
+start, end = 0, 6  # срез от 0 до 6
+sliced = mixed_tuple[start:end]
+numbers_only = tuple(x for x in sliced if isinstance(x, (int, float)))
+print(f"Срез без строк: {numbers_only}")
+
+# б) Преобразуем строки в числа
+string_numbers = ("10", "25", "-5", "30", "-8", "15")
+positive_numbers = tuple(int(x) for x in string_numbers if int(x) >= 0)
+print(f"Положительные числа: {positive_numbers}")
+print()
+
+# 14. Поиск порядкового номера и создание числа
+print("14. Поиск порядкового номера")
+# а) Ищем порядковый номер числа
+numbers_tuple = (10, "текст", 20, 30, "еще", 40, 50)
+target_number = 30
+if target_number in numbers_tuple:
+    index = numbers_tuple.index(target_number) + 1
+    print(f"Число {target_number} на позиции: {index}")
+else:
+    print(f"Число {target_number} не найдено")
+
+# б) Создаем большое число из кратных 3
+numbers = (3, 6, 9, 12, 15, 18)
+multiples_of_3 = [str(num) for num in numbers if num % 3 == 0]
+big_number = int(''.join(multiples_of_3)) if multiples_of_3 else 0
+print(f"Большое число из кратных 3: {big_number}")
+print()
+
+# 15. Длина кортежа и поиск в кортежах
+print("15. Длина кортежа и поиск в кортежах")
+# а) Определяем длину (только строки)
+mixed_tuple = (1, "привет", 3.14, "мир", [1, 2], "Python")
+string_count = sum(1 for item in mixed_tuple if isinstance(item, str))
+print(f"Количество строк в кортеже: {string_count}")
+
+# б) Ищем элемент в кортеже кортежей
+nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9), (1, 2, 3))
+element_to_find = 3
+count = 0
+for tup in nested_tuple:
+    count += tup.count(element_to_find)
+print(f"Элемент {element_to_find} встречается {count} раз(а)")
+
+
+
+# 1. Создание множеств и поиск отсутствующих товаров
+print("1. Создание множеств и поиск отсутствующих товаров")
+# а) Создаем множества
+sequence = "A B C D E F X Y Z 1 2 3 + - * /"
+all_chars = set(sequence.split())
+digits = set("0123456789")
+operations = set("+-*/")
+letters_AF = set("ABCDEF")
+letters_XYZ = set("XYZ")
+
+print(f"Все символы: {all_chars}")
+print(f"Цифры в последовательности: {all_chars & digits}")
+print(f"Знаки операций в последовательности: {all_chars & operations}")
+print(f"Буквы A-F в последовательности: {all_chars & letters_AF}")
+print(f"Буквы X-Z в последовательности: {all_chars & letters_XYZ}")
+
+# б) Поиск отсутствующих товаров
+all_products = set(range(1, 21))  # товары с кодами от 1 до 20
+available_products = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19}  # товары в наличии
+missing_products = all_products - available_products
+print(f"Отсутствующие товары: {sorted(missing_products)}")
+print()
+
+# 2. Подсчет цифр и операций, общие элементы
+print("2. Подсчет цифр и операций, общие элементы")
+# а) Подсчет цифр и знаков операций
+user_input = "123 + 456 - 789 * 0"
+digits_set = set("0123456789")
+operations_set = set("+-*/")
+
+digit_count = sum(1 for char in user_input if char in digits_set)
+operation_count = sum(1 for char in user_input if char in operations_set)
+
+print(f"Ввод: '{user_input}'")
+print(f"Количество цифр: {digit_count}")
+print(f"Количество знаков операций: {operation_count}")
+
+# б) Общие элементы двух списков
+list1 = [1, 2, 3, 4, 5, 6]
+list2 = [4, 5, 6, 7, 8, 9]
+common_elements = set(list1) & set(list2)
+print(f"Общие элементы: {sorted(common_elements)}")
+print()
+
+# 3. Латинские буквы и подмножества
+print("3. Латинские буквы и подмножества")
+# а) Строчные латинские буквы и знаки препинания
+user_text = "Hello, world! This is a test."
+lowercase_letters = set("abcdefghijklmnopqrstuvwxyz")
+punctuation = set(".,!?;:-")
+
+text_letters = set(user_text.lower())
+latin_letters = text_letters & lowercase_letters
+punctuation_count = sum(1 for char in user_text if char in punctuation)
+
+print(f"Текст: '{user_text}'")
+print(f"Строчные латинские буквы: {sorted(latin_letters)}")
+print(f"Количество знаков препинания: {punctuation_count}")
+
+# б) Проверка подмножества
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+is_subset = A.issubset(B)
+print(f"A = {A}, B = {B}")
+print(f"A является подмножеством B: {is_subset}")
+print()
+
+# 4. Общие буквы и уникальные предметы
+print("4. Общие буквы и уникальные предметы")
+# а) Общие буквы для трех предложений
+sentence1 = "Python is awesome"
+sentence2 = "Java is powerful"
+sentence3 = "C++ is fast"
+
+letters1 = set(sentence1.lower()) & set("abcdefghijklmnopqrstuvwxyz")
+letters2 = set(sentence2.lower()) & set("abcdefghijklmnopqrstuvwxyz")
+letters3 = set(sentence3.lower()) & set("abcdefghijklmnopqrstuvwxyz")
+
+common_letters = letters1 & letters2 & letters3
+print(f"Общие буквы: {sorted(common_letters)}")
+
+# б) Предметы, изучаемые только в одном университете
+university1_students = {
+    's1': {'math', 'physics', 'chemistry'},
+    's2': {'math', 'biology', 'history'},
+    's3': {'physics', 'chemistry', 'english'}
+}
+
+university2_students = {
+    's4': {'math', 'programming', 'physics'},
+    's5': {'biology', 'history', 'art'},
+    's6': {'programming', 'english', 'music'}
+}
+
+# Все предметы каждого университета
+subjects1 = set()
+for subjects in university1_students.values():
+    subjects1.update(subjects)
+
+subjects2 = set()
+for subjects in university2_students.values():
+    subjects2.update(subjects)
+
+only_university1 = subjects1 - subjects2
+only_university2 = subjects2 - subjects1
+
+print(f"Только в университете 1: {only_university1}")
+print(f"Только в университете 2: {only_university2}")
+print()
+
+# 5. Наибольшая цифра и уникальные элементы
+print("5. Наибольшая цифра и уникальные элементы")
+# а) Наибольшая цифра среди трех чисел
+num1, num2, num3 = 123, 456, 789
+all_digits = set(str(num1) + str(num2) + str(num3))
+max_digit = max(all_digits)
+print(f"Числа: {num1}, {num2}, {num3}")
+print(f"Наибольшая цифра: {max_digit}")
+
+# б) Элементы только в одном множестве
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+unique_to_A = A - B
+unique_to_B = B - A
+only_one = unique_to_A | unique_to_B
+print(f"Элементы только в одном множестве: {sorted(only_one)}")
+print()
+
+# 6. Уникальные цифры и товары одного пользователя
+print("6. Уникальные цифры и товары одного пользователя")
+# а) Уникальные цифры в строке
+text_with_numbers = "Мой номер телефона: 123-45-67, код: 890"
+digits = set("0123456789")
+found_digits = set(char for char in text_with_numbers if char in digits)
+print(f"Текст: '{text_with_numbers}'")
+print(f"Уникальные цифры: {sorted(found_digits)}")
+
+# б) Товары, купленные только одним пользователем
+purchases = {
+    'user1': {'apple', 'banana', 'orange'},
+    'user2': {'banana', 'grape', 'pear'},
+    'user3': {'apple', 'peach', 'plum'},
+    'user4': {'orange', 'grape', 'kiwi'}
+}
+
+# Считаем количество покупок каждого товара
+from collections import defaultdict
+product_count = defaultdict(int)
+for products in purchases.values():
+    for product in products:
+        product_count[product] += 1
+
+# Товары, купленные только одним пользователем
+unique_products = {product for product, count in product_count.items() if count == 1}
+print(f"Товары, купленные только одним пользователем: {unique_products}")
+print()
+
+# 7. Уникальные буквы и непересекающиеся множества
+print("7. Уникальные буквы и непересекающиеся множества")
+# а) Уникальные буквы для трех предложений
+text1 = "Quick brown fox"
+text2 = "Jumps over dog"
+text3 = "Lazy fox sleeps"
+
+unique1 = set(text1.lower()) - set(text2.lower()) - set(text3.lower())
+unique2 = set(text2.lower()) - set(text1.lower()) - set(text3.lower())
+unique3 = set(text3.lower()) - set(text1.lower()) - set(text2.lower())
+
+all_unique = (unique1 | unique2 | unique3) & set("abcdefghijklmnopqrstuvwxyz")
+print(f"Уникальные буквы: {sorted(all_unique)}")
+
+# б) Проверка непересекающихся множеств
+A = {1, 2, 3}
+B = {4, 5, 6}
+C = {3, 4, 5}
+
+print(f"A и B непересекаются: {A.isdisjoint(B)}")
+print(f"A и C непересекаются: {A.isdisjoint(C)}")
+print()
+
+# 8. Составление строки и уникальные навыки
+print("8. Составление строки и уникальные навыки")
+# а) Можно ли составить третью строку из символов первых двух
+str1 = "hello world"
+str2 = "python programming"
+str3 = "hello python"
+
+chars_available = set(str1 + str2)
+chars_needed = set(str3)
+
+can_form = chars_needed.issubset(chars_available)
+print(f"Можно составить '{str3}' из символов '{str1}' и '{str2}': {can_form}")
+
+# б) Навыки только у одного сотрудника
+employees = {
+    'emp1': {'python', 'java', 'sql'},
+    'emp2': {'java', 'javascript', 'html'},
+    'emp3': {'python', 'c++', 'css'},
+    'emp4': {'sql', 'html', 'css'}
+}
+
+# Считаем количество сотрудников с каждым навыком
+skill_count = defaultdict(int)
+for skills in employees.values():
+    for skill in skills:
+        skill_count[skill] += 1
+
+# Навыки только у одного сотрудника
+unique_skills = {skill for skill, count in skill_count.items() if count == 1}
+print(f"Навыки только у одного сотрудника: {unique_skills}")
+print()
+
+# 9. Русские гласные и уникальные категории
+print("9. Русские гласные и уникальные категории")
+# а) Уникальные русские гласные
+russian_text = "Привет, как дела? Это тестовый текст."
+russian_vowels = set("аеёиоуыэюя")
+text_vowels = set(char.lower() for char in russian_text if char.lower() in russian_vowels)
+print(f"Текст: '{russian_text}'")
+print(f"Уникальные гласные: {sorted(text_vowels)}")
+
+# б) Категории с только одним продуктом
+products = {
+    'p1': {'electronics', 'computers'},
+    'p2': {'electronics', 'phones'},
+    'p3': {'books', 'fiction'},
+    'p4': {'books', 'non-fiction'},
+    'p5': {'clothing', 'shirts'}
+}
+
+# Считаем количество продуктов в каждой категории
+category_count = defaultdict(int)
+for categories in products.values():
+    for category in categories:
+        category_count[category] += 1
+
+# Категории с только одним продуктом
+unique_categories = {category for category, count in category_count.items() if count == 1}
+print(f"Категории с одним продуктом: {unique_categories}")
+print()
+
+# 10. Уникальные цифры числа и строгое подмножество
+print("10. Уникальные цифры числа и строгое подмножество")
+# а) Уникальные цифры числа
+number = 1234554321
+unique_digits = set(str(number))
+print(f"Число: {number}")
+print(f"Уникальные цифры: {sorted(unique_digits)}")
+
+# б) Строгое подмножество
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+C = {1, 2, 3}
+
+is_strict_subset_AB = A.issubset(B) and A != B
+is_strict_subset_AC = A.issubset(C) and A != C
+
+print(f"A строгое подмножество B: {is_strict_subset_AB}")
+print(f"A строгое подмножество C: {is_strict_subset_AC}")
+print()
+
+# 11. Гласные vs согласные и товары за день
+print("11. Гласные vs согласные и товары за день")
+# а) Гласные vs согласные
+text = "Programming is fun and challenging"
+vowels = set("aeiou")
+consonants = set("bcdfghjklmnpqrstvwxyz")
+
+text_lower = text.lower()
+text_vowels = set(char for char in text_lower if char in vowels)
+text_consonants = set(char for char in text_lower if char in consonants)
+
+print(f"Текст: '{text}'")
+print(f"Гласных букв: {len(text_vowels)}")
+print(f"Согласных букв: {len(text_consonants)}")
+print(f"Больше гласных: {len(text_vowels) > len(text_consonants)}")
+
+# б) Товары, заказанные только в определенный день
+orders_day1 = {
+    'order1': {'apple', 'banana', 'orange'},
+    'order2': {'banana', 'grape', 'milk'},
+    'order3': {'bread', 'butter', 'milk'}
+}
+
+orders_day2 = {
+    'order4': {'apple', 'peach', 'yogurt'},
+    'order5': {'banana', 'grape', 'cheese'},
+    'order6': {'bread', 'milk', 'eggs'}
+}
+
+# Все товары каждого дня
+day1_products = set()
+for products in orders_day1.values():
+    day1_products.update(products)
+
+day2_products = set()
+for products in orders_day2.values():
+    day2_products.update(products)
+
+only_day1 = day1_products - day2_products
+only_day2 = day2_products - day1_products
+
+print(f"Только в день 1: {only_day1}")
+print(f"Только в день 2: {only_day2}")
+print()
+
+# 12. Отсутствующие цифры и надмножество
+print("12. Отсутствующие цифры и надмножество")
+# а) Цифры, не встречающиеся в числе
+number = 13579
+all_digits = set("0123456789")
+number_digits = set(str(number))
+missing_digits = all_digits - number_digits
+print(f"Число: {number}")
+print(f"Отсутствующие цифры: {sorted(missing_digits)}")
+
+# б) Проверка надмножества
+A = {1, 2, 3, 4, 5}
+B = {2, 3, 4}
+C = {1, 2, 6}
+
+is_superset_AB = A.issuperset(B)
+is_superset_AC = A.issuperset(C)
+
+print(f"A надмножество B: {is_superset_AB}")
+print(f"A надмножество C: {is_superset_AC}")
+print()
+
+# 13. Удаление пересекающихся элементов и популярные товары
+print("13. Удаление пересекающихся элементов и популярные товары")
+# а) Удаление пересекающихся элементов
+A = {1, 2, 3, 4, 5, 6}
+B = {4, 5, 6, 7, 8, 9}
+A_no_intersection = A - B
+print(f"A до: {A}")
+print(f"A после удаления пересечения с B: {A_no_intersection}")
+
+# б) Товары, купленные хотя бы одним пользователем
+all_purchased = set()
+for products in purchases.values():
+    all_purchased.update(products)
+print(f"Все купленные товары: {all_purchased}")
+print()
+
+# 14. Отсутствующие согласные и равенство множеств
+print("14. Отсутствующие согласные и равенство множеств")
+# а) Согласные, не встречающиеся в тексте
+text = "Hello world, this is a test!"
+english_consonants = set("bcdfghjklmnpqrstvwxyz")
+text_consonants = set(char.lower() for char in text if char.lower() in english_consonants)
+missing_consonants = english_consonants - text_consonants
+print(f"Текст: '{text}'")
+print(f"Отсутствующие согласные: {sorted(missing_consonants)}")
+
+# б) Проверка равенства множеств
+A = {1, 2, 3}
+B = {3, 2, 1}
+C = {1, 2, 4}
+
+print(f"A равно B: {A == B}")
+print(f"A равно C: {A == C}")
+print()
+
+# 15. Общие элементы и общие предметы
+print("15. Общие элементы и общие предметы")
+# а) Проверка общих элементов
+X = {1, 2, 3, 4}
+Y = {3, 4, 5, 6}
+Z = {7, 8, 9}
+
+print(f"X и Y имеют общие элементы: {not X.isdisjoint(Y)}")
+print(f"X и Z имеют общие элементы: {not X.isdisjoint(Z)}")
+
+# б) Предметы, изучаемые в обоих университетах
+common_subjects = subjects1 & subjects2
+print(f"Предметы, изучаемые в обоих университетах: {common_subjects}")
