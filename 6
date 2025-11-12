@@ -1,0 +1,248 @@
+import math
+# 1. Среднее арифметическое элементов с номерами от K до L
+print("1. Среднее арифметическое элементов с номерами от K до L")
+numbers = [10, 20, 30, 40, 50, 60, 70]
+K = 2
+L = 5
+print(f"Список: {numbers}")
+print(f"K = {K}, L = {L}")
+
+selected_numbers = numbers[K-1:L]  # K-1 потому что индексы с 0
+average = sum(selected_numbers) / len(selected_numbers)
+print(f"Элементы с {K} по {L}: {selected_numbers}")
+print(f"Среднее арифметическое: {average:.2f}")
+print()
+
+# 2. Сумма всех элементов, кроме элементов с K по L
+print("2. Сумма всех элементов, кроме элементов с K по L")
+numbers = [10, 20, 30, 40, 50, 60, 70]
+K = 3
+L = 5
+print(f"Список: {numbers}")
+print(f"K = {K}, L = {L}")
+
+# Берем элементы до K и после L
+sum_total = sum(numbers[:K-1]) + sum(numbers[L:])
+print(f"Элементы кроме {K}-{L}: {numbers[:K-1]} + {numbers[L:]}")
+print(f"Сумма: {sum_total}")
+print()
+
+# 3. Среднее арифметическое всех элементов, кроме элементов с K по L
+print("3. Среднее арифметическое всех элементов, кроме элементов с K по L")
+numbers = [10, 20, 30, 40, 50, 60, 70]
+K = 2
+L = 4
+print(f"Список: {numbers}")
+print(f"K = {K}, L = {L}")
+
+remaining_numbers = numbers[:K-1] + numbers[L:]
+average = sum(remaining_numbers) / len(remaining_numbers)
+print(f"Элементы кроме {K}-{L}: {remaining_numbers}")
+print(f"Среднее арифметическое: {average:.2f}")
+print()
+
+# 4. Четные числа по возрастанию индексов, нечетные по убыванию
+print("4. Четные и нечетные числа в разном порядке")
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+print(f"Список: {numbers}")
+
+even_numbers = []
+odd_numbers = []
+
+for i, num in enumerate(numbers):
+    if num % 2 == 0:
+        even_numbers.append(num)
+    else:
+        odd_numbers.append(num)
+
+print("Четные числа (по возрастанию индексов):", even_numbers)
+print("Нечетные числа (по убыванию индексов):", odd_numbers[::-1])
+print()
+
+# 5. Элементы с четными и нечетными номерами
+print("5. Элементы с четными и нечетными номерами")
+numbers = [10, 20, 30, 40, 50, 60, 70, 80]
+print(f"Список: {numbers}")
+
+even_index = []
+odd_index = []
+
+for i in range(len(numbers)):
+    if (i + 1) % 2 == 0:  # i+1 потому что номера с 1
+        even_index.append(numbers[i])
+    else:
+        odd_index.append(numbers[i])
+
+print("Элементы с четными номерами:", even_index)
+print("Элементы с нечетными номерами:", odd_index)
+print()
+
+# 6. Произведение элементов справа от максимального
+print("6. Произведение элементов справа от максимального")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Список: {numbers}")
+
+max_index = numbers.index(max(numbers))
+print(f"Максимальный элемент: {numbers[max_index]} на позиции {max_index + 1}")
+
+if max_index < len(numbers) - 1:
+    right_elements = numbers[max_index + 1:]
+    product = math.prod(right_elements)
+    print(f"Элементы справа: {right_elements}")
+    print(f"Произведение: {product}")
+else:
+    print("Максимальный элемент последний, справа элементов нет")
+print()
+
+# 7. Сумма между минимальным и максимальным элементами
+print("7. Сумма между минимальным и максимальным элементами")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Список: {numbers}")
+
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+
+start = min(min_index, max_index)
+end = max(min_index, max_index)
+
+between_elements = numbers[start:end + 1]
+total_sum = sum(between_elements)
+
+print(f"Минимальный: {numbers[min_index]}, максимальный: {numbers[max_index]}")
+print(f"Элементы между ними: {between_elements}")
+print(f"Сумма: {total_sum}")
+print()
+
+# 8. Обнулить элементы между минимальным и максимальным
+print("8. Обнулить элементы между минимальным и максимальным")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Исходный список: {numbers}")
+
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+
+start = min(min_index, max_index) + 1
+end = max(min_index, max_index)
+
+for i in range(start, end):
+    numbers[i] = 0
+
+print(f"После обнуления: {numbers}")
+print()
+
+# 9. Увеличить четные числа на заданное число
+print("9. Увеличить четные числа на заданное число")
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+increase_by = 10
+print(f"Исходный список: {numbers}")
+print(f"Увеличиваем на: {increase_by}")
+
+has_even = False
+for i in range(len(numbers)):
+    if numbers[i] % 2 == 0:
+        numbers[i] += increase_by
+        has_even = True
+
+if has_even:
+    print(f"После увеличения: {numbers}")
+else:
+    print("Четных чисел нет, список без изменений")
+print()
+
+# 10. Обнулить нечетные числа
+print("10. Обнулить нечетные числа")
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+print(f"Исходный список: {numbers}")
+
+has_odd = False
+for i in range(len(numbers)):
+    if numbers[i] % 2 == 1:
+        numbers[i] = 0
+        has_odd = True
+
+if has_odd:
+    print(f"После обнуления: {numbers}")
+else:
+    print("Нечетных чисел нет, список без изменений")
+print()
+
+# 11. Минимальный элемент с четными номерами
+print("11. Минимальный элемент с четными номерами")
+numbers = [10, 5, 8, 3, 12, 7, 9, 4]
+print(f"Список: {numbers}")
+
+even_index_numbers = []
+for i in range(1, len(numbers), 2):  # индексы 1, 3, 5... (номера 2, 4, 6...)
+    even_index_numbers.append(numbers[i])
+
+if even_index_numbers:
+    min_even = min(even_index_numbers)
+    print(f"Элементы с четными номерами: {even_index_numbers}")
+    print(f"Минимальный: {min_even}")
+else:
+    print("Нет элементов с четными номерами")
+print()
+
+# 12. Элементы больше правого соседа
+print("12. Элементы больше правого соседа")
+numbers = [5, 3, 8, 6, 4, 9, 2, 7]
+print(f"Список: {numbers}")
+
+greater_indices = []
+count = 0
+
+for i in range(len(numbers) - 1):
+    if numbers[i] > numbers[i + 1]:
+        greater_indices.append(i + 1)  # +1 для номера (не индекса)
+        count += 1
+
+print(f"Номера элементов больше правого соседа: {greater_indices}")
+print(f"Количество таких элементов: {count}")
+print()
+
+# 13. Два соседних элемента с максимальной суммой
+print("13. Два соседних элемента с максимальной суммой")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Список: {numbers}")
+
+max_sum = 0
+max_pair = (0, 0)
+
+for i in range(len(numbers) - 1):
+    current_sum = numbers[i] + numbers[i + 1]
+    if current_sum > max_sum:
+        max_sum = current_sum
+        max_pair = (numbers[i], numbers[i + 1])
+
+print(f"Пара с максимальной суммой: {max_pair}")
+print(f"Их сумма: {max_sum}")
+print()
+
+# 14. Поменять местами минимальный и максимальный элементы
+print("14. Поменять местами минимальный и максимальный элементы")
+numbers = [3, 7, 2, 9, 5, 4, 8]
+print(f"Исходный список: {numbers}")
+
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+
+numbers[min_index], numbers[max_index] = numbers[max_index], numbers[min_index]
+
+print(f"После замены: {numbers}")
+print(f"Поменяли местами элементы на позициях {min_index + 1} и {max_index + 1}")
+print()
+
+# 15. Список где каждый следующий равен сумме предыдущих
+print("15. Список где каждый следующий равен сумме предыдущих")
+N = 6
+A = 2
+B = 3
+print(f"N = {N}, A = {A}, B = {B}")
+
+result = [A, B]
+for i in range(2, N):
+    next_element = sum(result)
+    result.append(next_element)
+
+print(f"Полученный список: {result}")
+print()
