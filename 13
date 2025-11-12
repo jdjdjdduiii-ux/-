@@ -1,0 +1,376 @@
+# 1. Создание множеств и поиск отсутствующих товаров
+print("1. Создание множеств и поиск отсутствующих товаров")
+# а) Создаем множества
+sequence = "A B C D E F X Y Z 1 2 3 + - * /"
+all_chars = set(sequence.split())
+digits = set("0123456789")
+operations = set("+-*/")
+letters_AF = set("ABCDEF")
+letters_XYZ = set("XYZ")
+
+print(f"Все символы: {all_chars}")
+print(f"Цифры в последовательности: {all_chars & digits}")
+print(f"Знаки операций в последовательности: {all_chars & operations}")
+print(f"Буквы A-F в последовательности: {all_chars & letters_AF}")
+print(f"Буквы X-Z в последовательности: {all_chars & letters_XYZ}")
+
+# б) Поиск отсутствующих товаров
+all_products = set(range(1, 21))  # товары с кодами от 1 до 20
+available_products = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19}  # товары в наличии
+missing_products = all_products - available_products
+print(f"Отсутствующие товары: {sorted(missing_products)}")
+print()
+
+# 2. Подсчет цифр и операций, общие элементы
+print("2. Подсчет цифр и операций, общие элементы")
+# а) Подсчет цифр и знаков операций
+user_input = "123 + 456 - 789 * 0"
+digits_set = set("0123456789")
+operations_set = set("+-*/")
+
+digit_count = sum(1 for char in user_input if char in digits_set)
+operation_count = sum(1 for char in user_input if char in operations_set)
+
+print(f"Ввод: '{user_input}'")
+print(f"Количество цифр: {digit_count}")
+print(f"Количество знаков операций: {operation_count}")
+
+# б) Общие элементы двух списков
+list1 = [1, 2, 3, 4, 5, 6]
+list2 = [4, 5, 6, 7, 8, 9]
+common_elements = set(list1) & set(list2)
+print(f"Общие элементы: {sorted(common_elements)}")
+print()
+
+# 3. Латинские буквы и подмножества
+print("3. Латинские буквы и подмножества")
+# а) Строчные латинские буквы и знаки препинания
+user_text = "Hello, world! This is a test."
+lowercase_letters = set("abcdefghijklmnopqrstuvwxyz")
+punctuation = set(".,!?;:-")
+
+text_letters = set(user_text.lower())
+latin_letters = text_letters & lowercase_letters
+punctuation_count = sum(1 for char in user_text if char in punctuation)
+
+print(f"Текст: '{user_text}'")
+print(f"Строчные латинские буквы: {sorted(latin_letters)}")
+print(f"Количество знаков препинания: {punctuation_count}")
+
+# б) Проверка подмножества
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+is_subset = A.issubset(B)
+print(f"A = {A}, B = {B}")
+print(f"A является подмножеством B: {is_subset}")
+print()
+
+# 4. Общие буквы и уникальные предметы
+print("4. Общие буквы и уникальные предметы")
+# а) Общие буквы для трех предложений
+sentence1 = "Python is awesome"
+sentence2 = "Java is powerful"
+sentence3 = "C++ is fast"
+
+letters1 = set(sentence1.lower()) & set("abcdefghijklmnopqrstuvwxyz")
+letters2 = set(sentence2.lower()) & set("abcdefghijklmnopqrstuvwxyz")
+letters3 = set(sentence3.lower()) & set("abcdefghijklmnopqrstuvwxyz")
+
+common_letters = letters1 & letters2 & letters3
+print(f"Общие буквы: {sorted(common_letters)}")
+
+# б) Предметы, изучаемые только в одном университете
+university1_students = {
+    's1': {'math', 'physics', 'chemistry'},
+    's2': {'math', 'biology', 'history'},
+    's3': {'physics', 'chemistry', 'english'}
+}
+
+university2_students = {
+    's4': {'math', 'programming', 'physics'},
+    's5': {'biology', 'history', 'art'},
+    's6': {'programming', 'english', 'music'}
+}
+
+# Все предметы каждого университета
+subjects1 = set()
+for subjects in university1_students.values():
+    subjects1.update(subjects)
+
+subjects2 = set()
+for subjects in university2_students.values():
+    subjects2.update(subjects)
+
+only_university1 = subjects1 - subjects2
+only_university2 = subjects2 - subjects1
+
+print(f"Только в университете 1: {only_university1}")
+print(f"Только в университете 2: {only_university2}")
+print()
+
+# 5. Наибольшая цифра и уникальные элементы
+print("5. Наибольшая цифра и уникальные элементы")
+# а) Наибольшая цифра среди трех чисел
+num1, num2, num3 = 123, 456, 789
+all_digits = set(str(num1) + str(num2) + str(num3))
+max_digit = max(all_digits)
+print(f"Числа: {num1}, {num2}, {num3}")
+print(f"Наибольшая цифра: {max_digit}")
+
+# б) Элементы только в одном множестве
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+unique_to_A = A - B
+unique_to_B = B - A
+only_one = unique_to_A | unique_to_B
+print(f"Элементы только в одном множестве: {sorted(only_one)}")
+print()
+
+# 6. Уникальные цифры и товары одного пользователя
+print("6. Уникальные цифры и товары одного пользователя")
+# а) Уникальные цифры в строке
+text_with_numbers = "Мой номер телефона: 123-45-67, код: 890"
+digits = set("0123456789")
+found_digits = set(char for char in text_with_numbers if char in digits)
+print(f"Текст: '{text_with_numbers}'")
+print(f"Уникальные цифры: {sorted(found_digits)}")
+
+# б) Товары, купленные только одним пользователем
+purchases = {
+    'user1': {'apple', 'banana', 'orange'},
+    'user2': {'banana', 'grape', 'pear'},
+    'user3': {'apple', 'peach', 'plum'},
+    'user4': {'orange', 'grape', 'kiwi'}
+}
+
+# Считаем количество покупок каждого товара
+from collections import defaultdict
+product_count = defaultdict(int)
+for products in purchases.values():
+    for product in products:
+        product_count[product] += 1
+
+# Товары, купленные только одним пользователем
+unique_products = {product for product, count in product_count.items() if count == 1}
+print(f"Товары, купленные только одним пользователем: {unique_products}")
+print()
+
+# 7. Уникальные буквы и непересекающиеся множества
+print("7. Уникальные буквы и непересекающиеся множества")
+# а) Уникальные буквы для трех предложений
+text1 = "Quick brown fox"
+text2 = "Jumps over dog"
+text3 = "Lazy fox sleeps"
+
+unique1 = set(text1.lower()) - set(text2.lower()) - set(text3.lower())
+unique2 = set(text2.lower()) - set(text1.lower()) - set(text3.lower())
+unique3 = set(text3.lower()) - set(text1.lower()) - set(text2.lower())
+
+all_unique = (unique1 | unique2 | unique3) & set("abcdefghijklmnopqrstuvwxyz")
+print(f"Уникальные буквы: {sorted(all_unique)}")
+
+# б) Проверка непересекающихся множеств
+A = {1, 2, 3}
+B = {4, 5, 6}
+C = {3, 4, 5}
+
+print(f"A и B непересекаются: {A.isdisjoint(B)}")
+print(f"A и C непересекаются: {A.isdisjoint(C)}")
+print()
+
+# 8. Составление строки и уникальные навыки
+print("8. Составление строки и уникальные навыки")
+# а) Можно ли составить третью строку из символов первых двух
+str1 = "hello world"
+str2 = "python programming"
+str3 = "hello python"
+
+chars_available = set(str1 + str2)
+chars_needed = set(str3)
+
+can_form = chars_needed.issubset(chars_available)
+print(f"Можно составить '{str3}' из символов '{str1}' и '{str2}': {can_form}")
+
+# б) Навыки только у одного сотрудника
+employees = {
+    'emp1': {'python', 'java', 'sql'},
+    'emp2': {'java', 'javascript', 'html'},
+    'emp3': {'python', 'c++', 'css'},
+    'emp4': {'sql', 'html', 'css'}
+}
+
+# Считаем количество сотрудников с каждым навыком
+skill_count = defaultdict(int)
+for skills in employees.values():
+    for skill in skills:
+        skill_count[skill] += 1
+
+# Навыки только у одного сотрудника
+unique_skills = {skill for skill, count in skill_count.items() if count == 1}
+print(f"Навыки только у одного сотрудника: {unique_skills}")
+print()
+
+# 9. Русские гласные и уникальные категории
+print("9. Русские гласные и уникальные категории")
+# а) Уникальные русские гласные
+russian_text = "Привет, как дела? Это тестовый текст."
+russian_vowels = set("аеёиоуыэюя")
+text_vowels = set(char.lower() for char in russian_text if char.lower() in russian_vowels)
+print(f"Текст: '{russian_text}'")
+print(f"Уникальные гласные: {sorted(text_vowels)}")
+
+# б) Категории с только одним продуктом
+products = {
+    'p1': {'electronics', 'computers'},
+    'p2': {'electronics', 'phones'},
+    'p3': {'books', 'fiction'},
+    'p4': {'books', 'non-fiction'},
+    'p5': {'clothing', 'shirts'}
+}
+
+# Считаем количество продуктов в каждой категории
+category_count = defaultdict(int)
+for categories in products.values():
+    for category in categories:
+        category_count[category] += 1
+
+# Категории с только одним продуктом
+unique_categories = {category for category, count in category_count.items() if count == 1}
+print(f"Категории с одним продуктом: {unique_categories}")
+print()
+
+# 10. Уникальные цифры числа и строгое подмножество
+print("10. Уникальные цифры числа и строгое подмножество")
+# а) Уникальные цифры числа
+number = 1234554321
+unique_digits = set(str(number))
+print(f"Число: {number}")
+print(f"Уникальные цифры: {sorted(unique_digits)}")
+
+# б) Строгое подмножество
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+C = {1, 2, 3}
+
+is_strict_subset_AB = A.issubset(B) and A != B
+is_strict_subset_AC = A.issubset(C) and A != C
+
+print(f"A строгое подмножество B: {is_strict_subset_AB}")
+print(f"A строгое подмножество C: {is_strict_subset_AC}")
+print()
+
+# 11. Гласные vs согласные и товары за день
+print("11. Гласные vs согласные и товары за день")
+# а) Гласные vs согласные
+text = "Programming is fun and challenging"
+vowels = set("aeiou")
+consonants = set("bcdfghjklmnpqrstvwxyz")
+
+text_lower = text.lower()
+text_vowels = set(char for char in text_lower if char in vowels)
+text_consonants = set(char for char in text_lower if char in consonants)
+
+print(f"Текст: '{text}'")
+print(f"Гласных букв: {len(text_vowels)}")
+print(f"Согласных букв: {len(text_consonants)}")
+print(f"Больше гласных: {len(text_vowels) > len(text_consonants)}")
+
+# б) Товары, заказанные только в определенный день
+orders_day1 = {
+    'order1': {'apple', 'banana', 'orange'},
+    'order2': {'banana', 'grape', 'milk'},
+    'order3': {'bread', 'butter', 'milk'}
+}
+
+orders_day2 = {
+    'order4': {'apple', 'peach', 'yogurt'},
+    'order5': {'banana', 'grape', 'cheese'},
+    'order6': {'bread', 'milk', 'eggs'}
+}
+
+# Все товары каждого дня
+day1_products = set()
+for products in orders_day1.values():
+    day1_products.update(products)
+
+day2_products = set()
+for products in orders_day2.values():
+    day2_products.update(products)
+
+only_day1 = day1_products - day2_products
+only_day2 = day2_products - day1_products
+
+print(f"Только в день 1: {only_day1}")
+print(f"Только в день 2: {only_day2}")
+print()
+
+# 12. Отсутствующие цифры и надмножество
+print("12. Отсутствующие цифры и надмножество")
+# а) Цифры, не встречающиеся в числе
+number = 13579
+all_digits = set("0123456789")
+number_digits = set(str(number))
+missing_digits = all_digits - number_digits
+print(f"Число: {number}")
+print(f"Отсутствующие цифры: {sorted(missing_digits)}")
+
+# б) Проверка надмножества
+A = {1, 2, 3, 4, 5}
+B = {2, 3, 4}
+C = {1, 2, 6}
+
+is_superset_AB = A.issuperset(B)
+is_superset_AC = A.issuperset(C)
+
+print(f"A надмножество B: {is_superset_AB}")
+print(f"A надмножество C: {is_superset_AC}")
+print()
+
+# 13. Удаление пересекающихся элементов и популярные товары
+print("13. Удаление пересекающихся элементов и популярные товары")
+# а) Удаление пересекающихся элементов
+A = {1, 2, 3, 4, 5, 6}
+B = {4, 5, 6, 7, 8, 9}
+A_no_intersection = A - B
+print(f"A до: {A}")
+print(f"A после удаления пересечения с B: {A_no_intersection}")
+
+# б) Товары, купленные хотя бы одним пользователем
+all_purchased = set()
+for products in purchases.values():
+    all_purchased.update(products)
+print(f"Все купленные товары: {all_purchased}")
+print()
+
+# 14. Отсутствующие согласные и равенство множеств
+print("14. Отсутствующие согласные и равенство множеств")
+# а) Согласные, не встречающиеся в тексте
+text = "Hello world, this is a test!"
+english_consonants = set("bcdfghjklmnpqrstvwxyz")
+text_consonants = set(char.lower() for char in text if char.lower() in english_consonants)
+missing_consonants = english_consonants - text_consonants
+print(f"Текст: '{text}'")
+print(f"Отсутствующие согласные: {sorted(missing_consonants)}")
+
+# б) Проверка равенства множеств
+A = {1, 2, 3}
+B = {3, 2, 1}
+C = {1, 2, 4}
+
+print(f"A равно B: {A == B}")
+print(f"A равно C: {A == C}")
+print()
+
+# 15. Общие элементы и общие предметы
+print("15. Общие элементы и общие предметы")
+# а) Проверка общих элементов
+X = {1, 2, 3, 4}
+Y = {3, 4, 5, 6}
+Z = {7, 8, 9}
+
+print(f"X и Y имеют общие элементы: {not X.isdisjoint(Y)}")
+print(f"X и Z имеют общие элементы: {not X.isdisjoint(Z)}")
+
+# б) Предметы, изучаемые в обоих университетах
+common_subjects = subjects1 & subjects2
+print(f"Предметы, изучаемые в обоих университетах: {common_subjects}")
