@@ -1,0 +1,189 @@
+import math
+# 1. Сумма 1/2 + 1/2² + 1/2³ + ... + 1/2ⁿ
+print("1. Сумма: 1/2 + 1/2² + 1/2³ + ... + 1/2ⁿ")
+n = 5
+total = 0
+for i in range(1, n + 1):
+    term = 1 / (2 ** i)
+    total += term
+    print(f"1/2^{i} = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 2. Сумма: cos(x)/1 + cos(2x)/2 + ... + cos(nx)/n
+print("2. Сумма: cos(x)/1 + cos(2x)/2 + ... + cos(nx)/n")
+n = 4
+x = math.pi / 4
+total = 0
+for i in range(1, n + 1):
+    term = math.cos(i * x) / i
+    total += term
+    print(f"cos({i}*π/4)/{i} = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 3. Сумма: 1 - 3 + 3² - 3³ + ... + (-1)ⁿ·3ⁿ
+print("3. Сумма: 1 - 3 + 3² - 3³ + ... + (-1)ⁿ·3ⁿ")
+n = 4
+total = 0
+for i in range(n + 1):
+    term = ((-1) ** i) * (3 ** i)
+    total += term
+    print(f"{' - ' if i % 2 == 1 and i > 0 else ' + ' if i > 0 else ''}{3 ** i}", end="")
+print(f" = {total}")
+print()
+
+# 4. Сумма: 1/sin(1) + 1/sin(2) + ... + 1/sin(n)
+print("4. Сумма: 1/sin(1) + 1/sin(2) + ... + 1/sin(n)")
+n = 3
+total = 0
+for i in range(1, n + 1):
+    term = 1 / math.sin(i)
+    total += term
+    print(f"1/sin({i}) = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 5. Сумма: 1 - 2³ + 3³ - ... + (-1)ⁿ⁺¹·n³
+print("5. Сумма: 1 - 2³ + 3³ - ... + (-1)ⁿ⁺¹·n³")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    term = ((-1) ** (i + 1)) * (i ** 3)
+    total += term
+    sign = "+" if ((-1) ** (i + 1)) > 0 else "-"
+    print(f"{sign} {i}³", end=" ")
+print(f"= {total}")
+print()
+
+# 6. Сумма: cos(1) - cos(2) + cos(3) - ... + (-1)ⁿ⁺¹·cos(n)
+print("6. Сумма: cos(1) - cos(2) + cos(3) - ... + (-1)ⁿ⁺¹·cos(n)")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    term = ((-1) ** (i + 1)) * math.cos(i)
+    total += term
+    sign = "+" if ((-1) ** (i + 1)) > 0 else "-"
+    print(f"{sign} cos({i})", end=" ")
+print(f"= {total:.4f}")
+print()
+
+# 7. Сумма: x - x²/2 + x³/3 - ... + (-1)ⁿ⁻¹·xⁿ/n
+print("7. Сумма: x - x²/2 + x³/3 - ... + (-1)ⁿ⁻¹·xⁿ/n")
+n = 5
+x = 0.5
+total = 0
+for i in range(1, n + 1):
+    term = ((-1) ** (i - 1)) * (x ** i) / i
+    total += term
+    print(f"{' - ' if i % 2 == 0 and i > 1 else ' + ' if i > 1 else ''}{x}^{i}/{i}", end="")
+print(f" = {total:.4f}")
+print()
+
+# 8. Сумма: 1! - 2! + 3! - ... + (-1)ⁿ⁺¹·n!
+print("8. Сумма: 1! - 2! + 3! - ... + (-1)ⁿ⁺¹·n!")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    factorial = math.factorial(i)
+    term = ((-1) ** (i + 1)) * factorial
+    total += term
+    sign = "+" if ((-1) ** (i + 1)) > 0 else "-"
+    print(f"{sign} {i}!", end=" ")
+print(f"= {total}")
+print()
+
+# 9. Сумма: sin(x) + sin(x²) + sin(x³) + ... + sin(xⁿ)
+print("9. Сумма: sin(x) + sin(x²) + sin(x³) + ... + sin(xⁿ)")
+n = 4
+x = math.pi / 6
+total = 0
+for i in range(1, n + 1):
+    term = math.sin(x ** i)
+    total += term
+    print(f"sin((π/6)^{i}) = {term:.4f}")
+print(f"Общая сумма: {total:.4f}")
+print()
+
+# 10. Сумма: 1 + 1/2! + 1/3! + ... + 1/n!
+print("10. Сумма: 1 + 1/2! + 1/3! + ... + 1/n!")
+n = 5
+total = 0
+for i in range(1, n + 1):
+    term = 1 / math.factorial(i)
+    total += term
+    print(f"1/{i}! = {term:.6f}")
+print(f"Общая сумма: {total:.6f}")
+print()
+
+# 11. Сумма: n² + (n+1)² + (n+2)² + ... + (2n)²
+print("11. Сумма: n² + (n+1)² + (n+2)² + ... + (2n)²")
+n = 3
+total = 0
+for i in range(n, 2 * n + 1):
+    term = i ** 2
+    total += term
+    print(f"{i}²", end=" + " if i < 2 * n else "")
+print(f" = {total}")
+print()
+
+# 12. Сумма: 1! + 2! + 3! + ... + n!
+print("12. Сумма: 1! + 2! + 3! + ... + n!")
+n = 4
+total = 0
+for i in range(1, n + 1):
+    factorial = math.factorial(i)
+    total += factorial
+    print(f"{i}!", end=" + " if i < n else "")
+print(f" = {total}")
+print()
+
+# 13. Сумма: 1 + x + x²/2! + x³/3! + ... + xⁿ/n!
+print("13. Сумма: 1 + x + x²/2! + x³/3! + ... + xⁿ/n!")
+n = 4
+x = 1
+total = 0
+for i in range(n + 1):
+    if i == 0:
+        term = 1
+    else:
+        term = (x ** i) / math.factorial(i)
+    total += term
+    if i == 0:
+        print("1", end="")
+    else:
+        print(f" + {x}^{i}/{i}!", end="")
+print(f" = {total:.4f}")
+print()
+
+# 14. Сумма: 1 - x + x² - x³ + ... + (-1)ⁿ·xⁿ
+print("14. Сумма: 1 - x + x² - x³ + ... + (-1)ⁿ·xⁿ")
+n = 4
+x = 0.5
+total = 0
+for i in range(n + 1):
+    term = ((-1) ** i) * (x ** i)
+    total += term
+    if i == 0:
+        print("1", end="")
+    else:
+        sign = " - " if i % 2 == 1 else " + "
+        print(f"{sign}{x}^{i}", end="")
+print(f" = {total:.4f}")
+print()
+
+# 15. Сумма: x - x³/3 + x⁵/5 - ... + (-1)ⁿ·x²ⁿ⁺¹/(2n+1)
+print("15. Сумма: x - x³/3 + x⁵/5 - ... + (-1)ⁿ·x²ⁿ⁺¹/(2n+1)")
+n = 4
+x = 0.5
+total = 0
+for i in range(n + 1):
+    term = ((-1) ** i) * (x ** (2 * i + 1)) / (2 * i + 1)
+    total += term
+    if i == 0:
+        print(f"{x}", end="")
+    else:
+        sign = " - " if i % 2 == 1 else " + "
+        print(f"{sign}{x}^{2*i+1}/{2*i+1}", end="")
+print(f" = {total:.6f}")
+print()
