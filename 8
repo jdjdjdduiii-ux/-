@@ -1,0 +1,379 @@
+import copy
+# 1. Найти номер первого столбца с только нечетными числами
+print("1. Найти номер первого столбца с только нечетными числами")
+matrix = [
+    [1, 2, 3, 5],
+    [3, 4, 7, 9],
+    [5, 6, 9, 1]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+found_column = 0
+for j in range(len(matrix[0])):
+    all_odd = True
+    for i in range(len(matrix)):
+        if matrix[i][j] % 2 == 0:
+            all_odd = False
+            break
+    if all_odd:
+        found_column = j + 1
+        break
+
+print(f"Первый столбец с только нечетными числами: {found_column}")
+print()
+
+# 2. Поменять местами min и max в каждой строке
+print("2. Поменять местами min и max в каждой строке")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+for i in range(len(matrix)):
+    min_val = min(matrix[i])
+    max_val = max(matrix[i])
+    min_index = matrix[i].index(min_val)
+    max_index = matrix[i].index(max_val)
+    matrix[i][min_index], matrix[i][max_index] = matrix[i][max_index], matrix[i][min_index]
+
+print("После замены min и max в каждой строке:")
+for row in matrix:
+    print(row)
+print()
+
+# 3. Поменять местами строки с min и max элементами
+print("3. Поменять местами строки с min и max элементами")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+min_val = min(min(row) for row in matrix)
+max_val = max(max(row) for row in matrix)
+
+min_row = -1
+max_row = -1
+
+for i in range(len(matrix)):
+    if min_val in matrix[i]:
+        min_row = i
+    if max_val in matrix[i]:
+        max_row = i
+
+if min_row != -1 and max_row != -1:
+    matrix[min_row], matrix[max_row] = matrix[max_row], matrix[min_row]
+
+print("После замены строк с min и max элементами:")
+for row in matrix:
+    print(row)
+print()
+
+# 4. Зеркальное отражение относительно горизонтальной оси
+print("4. Зеркальное отражение относительно горизонтальной оси")
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [10, 11, 12]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+matrix.reverse()
+
+print("После горизонтального отражения:")
+for row in matrix:
+    print(row)
+print()
+
+# 5. Удалить строку с минимальным элементом
+print("5. Удалить строку с минимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+min_val = min(min(row) for row in matrix)
+min_row_index = -1
+
+for i in range(len(matrix)):
+    if min_val in matrix[i]:
+        min_row_index = i
+        break
+
+if min_row_index != -1:
+    del matrix[min_row_index]
+
+print("После удаления строки с минимальным элементом:")
+for row in matrix:
+    print(row)
+print()
+
+# 6. Удалить столбец с максимальным элементом
+print("6. Удалить столбец с максимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+max_val = max(max(row) for row in matrix)
+max_col_index = -1
+
+for j in range(len(matrix[0])):
+    for i in range(len(matrix)):
+        if matrix[i][j] == max_val:
+            max_col_index = j
+            break
+    if max_col_index != -1:
+        break
+
+if max_col_index != -1:
+    for i in range(len(matrix)):
+        del matrix[i][max_col_index]
+
+print("После удаления столбца с максимальным элементом:")
+for row in matrix:
+    print(row)
+print()
+
+# 7. Зеркальное отражение относительно вертикальной оси
+print("7. Зеркальное отражение относительно вертикальной оси")
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+for i in range(len(matrix)):
+    matrix[i].reverse()
+
+print("После вертикального отражения:")
+for row in matrix:
+    print(row)
+print()
+
+# 8. Продублировать строку с максимальным элементом
+print("8. Продублировать строку с максимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+max_val = max(max(row) for row in matrix)
+max_row_index = -1
+
+for i in range(len(matrix)):
+    if max_val in matrix[i]:
+        max_row_index = i
+        break
+
+if max_row_index != -1:
+    matrix.insert(max_row_index + 1, matrix[max_row_index].copy())
+
+print("После дублирования строки с максимальным элементом:")
+for row in matrix:
+    print(row)
+print()
+
+# 9. Количество элементов больше среднего в каждом столбце
+print("9. Количество элементов больше среднего в каждом столбце")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5],
+    [2, 3, 8]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+for j in range(len(matrix[0])):
+    column = [matrix[i][j] for i in range(len(matrix))]
+    avg = sum(column) / len(column)
+    count = sum(1 for num in column if num > avg)
+    print(f"Столбец {j+1}: среднее = {avg:.2f}, элементов больше среднего = {count}")
+print()
+
+# 10. Поменять местами левую верхнюю и правую нижнюю четверти
+print("10. Поменять местами левую верхнюю и правую нижнюю четверти")
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+M = len(matrix)
+N = len(matrix[0])
+half_M = M // 2
+half_N = N // 2
+
+for i in range(half_M):
+    for j in range(half_N):
+        matrix[i][j], matrix[i + half_M][j + half_N] = matrix[i + half_M][j + half_N], matrix[i][j]
+
+print("После замены четвертей:")
+for row in matrix:
+    print(row)
+print()
+
+# 11. Среднее арифметическое для нечетных строк
+print("11. Среднее арифметическое для нечетных строк")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5],
+    [2, 3, 8]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+for i in range(0, len(matrix), 2):  # 0, 2, 4... (нечетные строки: 1, 3, 5...)
+    avg = sum(matrix[i]) / len(matrix[i])
+    print(f"Строка {i+1}: среднее = {avg:.2f}")
+print()
+
+# 12. Строка с наибольшей суммой элементов
+print("12. Строка с наибольшей суммой элементов")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5],
+    [2, 3, 8]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+max_sum = -1
+max_row_index = -1
+
+for i in range(len(matrix)):
+    row_sum = sum(matrix[i])
+    if row_sum > max_sum:
+        max_sum = row_sum
+        max_row_index = i
+
+print(f"Строка с наибольшей суммой: {max_row_index + 1}")
+print(f"Сумма элементов: {max_sum}")
+print()
+
+# 13. Вставить строку из нулей перед строкой с минимальным элементом
+print("13. Вставить строку из нулей перед строкой с минимальным элементом")
+matrix = [
+    [3, 7, 2],
+    [8, 1, 9],
+    [4, 6, 5]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+min_val = min(min(row) for row in matrix)
+min_row_index = -1
+
+for i in range(len(matrix)):
+    if min_val in matrix[i]:
+        min_row_index = i
+        break
+
+if min_row_index != -1:
+    zeros_row = [0] * len(matrix[0])
+    matrix.insert(min_row_index, zeros_row)
+
+print("После вставки строки из нулей:")
+for row in matrix:
+    print(row)
+print()
+
+# 14. Найти номер последней строки с только четными числами
+print("14. Найти номер последней строки с только четными числами")
+matrix = [
+    [2, 4, 6],
+    [3, 5, 7],
+    [8, 2, 4],
+    [1, 3, 5]
+]
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+last_even_row = 0
+for i in range(len(matrix)):
+    all_even = True
+    for num in matrix[i]:
+        if num % 2 != 0:
+            all_even = False
+            break
+    if all_even:
+        last_even_row = i + 1
+
+print(f"Последняя строка с только четными числами: {last_even_row}")
+print()
+
+# 15. Поменять местами первый и последний положительный столбец
+print("15. Поменять местами первый и последний положительный столбец")
+matrix = [
+    [3, -2, 7, 4],
+    [1, -5, 8, 2],
+    [4, -1, 6, 9]
+]
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+positive_columns = []
+for j in range(len(matrix[0])):
+    all_positive = True
+    for i in range(len(matrix)):
+        if matrix[i][j] <= 0:
+            all_positive = False
+            break
+    if all_positive:
+        positive_columns.append(j)
+
+if len(positive_columns) >= 2:
+    first_pos_col = positive_columns[0]
+    last_pos_col = positive_columns[-1]
+    
+    for i in range(len(matrix)):
+        matrix[i][first_pos_col], matrix[i][last_pos_col] = matrix[i][last_pos_col], matrix[i][first_pos_col]
+    
+    print("После замены столбцов:")
+    for row in matrix:
+        print(row)
+else:
+    print("Требуемых столбцов нет, матрица без изменений")
+    for row in matrix:
+        print(row)
+print()
