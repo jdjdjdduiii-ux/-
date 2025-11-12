@@ -1,0 +1,201 @@
+# 1. Прямоугольный параллелепипед
+print("1. Прямоугольный параллелепипед")
+a = 5
+b = 3
+c = 4
+V = a * b * c
+S = 2 * (a*b + b*c + a*c)
+print(f"Если a = {a}, b = {b}, c = {c}")
+print(f"То объем V = {V}")
+print(f"Площадь поверхности S = {S}")
+print()
+
+# 2. Длина окружности и площадь круга
+print("2. Окружность и круг")
+R = 7
+L = 2 * math.pi * R
+S_circle = math.pi * R * R
+print(f"Если радиус R = {R}")
+print(f"То длина окружности L = {L:.2f}")
+print(f"Площадь круга S = {S_circle:.2f}")
+print()
+
+# 3. Прямоугольный треугольник
+print("3. Прямоугольный треугольник")
+a_triangle = 3
+b_triangle = 4
+c_triangle = math.sqrt(a_triangle*a_triangle + b_triangle*b_triangle)
+P_triangle = a_triangle + b_triangle + c_triangle
+print(f"Если катеты a = {a_triangle}, b = {b_triangle}")
+print(f"То гипотенуза c = {c_triangle:.2f}")
+print(f"Периметр P = {P_triangle:.2f}")
+print()
+
+# 4. Два круга и кольцо
+print("4. Два круга и кольцо")
+R1 = 8
+R2 = 5
+S1 = math.pi * R1 * R1
+S2 = math.pi * R2 * R2
+S3 = S1 - S2
+print(f"Если радиусы R1 = {R1}, R2 = {R2}")
+print(f"То площадь большого круга S1 = {S1:.2f}")
+print(f"Площадь малого круга S2 = {S2:.2f}")
+print(f"Площадь кольца S3 = {S3:.2f}")
+print()
+
+# 5. Прямоугольник по координатам
+print("5. Прямоугольник по координатам")
+x1, y1 = 1, 1
+x2, y2 = 4, 5
+width = abs(x2 - x1)
+height = abs(y2 - y1)
+P_rect = 2 * (width + height)
+S_rect = width * height
+print(f"Если вершины ({x1},{y1}) и ({x2},{y2})")
+print(f"То ширина = {width}, высота = {height}")
+print(f"Периметр P = {P_rect}")
+print(f"Площадь S = {S_rect}")
+print()
+
+# 6. Расстояние между точками
+print("6. Расстояние между точками")
+x1, y1 = 2, 3
+x2, y2 = 5, 7
+distance = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+print(f"Если точки A({x1},{y1}) и B({x2},{y2})")
+print(f"То расстояние между ними = {distance:.2f}")
+print()
+
+# 7. Треугольник по координатам вершин
+print("7. Треугольник по координатам")
+x1, y1 = 1, 1
+x2, y2 = 4, 5
+x3, y3 = 6, 2
+
+# Находим длины сторон
+a_side = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+b_side = math.sqrt((x3-x2)**2 + (y3-y2)**2)
+c_side = math.sqrt((x1-x3)**2 + (y1-y3)**2)
+
+P_tri = a_side + b_side + c_side
+p = P_tri / 2  # полупериметр
+S_tri = math.sqrt(p * (p - a_side) * (p - b_side) * (p - c_side))
+
+print(f"Если вершины: A({x1},{y1}), B({x2},{y2}), C({x3},{y3})")
+print(f"Стороны: a = {a_side:.2f}, b = {b_side:.2f}, c = {c_side:.2f}")
+print(f"Периметр P = {P_tri:.2f}")
+print(f"Площадь S = {S_tri:.2f}")
+print()
+
+# 8. Перевод температуры
+print("8. Перевод температуры")
+TF = 95  # градусов Фаренгейта
+TC = (TF - 32) * 5 / 9
+print(f"Если температура {TF}°F")
+print(f"То в Цельсиях это {TC:.1f}°C")
+print()
+
+# 9. Стоимость конфет
+print("9. Стоимость конфет")
+X = 2  # кг шоколадных конфет
+A = 800  # рублей
+Y = 3  # кг ирисок
+B = 300  # рублей
+
+price_chocolate = A / X
+price_caramel = B / Y
+ratio = price_chocolate / price_caramel
+
+print(f"Шоколадные: {X} кг за {A} руб")
+print(f"Ириски: {Y} кг за {B} руб")
+print(f"1 кг шоколадных = {price_chocolate:.1f} руб")
+print(f"1 кг ирисок = {price_caramel:.1f} руб")
+print(f"Шоколадные дороже в {ratio:.1f} раз")
+print()
+
+# 10. Система уравнений
+print("10. Система уравнений")
+A1, B1, C1 = 2, 3, 7
+A2, B2, C2 = 1, -1, 1
+
+D = A1 * B2 - A2 * B1
+x = (C1 * B2 - C2 * B1) / D
+y = (A1 * C2 - A2 * C1) / D
+
+print(f"Система: {A1}x + {B1}y = {C1}")
+print(f"         {A2}x + {B2}y = {C2}")
+print(f"Решение: x = {x}, y = {y}")
+print()
+
+# 11. Перевод угла в радианы
+print("11. Перевод угла в радианы")
+alpha_degrees = 60
+alpha_radians = alpha_degrees * math.pi / 180
+print(f"Угол {alpha_degrees}°")
+print(f"В радианах = {alpha_radians:.2f}")
+print()
+
+# 12. Расстояние между автомобилями
+print("12. Автомобили")
+V1 = 60  # км/ч
+V2 = 80  # км/ч
+S_start = 100  # км
+T = 2  # часов
+
+S_end = S_start + (V1 + V2) * T
+print(f"Скорости: {V1} км/ч и {V2} км/ч")
+print(f"Начальное расстояние: {S_start} км")
+print(f"Через {T} часов расстояние = {S_end} км")
+print()
+
+# 13. Отрезки на числовой оси
+print("13. Отрезки на числовой оси")
+A = 2
+B = 7
+C = 5
+
+AC = abs(C - A)
+BC = abs(C - B)
+sum_AC_BC = AC + BC
+
+print(f"Точки: A={A}, B={B}, C={C}")
+print(f"Длина AC = {AC}")
+print(f"Длина BC = {BC}")
+print(f"Сумма длин = {sum_AC_BC}")
+print()
+
+# 14. Операции с квадратами чисел
+print("14. Операции с квадратами")
+num1 = 4
+num2 = 3
+
+sum_squares = num1*num1 + num2*num2
+diff_squares = num1*num1 - num2*num2
+prod_squares = (num1*num1) * (num2*num2)
+div_squares = (num1*num1) / (num2*num2)
+
+print(f"Числа: {num1} и {num2}")
+print(f"Сумма квадратов = {sum_squares}")
+print(f"Разность квадратов = {diff_squares}")
+print(f"Произведение квадратов = {prod_squares}")
+print(f"Частное квадратов = {div_squares:.2f}")
+print()
+
+# 15. Путь лодки
+print("15. Путь лодки")
+V = 12  # км/ч - скорость лодки
+U = 3   # км/ч - скорость течения
+T1 = 2  # часов - по озеру
+T2 = 3  # часов - против течения
+
+path_lake = V * T1
+path_river = (V - U) * T2
+total_path = path_lake + path_river
+
+print(f"Скорость лодки: {V} км/ч")
+print(f"Скорость течения: {U} км/ч")
+print(f"По озеру: {T1} часов = {path_lake} км")
+print(f"Против течения: {T2} часов = {path_river} км")
+print(f"Общий путь: {total_path} км")
+print()
