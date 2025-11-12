@@ -1,0 +1,272 @@
+import itertools
+print("1. Сортировка словаря по значениям")
+my_dict = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+print(f"Исходный словарь: {my_dict}")
+
+# Сортировка по возрастанию значений
+sorted_asc = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+print(f"По возрастанию: {sorted_asc}")
+
+# Сортировка по убыванию значений
+sorted_desc = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+print(f"По убыванию: {sorted_desc}")
+
+# Объединение словарей с суммированием значений
+dict1 = {1: 2, 3: 4}
+dict2 = {3: 5, 6: 7}
+merged_dict = dict1.copy()
+for key, value in dict2.items():
+    merged_dict[key] = merged_dict.get(key, 0) + value
+print(f"Объединенный словарь: {merged_dict}")
+
+# Проверка наличия ключей
+keys_to_check = [1, 3]
+all_present = all(key in my_dict for key in keys_to_check)
+print(f"Все ключи {keys_to_check} присутствуют: {all_present}")
+print()
+
+# 2. Работа с уникальными значениями и подсчет элементов
+print("2. Работа с уникальными значениями")
+my_dict = {1: 2, 3: 4}
+print(f"Исходный словарь: {my_dict}")
+
+# Добавление нового ключа
+my_dict[5] = 6
+print(f"После добавления ключа 5: {my_dict}")
+
+# Уникальные значения
+dict_with_duplicates = {1: 2, 3: 4, 5: 2}
+unique_values = set(dict_with_duplicates.values())
+print(f"Уникальные значения: {unique_values}")
+
+# Подсчет элементов в списках-значениях
+dict_with_lists = {1: [2, 3, 4], 3: [5, 6, 7], 5: [8, 9, 0]}
+total_elements = sum(len(lst) for lst in dict_with_lists.values())
+print(f"Всего элементов в списках: {total_elements}")
+print()
+
+# 3. Объединение словарей и очистка списков
+print("3. Объединение словарей")
+dicts_to_merge = [{1: 2}, {3: 4}, {5: 6}]
+merged = {}
+for d in dicts_to_merge:
+    merged.update(d)
+print(f"Объединенный словарь: {merged}")
+
+# Очистка списков в словаре
+dict_with_lists = {1: [2, 3, 4], 3: [5, 6, 7], 5: [8, 9, 0]}
+for key in dict_with_lists:
+    dict_with_lists[key] = []
+print(f"После очистки списков: {dict_with_lists}")
+print()
+
+# 4. Генерация комбинаций и замена на средние значения
+print("4. Генерация комбинаций букв")
+my_dict = {1: 'abc', 2: 'def'}
+key_to_use = 1
+if key_to_use in my_dict:
+    combinations = [''.join(perm) for perm in itertools.permutations(my_dict[key_to_use])]
+    print(f"Комбинации для ключа {key_to_use}: {combinations}")
+
+# Замена на средние значения
+dict_with_number_lists = {1: [2, 3, 4], 3: [5, 6, 7], 5: [8, 9, 0]}
+averages_dict = {key: mean(values) for key, values in dict_with_number_lists.items()}
+print(f"Средние значения: {averages_dict}")
+print()
+
+# 5. Три наибольших значения и сравнение словарей
+print("5. Три наибольших значения")
+my_dict = {1: 2, 3: 4, 5: 6, 2: 8, 4: 1}
+print(f"Словарь: {my_dict}")
+
+# Три наибольших значения
+three_largest = sorted(my_dict.values(), reverse=True)[:3]
+print(f"Три наибольших значения: {three_largest}")
+
+# Сравнение двух словарей
+dict1 = {1: 2, 3: 4}
+dict2 = {1: 3, 3: 4}
+comparison = {key: (dict1.get(key), dict2.get(key)) for key in set(dict1) | set(dict2)}
+print(f"Сравнение значений: {comparison}")
+print()
+
+# 6. Создание словаря квадратов и удаление пустых элементов
+print("6. Создание словаря квадратов")
+n = 5
+squares_dict = {i: i**2 for i in range(1, n+1)}
+print(f"Квадраты чисел от 1 до {n}: {squares_dict}")
+
+# Объединение значений из списка словарей
+dict_list = [{1: 2}, {3: 4}, {5: 6}]
+values_list = [list(d.values())[0] for d in dict_list]
+print(f"Объединенные значения: {values_list}")
+
+# Удаление пустых элементов
+dict_with_empty = {1: '', 2: 'abc', 3: None, 4: [], 5: 'hello'}
+cleaned_dict = {k: v for k, v in dict_with_empty.items() if v not in ['', None, []]}
+print(f"После удаления пустых: {cleaned_dict}")
+print()
+
+# 7. Частота символов и фильтрация словаря
+print("7. Частота символов в строке")
+text = "hello world"
+char_freq = {}
+for char in text:
+    char_freq[char] = char_freq.get(char, 0) + 1
+print(f"Частота символов в '{text}': {char_freq}")
+
+# Фильтрация словаря
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+filtered_dict = {k: v for k, v in my_dict.items() if v > 2}
+print(f"Отфильтрованный словарь: {filtered_dict}")
+print()
+
+# 8. Объединение словарей и вывод в виде таблицы
+print("8. Вывод словаря в виде таблицы")
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+merged = {**dict1, **dict2}
+print(f"Объединенный словарь: {merged}")
+
+print("Содержимое словаря:")
+for key, value in merged.items():
+    print(f"{key} {value}")
+
+# Преобразование списков в словарь
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+lists_dict = {'key1': list1, 'key2': list2}
+print(f"Словарь из списков: {lists_dict}")
+print()
+
+# 9. Сумма значений по ключу и фильтрация данных
+print("9. Сумма значений по ключу")
+dict_list = [{'a': 1}, {'a': 2}, {'a': 3}, {'b': 1}]
+key_to_sum = 'a'
+total = sum(d.get(key_to_sum, 0) for d in dict_list)
+print(f"Сумма значений по ключу '{key_to_sum}': {total}")
+
+# Фильтрация данных учащихся
+students = {
+    'Иван': {'рост': 170, 'вес': 70},
+    'Михаил': {'рост': 180, 'вес': 75}
+}
+filtered_students = {name: {'рост': data['рост']} for name, data in students.items()}
+print(f"Только рост студентов: {filtered_students}")
+print()
+
+# 10. Сумма и произведение значений, проверка одинаковости
+print("10. Сумма и произведение значений")
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+values_sum = sum(my_dict.values())
+values_product = 1
+for value in my_dict.values():
+    values_product *= value
+print(f"Сумма значений: {values_sum}")
+print(f"Произведение значений: {values_product}")
+
+# Проверка одинаковости значений
+dict_same = {'a': 1, 'b': 1, 'c': 1}
+dict_different = {'a': 1, 'b': 2, 'c': 1}
+all_same = len(set(dict_same.values())) == 1
+all_same2 = len(set(dict_different.values())) == 1
+print(f"Все значения одинаковы в dict_same: {all_same}")
+print(f"Все значения одинаковы в dict_different: {all_same2}")
+print()
+
+# 11. Сортировка значений и группировка
+print("11. Сортировка значений в словаре")
+dict_with_lists = {'a': ['c', 'b', 'a'], 'b': ['c', 'b', 'a']}
+for key in dict_with_lists:
+    dict_with_lists[key].sort()
+print(f"После сортировки: {dict_with_lists}")
+
+# Группировка пар ключ-значение
+pairs = [('a', 1), ('b', 2), ('a', 3), ('b', 4)]
+grouped_dict = {}
+for key, value in pairs:
+    if key not in grouped_dict:
+        grouped_dict[key] = []
+    grouped_dict[key].append(value)
+print(f"Сгруппированный словарь: {grouped_dict}")
+print()
+
+# 12. Удаление ключей и преобразование словаря
+print("12. Удаление ключей")
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+key_to_remove = 'b'
+if key_to_remove in my_dict:
+    del my_dict[key_to_remove]
+print(f"После удаления ключа '{key_to_remove}': {my_dict}")
+
+# Удаление пробелов из ключей
+dict_with_spaces = {' a ': 1, ' b ': 2, ' c ': 3}
+cleaned_keys_dict = {key.strip(): value for key, value in dict_with_spaces.items()}
+print(f"После удаления пробелов: {cleaned_keys_dict}")
+
+# Преобразование словаря списков в список словарей
+dict_of_lists = {'a': [1, 2], 'b': [3, 4]}
+list_of_dicts = []
+for key, values in dict_of_lists.items():
+    for value in values:
+        list_of_dicts.append({key: value})
+print(f"Список словарей: {list_of_dicts}")
+print()
+
+# 13. Создание словаря из списков и поиск дорогих товаров
+print("13. Создание словаря из списков")
+keys = ['a', 'b', 'c']
+values = [1, 2, 3]
+new_dict = dict(zip(keys, values))
+print(f"Словарь из списков: {new_dict}")
+
+# Три самых дорогих товара
+items = [
+    {'name': 'item1', 'price': 10},
+    {'name': 'item2', 'price': 50},
+    {'name': 'item3', 'price': 30},
+    {'name': 'item4', 'price': 40}
+]
+top_three = sorted(items, key=lambda x: x['price'], reverse=True)[:3]
+print("Три самых дорогих товара:")
+for item in top_three:
+    print(f"  {item['name']}: {item['price']} руб")
+print()
+
+# 14. Сортировка по ключам и преобразование типов
+print("14. Сортировка по ключам")
+unsorted_dict = {'b': 1, 'a': 2, 'c': 3}
+sorted_by_key = dict(sorted(unsorted_dict.items()))
+print(f"Отсортированный по ключам: {sorted_by_key}")
+
+# Преобразование строковых значений в числа
+str_dict = {'a': '1', 'b': '2', 'c': '3.0'}
+numeric_dict = {}
+for key, value in str_dict.items():
+    try:
+        if '.' in value:
+            numeric_dict[key] = float(value)
+        else:
+            numeric_dict[key] = int(value)
+    except ValueError:
+        numeric_dict[key] = value
+print(f"После преобразования в числа: {numeric_dict}")
+print()
+
+# 15. Максимальные/минимальные значения и доступ к элементам
+print("15. Максимальные и минимальные значения")
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+max_val = max(my_dict.values())
+min_val = min(my_dict.values())
+print(f"Максимальное значение: {max_val}")
+print(f"Минимальное значение: {min_val}")
+
+# Словарь с списками значений
+complex_dict = {
+    'x': list(range(11, 21)),
+    'y': list(range(21, 31)),
+    'z': list(range(31, 41))
+}
+print("Пятые элементы каждого списка:")
+for key, values in complex_dict.items():
+    print(f"  {key}: {values[4]}")  # Индекс 4 - пятый элемент
