@@ -1,0 +1,118 @@
+# 1. y = 3x² + sin(x + 2)
+print("1. y = 3x² + sin(x + 2)")
+x = 2  # возьмем x = 2 для примера
+y1 = 3*x*x + math.sin(x + 2)
+print(f"Если x = {x}, то y = {y1:.2f}")
+print()
+
+# 2. y = ax² + cos(2x + 1)
+print("2. y = ax² + cos(2x + 1)")
+a = 3  # возьмем a = 3
+x = 1  # возьмем x = 1
+y2 = a*x*x + math.cos(2*x + 1)
+print(f"Если a = {a} и x = {x}, то y = {y2:.2f}")
+print()
+
+# 3. y = ax + b*sin(2x + 2)
+print("3. y = ax + b*sin(2x + 2)")
+a = 2
+b = 4
+x = 1
+y3 = a*x + b*math.sin(2*x + 2)
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y3:.2f}")
+print()
+
+# 4. y = ax³ + cos(3x + 1)
+print("4. y = ax³ + cos(3x + 1)")
+a = 2
+x = 1
+y4 = a*x*x*x + math.cos(3*x + 1)
+print(f"Если a = {a}, x = {x}, то y = {y4:.2f}")
+print()
+
+# 5. y = x²a + cos(2x - 1)
+print("5. y = x²a + cos(2x - 1)")
+a = 3
+x = 2
+y5 = x*x*a + math.cos(2*x - 1)
+print(f"Если a = {a}, x = {x}, то y = {y5:.2f}")
+print()
+
+# 6. y = xa + 2x²
+print("6. y = xa + 2x²")
+a = 4
+x = 2
+y6 = x*a + 2*x*x
+print(f"Если a = {a}, x = {x}, то y = {y6:.2f}")
+print()
+
+# 7. y = 3x² - 2x + 1
+print("7. y = 3x² - 2x + 1")
+x = 3
+y7 = 3*x*x - 2*x + 1
+print(f"Если x = {x}, то y = {y7:.2f}")
+print()
+
+# 8. y = 12x² - 3x + 1
+print("8. y = 12x² - 3x + 1")
+x = 2
+y8 = 12*x*x - 3*x + 1
+print(f"Если x = {x}, то y = {y8:.2f}")
+print()
+
+# 9. y = 1/(x² + 1) - a
+print("9. y = 1/(x² + 1) - a")
+a = 2
+x = 1
+y9 = 1/(x*x + 1) - a
+print(f"Если a = {a}, x = {x}, то y = {y9:.2f}")
+print()
+
+# 10. y = a/(x² + 1) - cos(2x - 1)
+print("10. y = a/(x² + 1) - cos(2x - 1)")
+a = 3
+x = 2
+y10 = a/(x*x + 1) - math.cos(2*x - 1)
+print(f"Если a = {a}, x = {x}, то y = {y10:.2f}")
+print()
+
+# 11. y = x³ - 2x² + 4
+print("11. y = x³ - 2x² + 4")
+x = 2
+y11 = x*x*x - 2*x*x + 4
+print(f"Если x = {x}, то y = {y11:.2f}")
+print()
+
+# 12. y = ax² + bx³ - 8
+print("12. y = ax² + bx³ - 8")
+a = 2
+b = 3
+x = 1
+y12 = a*x*x + b*x*x*x - 8
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y12:.2f}")
+print()
+
+# 13. y = √(ax² + 4) - b
+print("13. y = √(ax² + 4) - b")
+a = 3
+b = 2
+x = 2
+y13 = math.sqrt(a*x*x + 4) - b
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y13:.2f}")
+print()
+
+# 14. y = cos(2x - 1) + sin(x)
+print("14. y = cos(2x - 1) + sin(x)")
+x = 1
+y14 = math.cos(2*x - 1) + math.sin(x)
+print(f"Если x = {x}, то y = {y14:.2f}")
+print()
+
+# 15. y = a√x + bx²
+print("15. y = a√x + bx²")
+a = 4
+b = 2
+x = 9  # возьмем 9, чтобы корень был красивый
+y15 = a*math.sqrt(x) + b*x*x
+print(f"Если a = {a}, b = {b}, x = {x}, то y = {y15:.2f}")
+print()
