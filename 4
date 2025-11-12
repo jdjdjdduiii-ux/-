@@ -1,0 +1,166 @@
+# 1. Вывести N раз число K
+print("1. Вывести N раз число K")
+K = 7
+N = 5
+print(f"K = {K}, N = {N}")
+for i in range(N):
+    print(K, end=" ")
+print("\n")
+
+# 2. Числа от A до B в порядке возрастания (включая A и B)
+print("2. Числа от A до B в порядке возрастания")
+A = 3
+B = 8
+print(f"A = {A}, B = {B}")
+count = 0
+for i in range(A, B + 1):
+    print(i, end=" ")
+    count += 1
+print(f"\nКоличество чисел: {count}")
+print()
+
+# 3. Числа от A до B в порядке убывания (не включая A и B)
+print("3. Числа от A до B в порядке убывания")
+A = 2
+B = 9
+print(f"A = {A}, B = {B}")
+count = 0
+for i in range(B - 1, A, -1):
+    print(i, end=" ")
+    count += 1
+print(f"\nКоличество чисел: {count}")
+print()
+
+# 4. Таблица стоимости товара
+print("4. Таблица стоимости товара")
+price = 20.4
+print(f"Цена за 1 шт: {price} руб")
+print("Количество | Стоимость")
+for i in range(1, 11):
+    cost = i * price
+    print(f"{i:9} | {cost:8.1f} руб")
+print()
+
+# 5. Квадраты чисел от A до B с шагом H
+print("5. Квадраты чисел от A до B с шагом H")
+A = 1
+B = 10
+H = 2
+print(f"A = {A}, B = {B}, H = {H}")
+for i in range(A, B + 1, H):
+    square = i * i
+    print(f"{i}² = {square}")
+print()
+
+# 6. Положительные числа от A до B с шагом H
+print("6. Положительные числа от A до B с шагом H")
+A = -5
+B = 8
+H = 2
+print(f"A = {A}, B = {B}, H = {H}")
+print("Положительные числа:")
+for i in range(A, B + 1, H):
+    if i > 0:
+        print(i, end=" ")
+print("\n")
+
+# 7. Сумма чисел от A до B
+print("7. Сумма чисел от A до B")
+A = 1
+B = 5
+print(f"A = {A}, B = {B}")
+total = 0
+for i in range(A, B + 1):
+    total += i
+print(f"Сумма = {total}")
+print()
+
+# 8. Произведение чисел от A до B
+print("8. Произведение чисел от A до B")
+A = 1
+B = 5
+print(f"A = {A}, B = {B}")
+product = 1
+for i in range(A, B + 1):
+    product *= i
+print(f"Произведение = {product}")
+print()
+
+# 9. Сумма квадратов чисел от A до B
+print("9. Сумма квадратов чисел от A до B")
+A = 1
+B = 3
+print(f"A = {A}, B = {B}")
+sum_squares = 0
+for i in range(A, B + 1):
+    sum_squares += i * i
+print(f"Сумма квадратов = {sum_squares}")
+print()
+
+# 10. Стоимость конфет от 1.2 до 2 кг
+print("10. Стоимость конфет")
+price_per_kg = 150.5
+print(f"Цена за 1 кг: {price_per_kg} руб")
+print("Вес (кг) | Стоимость")
+weight = 1.2
+while weight <= 2:
+    cost = weight * price_per_kg
+    print(f"{weight:7.1f} | {cost:8.1f} руб")
+    weight += 0.2
+print()
+
+# 11. Квадрат числа как сумма нечетных чисел
+print("11. Квадрат числа как сумма нечетных чисел")
+N = 5
+print(f"N = {N}")
+square = 0
+for i in range(1, 2 * N, 2):
+    square += i
+    print(f"+{i}", end=" ")
+print(f"= {square}")
+print(f"Проверка: {N}² = {N * N}")
+print()
+
+# 12. Степени числа A от 1 до N
+print("12. Степени числа A от 1 до N")
+A = 2
+N = 5
+print(f"A = {A}, N = {N}")
+for i in range(1, N + 1):
+    power = A ** i
+    print(f"{A}^{i} = {power}")
+print()
+
+# 13. Наибольшее K, где K² ≤ N
+print("13. Наибольшее K, где K² ≤ N")
+N = 20
+print(f"N = {N}")
+K = 0
+while (K + 1) ** 2 <= N:
+    K += 1
+print(f"K = {K}, т.к. {K}² = {K*K} ≤ {N}")
+print()
+
+# 14. Наибольшее K, где 3K < N
+print("14. Наибольшее K, где 3K < N")
+N = 20
+print(f"N = {N}")
+K = 0
+while 3 * (K + 1) < N:
+    K += 1
+print(f"K = {K}, т.к. 3×{K} = {3*K} < {N}")
+print()
+
+# 15. Разбиение отрезка на N равных частей
+print("15. Разбиение отрезка на N равных частей")
+N = 5
+A = 0
+B = 10
+print(f"A = {A}, B = {B}, N = {N}")
+H = (B - A) / N
+print(f"Длина каждого отрезка H = {H:.1f}")
+print("Точки разбиения:")
+for i in range(N + 1):
+    point = A + i * H
+    print(f"{point:.1f}", end=" ")
+print("\n")
