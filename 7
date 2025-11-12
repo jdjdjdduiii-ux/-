@@ -1,0 +1,178 @@
+print("1. Все нечетные числа по убыванию")
+numbers = [7, 2, 9, 4, 5, 1, 8, 3, 6]
+print(f"Список: {numbers}")
+
+odd_numbers = [num for num in numbers if num % 2 == 1]
+odd_numbers.sort(reverse=True)
+print(f"Нечетные числа: {odd_numbers}")
+print(f"По убыванию: {odd_numbers}")
+print()
+
+# 2. Все положительные числа по возрастанию
+print("2. Все положительные числа по возрастанию")
+numbers = [5, -2, 8, -1, 3, -7, 4, -9, 6]
+print(f"Список: {numbers}")
+
+positive_numbers = [num for num in numbers if num > 0]
+positive_numbers.sort()
+print(f"Положительные числа: {positive_numbers}")
+print(f"По возрастанию: {positive_numbers}")
+print()
+
+# 3. Все положительные числа по убыванию
+print("3. Все положительные числа по убыванию")
+numbers = [5, -2, 8, -1, 3, -7, 4, -9, 6]
+print(f"Список: {numbers}")
+
+positive_numbers = [num for num in numbers if num > 0]
+positive_numbers.sort(reverse=True)
+print(f"Положительные числа: {positive_numbers}")
+print(f"По убыванию: {positive_numbers}")
+print()
+
+# 4. Все четные числа по возрастанию
+print("4. Все четные числа по возрастанию")
+numbers = [7, 2, 9, 4, 5, 1, 8, 3, 6]
+print(f"Список: {numbers}")
+
+even_numbers = [num for num in numbers if num % 2 == 0]
+even_numbers.sort()
+print(f"Четные числа: {even_numbers}")
+print(f"По возрастанию: {even_numbers}")
+print()
+
+# 5. Все числа больше k по убыванию
+print("5. Все числа больше k по убыванию")
+numbers = [3, 8, 1, 12, 5, 9, 4, 15, 7]
+k = 6
+print(f"Список: {numbers}")
+print(f"k = {k}")
+
+greater_than_k = [num for num in numbers if num > k]
+greater_than_k.sort(reverse=True)
+print(f"Числа больше {k}: {greater_than_k}")
+print(f"По убыванию: {greater_than_k}")
+print()
+
+# 6. Все числа больше 10 по возрастанию
+print("6. Все числа больше 10 по возрастанию")
+numbers = [15, 5, 12, 8, 18, 3, 20, 9, 11]
+print(f"Список: {numbers}")
+
+greater_than_10 = [num for num in numbers if num > 10]
+greater_than_10.sort()
+print(f"Числа больше 10: {greater_than_10}")
+print(f"По возрастанию: {greater_than_10}")
+print()
+
+# 7. Все числа кратные 5 по убыванию
+print("7. Все числа кратные 5 по убыванию")
+numbers = [15, 7, 25, 12, 30, 8, 20, 3, 10]
+print(f"Список: {numbers}")
+
+multiples_of_5 = [num for num in numbers if num % 5 == 0]
+multiples_of_5.sort(reverse=True)
+print(f"Числа кратные 5: {multiples_of_5}")
+print(f"По убыванию: {multiples_of_5}")
+print()
+
+# 8. Все числа меньше k по возрастанию
+print("8. Все числа меньше k по возрастанию")
+numbers = [3, 8, 1, 12, 5, 9, 4, 15, 7]
+k = 7
+print(f"Список: {numbers}")
+print(f"k = {k}")
+
+less_than_k = [num for num in numbers if num < k]
+less_than_k.sort()
+print(f"Числа меньше {k}: {less_than_k}")
+print(f"По возрастанию: {less_than_k}")
+print()
+
+# 9. Все числа меньше 15 по убыванию
+print("9. Все числа меньше 15 по убыванию")
+numbers = [15, 5, 12, 8, 18, 3, 20, 9, 11, 14]
+print(f"Список: {numbers}")
+
+less_than_15 = [num for num in numbers if num < 15]
+less_than_15.sort(reverse=True)
+print(f"Числа меньше 15: {less_than_15}")
+print(f"По убыванию: {less_than_15}")
+print()
+
+# 10. Все числа кратные 3 по возрастанию
+print("10. Все числа кратные 3 по возрастанию")
+numbers = [9, 4, 15, 7, 12, 2, 18, 5, 21, 8]
+print(f"Список: {numbers}")
+
+multiples_of_3 = [num for num in numbers if num % 3 == 0]
+multiples_of_3.sort()
+print(f"Числа кратные 3: {multiples_of_3}")
+print(f"По возрастанию: {multiples_of_3}")
+print()
+
+# 11. Все числа кратные k по убыванию
+print("11. Все числа кратные k по убыванию")
+numbers = [12, 5, 18, 7, 24, 3, 30, 8, 15, 9]
+k = 6
+print(f"Список: {numbers}")
+print(f"k = {k}")
+
+multiples_of_k = [num for num in numbers if num % k == 0]
+multiples_of_k.sort(reverse=True)
+print(f"Числа кратные {k}: {multiples_of_k}")
+print(f"По убыванию: {multiples_of_k}")
+print()
+
+# 12. Все отрицательные числа по возрастанию
+print("12. Все отрицательные числа по возрастанию")
+numbers = [5, -2, 8, -7, 3, -1, -9, 4, -5, 6]
+print(f"Список: {numbers}")
+
+negative_numbers = [num for num in numbers if num < 0]
+negative_numbers.sort()
+print(f"Отрицательные числа: {negative_numbers}")
+print(f"По возрастанию: {negative_numbers}")
+print()
+
+# 13. Все числа на нечетных позициях по убыванию
+print("13. Все числа на нечетных позициях по убыванию")
+numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+print(f"Список: {numbers}")
+
+odd_positions = []
+for i in range(len(numbers)):
+    if (i + 1) % 2 == 1:  # +1 потому что позиции с 1
+        odd_positions.append(numbers[i])
+
+odd_positions.sort(reverse=True)
+print(f"Числа на нечетных позициях: {odd_positions}")
+print(f"По убыванию: {odd_positions}")
+print()
+
+# 14. Все двузначные числа по возрастанию
+print("14. Все двузначные числа по возрастанию")
+numbers = [5, 23, 8, 45, 123, 12, 78, 3, 56, 9, 34]
+print(f"Список: {numbers}")
+
+two_digit_numbers = [num for num in numbers if 10 <= num <= 99]
+two_digit_numbers.sort()
+print(f"Двузначные числа: {two_digit_numbers}")
+print(f"По возрастанию: {two_digit_numbers}")
+print()
+
+# 15. Все числа на четных позициях по возрастанию
+print("15. Все числа на четных позициях по возрастанию")
+numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+print(f"Список: {numbers}")
+
+even_positions = []
+for i in range(len(numbers)):
+    if (i + 1) % 2 == 0:  # +1 потому что позиции с 1
+        even_positions.append(numbers[i])
+
+even_positions.sort()
+print(f"Числа на четных позициях: {even_positions}")
+print(f"По возрастанию: {even_positions}")
+print()
+
