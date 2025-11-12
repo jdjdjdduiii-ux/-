@@ -1,0 +1,228 @@
+print("1. Подсчет частоты символов")
+s = "программирование"
+print(f"Строка: '{s}'")
+char_count = {}
+for char in s:
+    char_count[char] = char_count.get(char, 0) + 1
+
+print("Частота символов:")
+for char, count in char_count.items():
+    print(f"  '{char}': {count}")
+print()
+
+# 2. Первые два и последние два символа
+print("2. Первые два и последние два символа")
+s = "программирование"
+print(f"Строка: '{s}'")
+if len(s) >= 2:
+    result = s[:2] + s[-2:]
+    print(f"Результат: '{result}'")
+else:
+    print("Длина строки меньше двух символов")
+print()
+
+# 3. Замена первого символа на $ (кроме самого первого)
+print("3. Замена первого символа на $ (кроме самого первого)")
+s = "программирование программиста"
+print(f"Строка: '{s}'")
+first_char = s[0]
+result = first_char + s[1:].replace(first_char, '$')
+print(f"Результат: '{result}'")
+print()
+
+# 4. Обмен первыми двумя символами двух строк
+print("4. Обмен первыми двумя символами двух строк")
+s1 = "привет"
+s2 = "мир"
+print(f"Строка 1: '{s1}'")
+print(f"Строка 2: '{s2}'")
+
+if len(s1) >= 2 and len(s2) >= 2:
+    new_s1 = s2[:2] + s1[2:]
+    new_s2 = s1[:2] + s2[2:]
+    result = new_s1 + " " + new_s2
+    print(f"Результат: '{result}'")
+else:
+    print("Одна из строк слишком короткая")
+print()
+
+# 5. Добавление ing/ly
+print("5. Добавление ing/ly")
+s = "read"
+print(f"Строка: '{s}'")
+if len(s) >= 3:
+    if s.endswith('ing'):
+        result = s + 'ly'
+    else:
+        result = s + 'ing'
+    print(f"Результат: '{result}'")
+else:
+    print(f"Строка слишком короткая: '{s}'")
+print()
+
+# 6. Удаление каждого n-го символа
+print("6. Удаление каждого n-го символа")
+s = "программирование"
+n = 3
+print(f"Строка: '{s}'")
+print(f"n = {n}")
+result = ""
+for i in range(len(s)):
+    if (i + 1) % n != 0:  # i+1 потому что начинаем с первого символа
+        result += s[i]
+print(f"Результат: '{result}'")
+print()
+
+# 7. Поменять местами первый и последний символы
+print("7. Поменять местами первый и последний символы")
+s = "программирование"
+print(f"Строка: '{s}'")
+if len(s) > 1:
+    result = s[-1] + s[1:-1] + s[0]
+    print(f"Результат: '{result}'")
+else:
+    print(f"Строка слишком короткая: '{s}'")
+print()
+
+# 8. Удалить символы с нечетными индексами
+print("8. Удалить символы с нечетными индексами")
+s = "программирование"
+print(f"Строка: '{s}'")
+result = ""
+for i in range(len(s)):
+    if i % 2 == 0:  # четные индексы (0, 2, 4...)
+        result += s[i]
+print(f"Результат: '{result}'")
+print()
+
+# 9. Подсчет вхождений слов
+print("9. Подсчет вхождений слов")
+s = "кот собака кот птица собака кот"
+print(f"Предложение: '{s}'")
+words = s.split()
+word_count = {}
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+print("Количество вхождений слов:")
+for word, count in word_count.items():
+    print(f"  '{word}': {count}")
+print()
+
+# 10. Перевернуть строку, если длина кратна 4
+print("10. Перевернуть строку, если длина кратна 4")
+s = "программирование"  # 16 символов
+print(f"Строка: '{s}'")
+print(f"Длина строки: {len(s)}")
+if len(s) % 4 == 0:
+    result = s[::-1]
+    print(f"Результат: '{result}'")
+else:
+    print("Длина строки не кратна 4")
+print()
+
+# 11. Верхний регистр, если в первых 4 символах >= 2 заглавных
+print("11. Верхний регистр, если в первых 4 символах >= 2 заглавных")
+s = "ПроГраммирование"
+print(f"Строка: '{s}'")
+first_four = s[:4]
+upper_count = sum(1 for char in first_four if char.isupper())
+print(f"Заглавных букв в первых 4 символах: {upper_count}")
+
+if upper_count >= 2:
+    result = s.upper()
+    print(f"Результат: '{result}'")
+else:
+    print("Недостаточно заглавных букв в начале")
+print()
+
+# 12. Шифрование циклической заменой букв
+print("12. Шифрование циклической заменой букв")
+s = "Hello World! zZ"
+print(f"Строка: '{s}'")
+
+result = ""
+for char in s:
+    if char.isalpha():
+        if char.islower():
+            # Для 'z' переходим к 'a'
+            result += chr((ord(char) - ord('a') + 1) % 26 + ord('a'))
+        else:
+            # Для 'Z' переходим к 'A'
+            result += chr((ord(char) - ord('A') + 1) % 26 + ord('A'))
+    else:
+        result += char
+
+print(f"Зашифрованная строка: '{result}'")
+print()
+
+# 13. Первый неповторяющийся символ
+print("13. Первый неповторяющийся символ")
+s = "программирование"
+print(f"Строка: '{s}'")
+
+char_count = {}
+for char in s:
+    char_count[char] = char_count.get(char, 0) + 1
+
+found = None
+for char in s:
+    if char_count[char] == 1:
+        found = char
+        break
+
+if found:
+    print(f"Первый неповторяющийся символ: '{found}'")
+else:
+    print("Все символы повторяются")
+print()
+
+# 14. Верхний регистр для первой и последней буквы каждого слова
+print("14. Верхний регистр для первой и последней буквы каждого слова")
+s = "привет мир программирование"
+print(f"Строка: '{s}'")
+
+words = s.split()
+result_words = []
+for word in words:
+    if len(word) > 1:
+        new_word = word[0].upper() + word[1:-1] + word[-1].upper()
+    else:
+        new_word = word.upper()
+    result_words.append(new_word)
+
+result = ' '.join(result_words)
+print(f"Результат: '{result}'")
+print()
+
+# 15. Проверка упорядоченности букв по алфавиту
+print("15. Проверка упорядоченности букв по алфавиту")
+s = "abcde123"  # упорядоченная строка
+# s = "abdce123"  # неупорядоченная строка
+print(f"Строка: '{s}'")
+
+# Извлекаем только буквы
+letters = [char for char in s if char.isalpha()]
+
+if len(letters) < 2:
+    print("0 (мало букв для проверки)")
+else:
+    # Проверяем упорядоченность
+    is_ordered = True
+    first_wrong_index = -1
+    
+    for i in range(len(letters) - 1):
+        if letters[i] > letters[i + 1]:
+            is_ordered = False
+            # Находим позицию в исходной строке
+            for j in range(len(s)):
+                if s[j] == letters[i + 1]:
+                    first_wrong_index = j + 1
+                    break
+            break
+    
+    if is_ordered:
+        print("0 (буквы упорядочены по алфавиту)")
+    else:
+        print(f"Позиция первого нарушения: {first_wrong_index}")
+print()
