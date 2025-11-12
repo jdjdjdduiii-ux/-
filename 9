@@ -1,0 +1,190 @@
+# 1. Количество слов в строке
+print("1. Количество слов в строке")
+s = "Привет   как    дела    у   тебя"
+print(f"Строка: '{s}'")
+words = s.split()
+count = len(words)
+print(f"Количество слов: {count}")
+print()
+
+# 2. Слова, начинающиеся и заканчивающиеся одной буквой
+print("2. Слова, начинающиеся и заканчивающиеся одной буквой")
+s = "ПОТОП РАДУГА ШАЛАШ МОЛОКО"
+print(f"Строка: '{s}'")
+words = s.split()
+count = 0
+for word in words:
+    if word[0] == word[-1]:
+        count += 1
+        print(f"Слово '{word}' начинается и заканчивается на '{word[0]}'")
+print(f"Всего таких слов: {count}")
+print()
+
+# 3. Слова, содержащие букву 'А'
+print("3. Слова, содержащие букву 'А'")
+s = "МАМА ПАПА КОТ СОБАКА АНАНАС"
+print(f"Строка: '{s}'")
+words = s.split()
+count = 0
+for word in words:
+    if 'А' in word:
+        count += 1
+        print(f"Слово '{word}' содержит букву 'А'")
+print(f"Всего таких слов: {count}")
+print()
+
+# 4. Длина самого короткого слова
+print("4. Длина самого короткого слова")
+s = "кот собака слон жираф мышь"
+print(f"Строка: '{s}'")
+words = s.split()
+min_length = min(len(word) for word in words)
+print(f"Длина самого короткого слова: {min_length}")
+for word in words:
+    if len(word) == min_length:
+        print(f"Самое короткое слово: '{word}'")
+print()
+
+# 5. Слова в обратном порядке
+print("5. Слова в обратном порядке")
+s = "один два три четыре пять"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+reversed_words = ' '.join(words[::-1])
+print(f"Слова в обратном порядке: '{reversed_words}'")
+print()
+
+# 6. Слова в алфавитном порядке
+print("6. Слова в алфавитном порядке")
+s = "ЯБЛОКО ГРУША АПЕЛЬСИН БАНАН ВИНОГРАД"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+sorted_words = ' '.join(sorted(words))
+print(f"Слова в алфавитном порядке: '{sorted_words}'")
+print()
+
+# 7. Вставка строки перед символом
+print("7. Вставка строки перед символом")
+C = 'а'
+S = "мама мыла раму"
+S0 = "***"
+print(f"Символ C: '{C}'")
+print(f"Строка S: '{S}'")
+print(f"Строка S0: '{S0}'")
+
+result = ""
+for char in S:
+    if char == C:
+        result += S0
+    result += char
+
+print(f"Результат: '{result}'")
+print()
+
+# 8. Удаление лишних пробелов
+print("8. Удаление лишних пробелов")
+s = "Удалить    лишние    пробелы    между    словами"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+result = ' '.join(words)
+print(f"Результат: '{result}'")
+print()
+
+# 9. Количество строчных букв
+print("9. Количество строчных букв")
+s = "Hello мир Привет world"
+print(f"Строка: '{s}'")
+
+count_latin = 0
+count_russian = 0
+
+for char in s:
+    if 'a' <= char <= 'z':
+        count_latin += 1
+    elif 'а' <= char <= 'я':
+        count_russian += 1
+
+print(f"Строчных латинских букв: {count_latin}")
+print(f"Строчных русских букв: {count_russian}")
+print(f"Всего строчных букв: {count_latin + count_russian}")
+print()
+
+# 10. Длина самого длинного слова
+print("10. Длина самого длинного слова")
+s = "кот собака слон жираф антилопа"
+print(f"Строка: '{s}'")
+words = s.split()
+max_length = max(len(word) for word in words)
+print(f"Длина самого длинного слова: {max_length}")
+for word in words:
+    if len(word) == max_length:
+        print(f"Самое длинное слово: '{word}'")
+print()
+
+# 11. Шифрование строки
+print("11. Шифрование строки")
+s = "Программа"
+print(f"Исходная строка: '{s}'")
+
+even_chars = s[1::2]  # символы на четных позициях (индексы 1, 3, 5...)
+odd_chars = s[0::2]   # символы на нечетных позициях (индексы 0, 2, 4...)
+odd_chars_reversed = odd_chars[::-1]  # нечетные символы в обратном порядке
+
+result = even_chars + odd_chars_reversed
+print(f"Зашифрованная строка: '{result}'")
+print()
+
+# 12. Вставка звездочек между символами
+print("12. Вставка звездочек между символами")
+S = "Python"
+N = 3
+print(f"Строка S: '{S}'")
+print(f"Число N: {N}")
+
+stars = '*' * N
+result = stars.join(S)
+
+print(f"Результат: '{result}'")
+print()
+
+# 13. Разделение слов точками
+print("13. Разделение слов точками")
+s = "один два три четыре пять"
+print(f"Исходная строка: '{s}'")
+words = s.split()
+result = '.'.join(words)
+print(f"Результат: '{result}'")
+print()
+
+# 14. Выделение имени файла без расширения
+print("14. Выделение имени файла без расширения")
+file_path = r"d:\ivanov\primer\prog.py"
+print(f"Полный путь: '{file_path}'")
+
+# Разделяем путь по обратным слешам
+parts = file_path.split('\\')
+# Берем последнюю часть (имя файла с расширением)
+filename_with_ext = parts[-1]
+# Разделяем имя файла и расширение
+filename = filename_with_ext.split('.')[0]
+
+print(f"Имя файла без расширения: '{filename}'")
+print()
+
+# 15. Самое длинное слово (последнее из самых длинных)
+print("15. Самое длинное слово (последнее из самых длинных)")
+s = "кот собака слон жираф антилопа бегемот"
+print(f"Строка: '{s}'")
+words = s.split()
+
+max_length = 0
+longest_word = ""
+
+for word in words:
+    if len(word) >= max_length:
+        max_length = len(word)
+        longest_word = word
+
+print(f"Самое длинное слово: '{longest_word}'")
+print(f"Его длина: {max_length}")
+print()
