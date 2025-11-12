@@ -1,0 +1,273 @@
+import random
+# 1. Создание кортежа из строк и преобразование в словарь
+print("1. Кортеж из строк и словарь длин")
+# а) Создаем кортеж из строк
+user_strings = ("ПРИВЕТ", "Мир", "PYTHON", "программирование", "CODE")
+print(f"Кортеж строк: {user_strings}")
+
+# б) Преобразуем в словарь (только буквы верхнего регистра)
+length_dict = {}
+for string in user_strings:
+    # Считаем только буквы верхнего регистра
+    upper_count = sum(1 for char in string if char.isupper())
+    length_dict[string] = upper_count
+
+print(f"Словарь длин (только верхний регистр): {length_dict}")
+print()
+
+# 2. Кортеж с разными типами данных и распаковка
+print("2. Кортеж с разными типами данных")
+# а) Создаем кортеж с разными типами
+mixed_tuple = ("строка", 42, [1, 2, 3], 3.14, {"ключ": "значение"}, True)
+print(f"Смешанный кортеж: {mixed_tuple}")
+
+# б) Распаковка списка кортежей по типам данных
+tuple_list = [("текст",), (123,), ([4, 5],), (7.89,), (False,)]
+strings = []
+numbers = []
+lists = []
+floats = []
+booleans = []
+
+for tup in tuple_list:
+    for item in tup:
+        if isinstance(item, str):
+            strings.append(item)
+        elif isinstance(item, int):
+            numbers.append(item)
+        elif isinstance(item, list):
+            lists.append(item)
+        elif isinstance(item, float):
+            floats.append(item)
+        elif isinstance(item, bool):
+            booleans.append(item)
+
+print("Распакованные по типам:")
+print(f"  Строки: {strings}")
+print(f"  Целые числа: {numbers}")
+print(f"  Списки: {lists}")
+print(f"  Вещественные числа: {floats}")
+print(f"  Логические: {booleans}")
+print()
+
+# 3. Кортеж чисел и работа с ним
+print("3. Кортеж чисел")
+# а) Создаем кортеж из чисел
+numbers_tuple = (10, 25, 30, 45, 60, 75, 90)
+print(f"Кортеж чисел: {numbers_tuple}")
+print(f"Первый элемент: {numbers_tuple[0]}")
+
+# б) Переворачиваем и удаляем кратные 3
+reversed_tuple = numbers_tuple[::-1]
+filtered_tuple = tuple(num for num in reversed_tuple if num % 3 != 0)
+print(f"Перевернутый без кратных 3: {filtered_tuple}")
+print()
+
+# 4. Распаковка кортежа и преобразование в словарь
+print("4. Распаковка кортежа")
+# а) Распаковываем кортеж в переменные
+person_tuple = ("Иван", 25, "инженер", "Москва")
+name, age, profession, city = person_tuple
+print(f"Имя: {name}")
+print(f"Возраст: {age}")
+print(f"Профессия: {profession}")
+print(f"Город: {city}")
+
+# б) Преобразуем список кортежей в словарь
+tuple_pairs = [("яблоко", 50), ("банан", 30), ("апельсин", 70)]
+result_dict = dict(tuple_pairs)
+sorted_dict = dict(sorted(result_dict.items(), key=lambda x: x[1]))
+print(f"Отсортированный словарь: {sorted_dict}")
+print()
+
+# 5. Добавление элемента и форматирование
+print("5. Добавление элемента в кортеж")
+# а) Добавляем элемент (создаем новый кортеж)
+original_tuple = (1, 2, 3)
+new_element = 4
+new_tuple = original_tuple + (new_element,)
+print(f"Исходный кортеж: {original_tuple}")
+print(f"С добавленным элементом: {new_tuple}")
+
+# б) Форматируем кортеж с обратной последовательностью символов
+string_tuple = ("привет", "мир", "python")
+reversed_strings = tuple(string[::-1] for string in string_tuple)
+print(f"Строки в обратном порядке: {reversed_strings}")
+print()
+
+# 6. Преобразование в строку и замена элементов
+print("6. Преобразование кортежа в строку")
+# а) Преобразуем кортеж в строку с разделителем
+words_tuple = ("я", "учу", "Python")
+separator = "-"
+result_string = separator.join(words_tuple)
+print(f"Кортеж как строка: {result_string}")
+
+# б) Заменяем последние элементы в кортежах
+tuple_list = [(1, 2, 3), ("a", "b", 5), (7, 8, 9.5)]
+new_value = 100
+for i in range(len(tuple_list)):
+    if isinstance(tuple_list[i][-1], (int, float)):
+        tuple_list[i] = tuple_list[i][:-1] + (new_value,)
+print(f"После замены последних элементов: {tuple_list}")
+print()
+
+# 7. Работа с элементами кортежа
+print("7. Четвертый элемент и удаление пустых кортежей")
+# а) Выводим четвертый элемент с начала и с конца
+sample_tuple = (10, 20, 30, 40, 50, 60, 70, 80)
+print(f"Кортеж: {sample_tuple}")
+if len(sample_tuple) >= 4:
+    print(f"4-й элемент с начала: {sample_tuple[3]}")
+    print(f"4-й элемент с конца: {sample_tuple[-4]}")
+
+# б) Удаляем пустые кортежи
+mixed_tuples = [(), (1, 2), (), (3, 4, 5), (), (6,)]
+filtered_tuples = [tup if tup else tuple([random.randint(1, 100)]) for tup in mixed_tuples]
+print(f"После замены пустых кортежей: {filtered_tuples}")
+print()
+
+# 8. Кортеж словарей и сортировка
+print("8. Кортеж словарей и сортировка")
+# а) Создаем кортеж словарей
+dict_tuple = (
+    {"name": "Иван", "age": 25, "score": 85.5},
+    {"name": "Мария", "age": 30, "score": 92.3},
+    {"name": "Петр", "age": 22, "score": 78.9}
+)
+print("Кортеж словарей:")
+for d in dict_tuple:
+    print(f"  {d}")
+
+# б) Сортируем по score в обратном порядке
+sorted_tuple = tuple(sorted(dict_tuple, key=lambda x: x["score"], reverse=True))
+print("Отсортированный по score:")
+for d in sorted_tuple:
+    print(f"  {d}")
+print()
+
+# 9. Поиск повторяющихся элементов и подсчет
+print("9. Поиск повторяющихся элементов")
+# а) Ищем повторяющиеся элементы
+numbers_tuple = (1, 2, 3, 2, 4, 5, 3, 6, 2)
+seen = set()
+duplicates = set()
+for num in numbers_tuple:
+    if num in seen:
+        duplicates.add(num)
+    else:
+        seen.add(num)
+print(f"Повторяющиеся элементы: {duplicates}")
+
+# б) Подсчитываем элементы до кортежа
+mixed_list = [1, 2, 3, "текст", [4, 5], (6, 7), 8, 9]
+count = 0
+total = 0
+for item in mixed_list:
+    if isinstance(item, tuple):
+        break
+    if isinstance(item, (int, float)):
+        count += 1
+        total += item
+print(f"Элементов до кортежа: {count}, сумма: {total}")
+print()
+
+# 10. Проверка наличия элемента и удаление дубликатов
+print("10. Проверка наличия элемента")
+# а) Проверяем наличие элемента
+test_tuple = (1, 2, 3, 2, 4, 5, 2, 6)
+element_to_find = 2
+if element_to_find in test_tuple:
+    count = test_tuple.count(element_to_find)
+    print(f"Элемент {element_to_find} встречается {count} раз(а)")
+else:
+    print(f"Элемент {element_to_find} не найден")
+
+# б) Удаляем повторяющиеся элементы из списка строк
+string_list = ["яблоко", "банан", "яблоко", "апельсин", "банан", "вишня"]
+unique_tuple = tuple(set(string_list))
+print(f"Кортеж без дубликатов: {unique_tuple}")
+print()
+
+# 11. Преобразование списка в кортеж и умножение чисел
+print("11. Преобразование списка в кортеж")
+# а) Преобразуем список в кортеж
+number_list = [2, 3, 4, 5, 6, 7, 8]
+number_tuple = tuple(number_list)
+print(f"Кортеж из списка: {number_tuple}")
+
+# б) Перемножаем четные числа
+product = 1
+even_numbers = [num for num in number_tuple if num % 2 == 0]
+for num in even_numbers:
+    product *= num
+print(f"Произведение четных чисел: {product}")
+print()
+
+# 12. Удаление элемента и вычисление среднего
+print("12. Удаление элемента из кортежа")
+# а) Удаляем элемент (создаем новый кортеж)
+original = (10, 20, 30, 40, 50)
+element_to_remove = 30
+new_tuple = tuple(x for x in original if x != element_to_remove)
+print(f"Исходный: {original}")
+print(f"Без элемента {element_to_remove}: {new_tuple}")
+
+# б) Вычисляем среднее в кортежах
+tuple_of_tuples = ((1, 6, 7, 8), (2, 3, 9, 10), (4, 5, 6, 11))
+averages = []
+for tup in tuple_of_tuples:
+    numbers_gt_5 = [num for num in tup if num > 5]
+    if numbers_gt_5:
+        avg = sum(numbers_gt_5) / len(numbers_gt_5)
+        averages.append(avg)
+print(f"Средние значения (числа > 5): {averages}")
+print()
+
+# 13. Срез кортежа и преобразование типов
+print("13. Срез кортежа и преобразование типов")
+# а) Делаем срез без строк
+mixed_tuple = (1, "текст", 3, 4.5, "еще текст", 6, 7.8)
+start, end = 0, 6  # срез от 0 до 6
+sliced = mixed_tuple[start:end]
+numbers_only = tuple(x for x in sliced if isinstance(x, (int, float)))
+print(f"Срез без строк: {numbers_only}")
+
+# б) Преобразуем строки в числа
+string_numbers = ("10", "25", "-5", "30", "-8", "15")
+positive_numbers = tuple(int(x) for x in string_numbers if int(x) >= 0)
+print(f"Положительные числа: {positive_numbers}")
+print()
+
+# 14. Поиск порядкового номера и создание числа
+print("14. Поиск порядкового номера")
+# а) Ищем порядковый номер числа
+numbers_tuple = (10, "текст", 20, 30, "еще", 40, 50)
+target_number = 30
+if target_number in numbers_tuple:
+    index = numbers_tuple.index(target_number) + 1
+    print(f"Число {target_number} на позиции: {index}")
+else:
+    print(f"Число {target_number} не найдено")
+
+# б) Создаем большое число из кратных 3
+numbers = (3, 6, 9, 12, 15, 18)
+multiples_of_3 = [str(num) for num in numbers if num % 3 == 0]
+big_number = int(''.join(multiples_of_3)) if multiples_of_3 else 0
+print(f"Большое число из кратных 3: {big_number}")
+print()
+
+# 15. Длина кортежа и поиск в кортежах
+print("15. Длина кортежа и поиск в кортежах")
+# а) Определяем длину (только строки)
+mixed_tuple = (1, "привет", 3.14, "мир", [1, 2], "Python")
+string_count = sum(1 for item in mixed_tuple if isinstance(item, str))
+print(f"Количество строк в кортеже: {string_count}")
+
+# б) Ищем элемент в кортеже кортежей
+nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9), (1, 2, 3))
+element_to_find = 3
+count = 0
+for tup in nested_tuple:
+    count += tup.count(element_to_find)
+print(f"Элемент {element_to_find} встречается {count} раз(а)")
