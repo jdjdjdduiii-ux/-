@@ -1,0 +1,160 @@
+# 1. Функция 1
+print("1. y = { ax² + 1, если x > 0; ax - 1, если x ≤ 0 }")
+a = 2
+x = 3
+if x > 0:
+    y = a * x * x + 1
+else:
+    y = a * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 2. Функция 2
+print("2. y = { ax + 1, если x ≥ 1; x² - 1, если x < 1 }")
+a = 3
+x = 2
+if x >= 1:
+    y = a * x + 1
+else:
+    y = x * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 3. Функция 3
+print("3. y = { 3a², если x < 0; 4ax - 1, если x ≥ 0 }")
+a = 2
+x = -1
+if x < 0:
+    y = 3 * a * a
+else:
+    y = 4 * a * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 4. Функция 4
+print("4. y = { 2a², если x > 4; 3x - 1, если x ≤ 4 }")
+a = 3
+x = 5
+if x > 4:
+    y = 2 * a * a
+else:
+    y = 3 * x - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 5. Функция 5
+print("5. y = { 2ax - 2, если x > 2; 3a² - 2x, если x ≤ 2 }")
+a = 2
+x = 3
+if x > 2:
+    y = 2 * a * x - 2
+else:
+    y = 3 * a * a - 2 * x
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 6. Функция 6
+print("6. y = { 2ax² - 1, если x > 1; x, если x ≤ 1 }")
+a = 4
+x = 2
+if x > 1:
+    y = 2 * a * x * x - 1
+else:
+    y = x
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 7. Функция 7
+print("7. y = { x², если x > 2; 2a - 1, если x ≤ 2 }")
+a = 5
+x = 3
+if x > 2:
+    y = x * x
+else:
+    y = 2 * a - 1
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 8. Функция 8
+print("8. y = { cos(2x - 1), если x > 2; sin(3x + 1), если x ≤ 2 }")
+x = 1
+if x > 2:
+    y = math.cos(2 * x - 1)
+else:
+    y = math.sin(3 * x + 1)
+print(f"При x = {x}: y = {y:.2f}")
+print()
+
+# 9. Функция 9
+print("9. y = { 2x³ - 2x - 1, если x > 2; 3x² - 2x + 1, если x ≤ 2 }")
+x = 3
+if x > 2:
+    y = 2 * x * x * x - 2 * x - 1
+else:
+    y = 3 * x * x - 2 * x + 1
+print(f"При x = {x}: y = {y}")
+print()
+
+# 10. Функция 10
+print("10. y = { 2ax² - 1, если x > 1; 1/a, если x ≤ 1 }")
+a = 2
+x = 0.5
+if x > 1:
+    y = 2 * a * x * x - 1
+else:
+    y = 1 / a
+print(f"При a = {a}, x = {x}: y = {y}")
+print()
+
+# 11. Функция 11
+print("11. y = { √(ax) + 1, если x ≥ 0; ax - 1, если x < 0 }")
+a = 4
+x = 9
+if x >= 0:
+    y = math.sqrt(a * x) + 1
+else:
+    y = a * x - 1
+print(f"При a = {a}, x = {x}: y = {y:.2f}")
+print()
+
+# 12. Функция 12
+print("12. y = { √x + a, если x ≥ 0; a/x - 1, если x < 0 }")
+a = 3
+x = 16
+if x >= 0:
+    y = math.sqrt(x) + a
+else:
+    y = a / x - 1
+print(f"При a = {a}, x = {x}: y = {y:.2f}")
+print()
+
+# 13. Функция 13
+print("13. y = { 1/x + a, если x > 0; x² - 1, если x ≤ 0 }")
+a = 2
+x = 4
+if x > 0:
+    y = 1 / x + a
+else:
+    y = x * x - 1
+print(f"При a = {a}, x = {x}: y = {y:.2f}")
+print()
+
+# 14. Функция 14
+print("14. y = { cos x, если x > π/2; sin x, если x ≤ π/2 }")
+x = math.pi / 4  # 45 градусов
+if x > math.pi / 2:
+    y = math.cos(x)
+else:
+    y = math.sin(x)
+print(f"При x = π/4: y = {y:.2f}")
+print()
+
+# 15. Функция 15
+print("15. y = { √(x - 2), если x > 2; (x - 2)² + 1, если x ≤ 2 }")
+x = 6
+if x > 2:
+    y = math.sqrt(x - 2)
+else:
+    y = (x - 2) ** 2 + 1
+print(f"При x = {x}: y = {y:.2f}")
+print()
