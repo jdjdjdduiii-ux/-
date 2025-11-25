@@ -1,0 +1,13 @@
+def Digits(S):
+    if S == "":  # если строка пустая
+        return 0
+    
+    if S[0].isdigit():  # если первый символ - цифра
+        return 1 + Digits(S[1:])
+    else:
+        return Digits(S[1:])
+
+# Примеры использования
+print(Digits("Hello123"))  # 3
+print(Digits("abc"))       # 0
+print(Digits("123"))       # 3
