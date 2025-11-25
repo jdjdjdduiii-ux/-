@@ -1,0 +1,59 @@
+ # а) 
+def full_name(first_name, last_name, middle_name=None):
+    if middle_name:
+        return f"{last_name} {first_name} {middle_name}"
+    else:
+        return f"{last_name} {first_name}"
+
+
+# б) 
+def transform_list(numbers, transform_function=None):
+    if transform_function:
+        return [transform_function(x) for x in numbers]
+    else:
+        return numbers.copy()
+
+
+# в) 
+def sum_positive_numbers(*args):
+    return sum(x for x in args if x > 0)
+
+
+# г) 
+def common_keys(**kwargs):
+    dicts = list(kwargs.values())
+
+    if not dicts:
+        return {}
+
+    common_keys_set = set(dicts[0].keys())
+    for d in dicts[1:]:
+        common_keys_set = common_keys_set.intersection(set(d.keys()))
+    result = {}
+    for key in common_keys_set:
+        first_value = dicts[0][key]
+        if all(d.get(key) == first_value for d in dicts):
+            result[key] = first_value
+
+    return result
+
+
+if __name__ == "__main__":
+    print("а) Тестирование full_name:")
+    print(full_name('Иван', 'Петров'))  # → 'Петров Иван'
+    print(full_name('Мария', 'Сидорова', middle_name='Алексеевна'))  # → 'Сидорова Мария Алексеевна'
+
+    # Тестирование функции transform_list
+    print("\nб) Тестирование transform_list:")
+    print(transform_list([1, 2, 3]))  
+    print(transform_list([1, 2, 3], transform_function=lambda x: x * 2))  
+
+    # Тестирование функции sum_positive_numbers
+    print("\nв) Тестирование sum_positive_numbers:")
+    print(sum_positive_numbers(1, -2, 3, -4, 5))  
+    print(sum_positive_numbers(-1, -2, -3))  
+
+    # Тестирование функции common_keys
+    print("\nг) Тестирование common_keys:")
+    print(common_keys(dict1={'a': 1, 'b': 2}, dict2={'b': 2, 'c': 3})) 
+    print(common_keys(dict1={'x': 5, 'y': 6}, dict2={'y': 6, 'z': 7}, dict3={'y': 6, 'w': 8}))  
