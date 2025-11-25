@@ -1,0 +1,87 @@
+def pair_and_filter(list1, list2, filter_function=None):
+    pairs = []
+    for x in list1:
+        for y in list2:
+            if filter_function is None or filter_function(x, y):
+                pairs.append((x, y))
+    return pairs
+
+
+# б) Функция для соединения строк с опцией верхнего регистра
+def concat_or_upper(strings, uppercase=False):
+    result = ' '.join(strings)
+    return result.upper() if uppercase else result
+
+
+# в) Функция для фильтрации строк в верхнем регистре
+def filter_uppercase_strings(strings):
+    return [s for s in strings if s.isupper()]
+
+
+# г) Функция для получения уникальных отсортированных элементов
+def unique_sorted_elements(*lists):
+    # Объединяем все элементы из всех списков
+    all_elements = []
+    for lst in lists:
+        all_elements.extend(lst)
+
+    # Возвращаем отсортированные уникальные элементы
+    return sorted(set(all_elements))
+
+
+# Тестирование функций
+if __name__ == "__main__":
+    print("а) Тестирование pair_and_filter:")
+    # Все возможные пары
+    print(pair_and_filter([1, 2], [3, 4]))
+    # → [(1, 3), (1, 4), (2, 3), (2, 4)]
+
+    # Пары с четной суммой
+    print(pair_and_filter([1, 2], [3, 4], filter_function=lambda x, y: (x + y) % 2 == 0))
+    # → [(1, 3), (2, 4)]
+
+    # Дополнительный пример: пары где x < y
+    print(pair_and_filter([1, 2, 3], [2, 1, 4], filter_function=lambda x, y: x < y))
+    # → [(1, 2), (1, 4), (2, 4)]
+
+    print("\nб) Тестирование concat_or_upper:")
+    # Без изменения регистра
+    print(concat_or_upper(['hello', 'world']))
+    # → 'hello world'
+
+    # В верхнем регистре
+    print(concat_or_upper(['hello', 'world'], uppercase=True))
+    # → 'HELLO WORLD'
+
+    # С явным указанием False
+    print(concat_or_upper(['Python', 'is', 'fun'], uppercase=False))
+    # → 'Python is fun'
+
+    print("\nв) Тестирование filter_uppercase_strings:")
+    # Фильтрация строк в верхнем регистре
+    print(filter_uppercase_strings(['HELLO', 'World', 'BYE']))
+    # → ['HELLO', 'BYE']
+
+    print(filter_uppercase_strings(['Python', 'JAVA', 'c++']))
+    # → ['JAVA']
+
+    # Все строки в нижнем регистре
+    print(filter_uppercase_strings(['hello', 'world', 'python']))
+    # → []
+
+    print("\nг) Тестирование unique_sorted_elements:")
+    # Числовые списки
+    print(unique_sorted_elements([3, 1], [2, 3], [1, 4]))
+    # → [1, 2, 3, 4]
+
+    # Строковые списки
+    print(unique_sorted_elements(['b', 'a'], ['c', 'a'], ['d', 'b']))
+    # → ['a', 'b', 'c', 'd']
+
+    # Один список
+    print(unique_sorted_elements([5, 2, 5, 1, 2]))
+    # → [1, 2, 5]
+
+    # Несколько списков с повторениями
+    print(unique_sorted_elements([1, 2], [2, 3], [3, 4], [4, 5]))
+    # → [1, 2, 3, 4, 5]
