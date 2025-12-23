@@ -1,0 +1,779 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "5c2974ef-a2fe-4def-967f-e6e8413c891e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Было:\n",
+      "[1, 2, 3]\n",
+      "[4, 5, 6]\n",
+      "[7, 8, 9]\n",
+      "Стало:\n",
+      "[1, 3]\n",
+      "[7, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def RemoveRowCol (A, K, L):\n",
+    "    M = len(A)      # количество строк\n",
+    "    N = len(A[0])   # количество столбцов\n",
+    "    \n",
+    "    # Проверяем, что K и L не выходят за границы матрицы\n",
+    "    if K >= M or L >= N:\n",
+    "        return A    # если выходят - возвращаем исходную матрицу\n",
+    "    \n",
+    "    # Создаем пустую матрицу для результата\n",
+    "    new_matrix = []\n",
+    "    \n",
+    "    # Проходим по всем строкам матрицы\n",
+    "    for i in range(M):\n",
+    "        # Пропускаем строку с номером K (которую нужно удалить)\n",
+    "        if i != K:\n",
+    "            # Создаем новую строку\n",
+    "            new_row = []\n",
+    "            # Проходим по всем столбцам в текущей строке\n",
+    "            for j in range(N):\n",
+    "                # Пропускаем столбец с номером L (который нужно удалить)\n",
+    "                if j != L:\n",
+    "                    # Добавляем элемент в новую строку\n",
+    "                    new_row.append(A[i][j])\n",
+    "            # Добавляем готовую строку в новую матрицу\n",
+    "            new_matrix.append(new_row) \n",
+    "    # Возвращаем результат\n",
+    "    return new_matrix\n",
+    "matrix = [\n",
+    "    [1, 2, 3],\n",
+    "    [4, 5, 6],\n",
+    "    [7, 8, 9]\n",
+    "]\n",
+    "\n",
+    "result = RemoveRowCol(matrix, 1, 1)\n",
+    "\n",
+    "print(\"Было:\")\n",
+    "for row in matrix:\n",
+    "    print(row)\n",
+    "\n",
+    "print(\"Стало:\")\n",
+    "for row in result:\n",
+    "    print(row)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "098481a6-bb3c-4ea8-9aaf-339048ebe079",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "список B [2, 4, 6, 8]\n",
+      "список C [1, 3, 5, 7]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def Split (A):\n",
+    "    B=[]\n",
+    "    C=[]\n",
+    "    for i in range (len(A)):\n",
+    "        if A[i]%2==0:\n",
+    "            B.append(A[i])\n",
+    "        else: \n",
+    "            C.append(A[i]) \n",
+    "    return (B,C)\n",
+    "A=[1,2,3,4,5,6,7,8]\n",
+    "B,C=Split (A)\n",
+    "print ('список B',B)\n",
+    "print ('список C',C)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "6ea821e5-7fe1-464e-b766-e099ca475ad6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "старая матрица \n",
+      "[1, 2, 3]\n",
+      "[4, 5, 6]\n",
+      "[7, 8, 9]\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите k1 1\n",
+      "введите k2 2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "новая матрица \n",
+      "[4, 5, 6]\n",
+      "[1, 2, 3]\n",
+      "[7, 8, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def SwapRow (A,k1,k2):\n",
+    "    A[k1-1], A[k2-1] = A[k2-1], A[k1-1]\n",
+    "    return A\n",
+    "\n",
+    "matrix = [\n",
+    "    [1, 2, 3],\n",
+    "    [4, 5, 6],\n",
+    "    [7, 8, 9]\n",
+    "]\n",
+    "print('старая матрица ')\n",
+    "for row in matrix:\n",
+    "    print(row)\n",
+    "k1=int(input('введите k1'))\n",
+    "k2=int(input('введите k2'))\n",
+    "new_matrix= SwapRow (matrix,k1,k2)\n",
+    "print('новая матрица ')\n",
+    "for row in new_matrix:\n",
+    "    print(row)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "5ec89430-1f16-4475-9f1a-db99d8b7f1af",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Исходная матрица:\n",
+      "[1, 2, 3]\n",
+      "[4, 5, 6]\n",
+      "[7, 8, 9]\n",
+      "\n",
+      "Транспонированная матрица:\n",
+      "[1, 4, 7]\n",
+      "[2, 5, 8]\n",
+      "[3, 6, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def Transp (A):\n",
+    "    M = len(A)\n",
+    "    for i in range(M):\n",
+    "        for j in range(i + 1, M):  # обрабатываем только элементы выше диагонали\n",
+    "            A[i][j], A[j][i] = A[j][i], A[i][j]\n",
+    "    return A\n",
+    "\n",
+    "matrix = [\n",
+    "    [1, 2, 3],\n",
+    "    [4, 5, 6],\n",
+    "    [7, 8, 9]\n",
+    "]\n",
+    "\n",
+    "print(\"Исходная матрица:\")\n",
+    "for row in matrix:\n",
+    "    print(row)\n",
+    "\n",
+    "# Транспонируем матрицу\n",
+    "transposed = Transp(matrix)\n",
+    "\n",
+    "print(\"\\nТранспонированная матрица:\")\n",
+    "for row in transposed:\n",
+    "    print(row)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "31267fa9-0469-448f-b73c-740ff25f04b4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Матрица A:\n",
+      "[1, 2]\n",
+      "[3, 4]\n",
+      "\n",
+      "Матрица B:\n",
+      "[5, 6]\n",
+      "[7, 8]\n",
+      "\n",
+      "Произведение A × B:\n",
+      "[19, 22]\n",
+      "[43, 50]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def MtrProd(A, B):\n",
+    "    if len(A[0]) != len(B):\n",
+    "        return \"Ошибка: количество столбцов A должно равняться количеству строк B\"\n",
+    "    m = len(A)      # строк в A\n",
+    "    n = len(A[0])   # столбцов в A (должно равняться строкам в B)\n",
+    "    p = len(B[0])   # столбцов в B\n",
+    "    \n",
+    "    # 1. Создаем матрицу-результат\n",
+    "    C = []\n",
+    "    for i in range(m):\n",
+    "        row = []\n",
+    "        for j in range(p):\n",
+    "            row.append(0)\n",
+    "        C.append(row)\n",
+    "    \n",
+    "    # 2. Заполняем результат\n",
+    "    for i in range(m):          # каждая строка A\n",
+    "        for j in range(p):      # каждый столбец B\n",
+    "            for k in range(n):  # суммируем произведения\n",
+    "                C[i][j] += A[i][k] * B[k][j]\n",
+    "    \n",
+    "    return C\n",
+    "A = [\n",
+    "    [1, 2],\n",
+    "    [3, 4]\n",
+    "]\n",
+    "\n",
+    "B = [\n",
+    "    [5, 6],\n",
+    "    [7, 8]\n",
+    "]\n",
+    "\n",
+    "print(\"Матрица A:\")\n",
+    "for row in A:\n",
+    "    print(row)\n",
+    "\n",
+    "print(\"\\nМатрица B:\")\n",
+    "for row in B:\n",
+    "    print(row)\n",
+    "\n",
+    "result = MtrProd(A, B)\n",
+    "\n",
+    "print(\"\\nПроизведение A × B:\")\n",
+    "for row in result:\n",
+    "    print(row)    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "9c987fc9-0b4d-473f-bfd4-fa336941396b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Матрица A:\n",
+      "[1, 2]\n",
+      "[3, 4]\n",
+      "\n",
+      "Матрица B:\n",
+      "[5, 6]\n",
+      "[7, 8]\n",
+      "готовая матрица \n",
+      "[6, 8]\n",
+      "[10, 12]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def SumMtr(A, B):\n",
+    "    # Проверяем размеры\n",
+    "    if len(A) != len(B) or len(A[0]) != len(B[0]):\n",
+    "        return None  # или выбросить ошибку\n",
+    "    \n",
+    "    # Создаем и заполняем результирующую матрицу\n",
+    "    C = []\n",
+    "    for i in range(len(A)):\n",
+    "        row = []\n",
+    "        for j in range(len(A[0])):\n",
+    "            row.append(A[i][j] + B[i][j])\n",
+    "        C.append(row)\n",
+    "    \n",
+    "    return C\n",
+    "\n",
+    "A = [\n",
+    "    [1, 2],\n",
+    "    [3, 4]\n",
+    "]\n",
+    "\n",
+    "B = [\n",
+    "    [5, 6],\n",
+    "    [7, 8]\n",
+    "]\n",
+    "\n",
+    "print(\"Матрица A:\")\n",
+    "for row in A:\n",
+    "    print(row)\n",
+    "\n",
+    "print(\"\\nМатрица B:\")\n",
+    "for row in B:\n",
+    "    print(row)\n",
+    "\n",
+    "result = SumMtr (A, B)\n",
+    "\n",
+    "print(\"готовая матрица \")\n",
+    "for row in result:\n",
+    "    print(row)        \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "ade7bc46-a798-4a0e-9e34-8a3a376e1a3d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Наша матрица:\n",
+      "[1, 2, 3]\n",
+      "[4, 5, 6]\n",
+      "[7, 8, 9]\n",
+      "\n",
+      "Какую диагональ суммировать?\n",
+      "1 - Главная (из левого верхнего угла)\n",
+      "2 - Побочная (из правого верхнего угла)\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Ваш выбор (1 или 2):  1\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Сумма главной диагонали: 15\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum_diagonal(matrix, diagonal_type):\n",
+    "    n = len(matrix)\n",
+    "    total = 0\n",
+    "    \n",
+    "    if diagonal_type == 1:  # главная диагональ\n",
+    "        for i in range(n):\n",
+    "            total += matrix[i][i]\n",
+    "    else:  # побочная диагональ\n",
+    "        for i in range(n):\n",
+    "            total += matrix[i][n-1-i]\n",
+    "    \n",
+    "    return total\n",
+    "\n",
+    "# Создаем матрицу 3x3 \n",
+    "matrix = [\n",
+    "    [1, 2, 3],\n",
+    "    [4, 5, 6],\n",
+    "    [7, 8, 9]\n",
+    "]\n",
+    "\n",
+    "# Показываем матрицу\n",
+    "print(\"Наша матрица:\")\n",
+    "for row in matrix:\n",
+    "    print(row)\n",
+    "\n",
+    "# Спрашиваем пользователя\n",
+    "print(\"\\nКакую диагональ суммировать?\")\n",
+    "print(\"1 - Главная (из левого верхнего угла)\")\n",
+    "print(\"2 - Побочная (из правого верхнего угла)\")\n",
+    "choice = int(input(\"Ваш выбор (1 или 2): \"))\n",
+    "\n",
+    "# Считаем сумму\n",
+    "result = sum_diagonal(matrix, choice)\n",
+    "\n",
+    "# Показываем результат\n",
+    "if choice == 1:\n",
+    "    print(f\"Сумма главной диагонали: {result}\")\n",
+    "else:\n",
+    "    print(f\"Сумма побочной диагонали: {result}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "d6b66c54-6e63-49e8-aa25-b3a48a9cf430",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Исходная матрица:\n",
+      "[1, 2, 3]\n",
+      "[4, 5, 6]\n",
+      "[7, 8, 9]\n",
+      "[10, 11, 12]\n",
+      "\n",
+      "После удаления строк 2-3:\n",
+      "[1, 2, 3]\n",
+      "[10, 11, 12]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def RemoveRows (A,k1,k2):\n",
+    "    \n",
+    "    m=len(A)\n",
+    "    if k1>m:\n",
+    "        return A\n",
+    "    if k2 > m:\n",
+    "        k2 = m\n",
+    "    \n",
+    "    # Создаем новую матрицу без строк от K1 до K2\n",
+    "    new_matrix = []\n",
+    "    for i in range(m):\n",
+    "        if i + 1 < k1 or i + 1 > k2:\n",
+    "            new_matrix.append(A[i])\n",
+    "    \n",
+    "    return new_matrix\n",
+    "\n",
+    "# Пример использования:\n",
+    "matrix = [\n",
+    "    [1, 2, 3],\n",
+    "    [4, 5, 6],\n",
+    "    [7, 8, 9],\n",
+    "    [10, 11, 12]\n",
+    "]\n",
+    "\n",
+    "print(\"Исходная матрица:\")\n",
+    "for row in matrix:\n",
+    "    print(row)\n",
+    "\n",
+    "# Удаляем строки с 2 по 3\n",
+    "result = RemoveRows(matrix, 2, 3)\n",
+    "print(\"\\nПосле удаления строк 2-3:\")\n",
+    "for row in result:\n",
+    "    print(row)\n",
+    "\n",
+    "        \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "8736949f-bf70-4372-9ece-c17f4d42dc43",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "полyченный резултат = edcb\n"
+     ]
+    }
+   ],
+   "source": [
+    "def InvertStr ( s , k ,n ):\n",
+    "    dl=len(s)\n",
+    "    if k > dl:\n",
+    "        return '' \n",
+    "    if dl< k+n :\n",
+    "        substring = s[k-1:]\n",
+    "    else:\n",
+    "        # Берем ровно N символов начиная с K\n",
+    "        substring = s[k-1:k-1+n]\n",
+    "    \n",
+    "    # Инвертируем подстроку\n",
+    "    inverted = substring[::-1]\n",
+    "    return inverted\n",
+    "\n",
+    "s = \"abcdefghijk\"\n",
+    "result=InvertStr ( s , 2 ,4 )\n",
+    "print ('полyченный резултат =',result)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "637c99c8-d388-4f92-8957-3b99fd153b1a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Исходная матрица:\n",
+      "[1, 2, 3, 4]\n",
+      "[5, 6, 7, 8]\n",
+      "[9, 10, 11, 12]\n",
+      "\n",
+      "После замены столбцов 2 и 4:\n",
+      "[1, 4, 3, 2]\n",
+      "[5, 8, 7, 6]\n",
+      "[9, 12, 11, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def SwapCol (A,K1,K2):\n",
+    "    M=len(A)\n",
+    "    N=len(A[0])\n",
+    "    for i in range (M):\n",
+    "        temp = A[i][K1-1]\n",
+    "        A[i][K1-1] = A[i][K2-1]\n",
+    "        A[i][K2-1] = temp\n",
+    "    \n",
+    "    return A\n",
+    "matrix = [\n",
+    "        [1, 2, 3, 4],\n",
+    "        [5, 6, 7, 8],\n",
+    "        [9, 10, 11, 12]\n",
+    "    ]\n",
+    "    \n",
+    "print(\"Исходная матрица:\")\n",
+    "for row in matrix:\n",
+    "    print(row)\n",
+    "    \n",
+    "# Меняем местами столбцы 2 и 4\n",
+    "SwapCol(matrix, 2, 4)\n",
+    "    \n",
+    "print(\"\\nПосле замены столбцов 2 и 4:\")\n",
+    "for row in matrix:\n",
+    "    print(row)    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "6ef63cef-df79-4000-81ea-b0479628ae5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Было: aaabbbbbcc\n",
+      "Стало: aaab{5}cc\n"
+     ]
+    }
+   ],
+   "source": [
+    "def CompressStr(S):\n",
+    "    result = \"\"          \n",
+    "    i = 0                \n",
+    "    \n",
+    "    while i < len(S):    \n",
+    "        # Шаг 1: Запоминаем текущую букву\n",
+    "        letter = S[i]\n",
+    "        count = 1        # Уже видим одну букву\n",
+    "        \n",
+    "        # Шаг 2: Считаем одинаковые буквы вперед\n",
+    "        # Смотрим на следующую букву (i+1), потом на (i+2) и т.д.\n",
+    "        while i + count < len(S) and S[i + count] == letter:\n",
+    "            count += 1   # Нашли еще одну такую же букву\n",
+    "        \n",
+    "        # Шаг 3: Решаем как записать\n",
+    "        if count > 4:\n",
+    "            result += f\"{letter}{{{count}}}\"  # Сжатая запись\n",
+    "        else:\n",
+    "            result += letter * count          # Обычная запись\n",
+    "        \n",
+    "        # Шаг 4: Перепрыгиваем через все посчитанные буквы\n",
+    "        i += count\n",
+    "    \n",
+    "    return result\n",
+    "test1 = \"aaabbbbbcc\"\n",
+    "result1 = CompressStr(test1)\n",
+    "print(f\"Было: {test1}\")\n",
+    "print(f\"Стало: {result1}\")    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "95add8c0-7bf8-45b2-9bc2-45ba3e669d3d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "def IsIdent (S):\n",
+    "    if not S:\n",
+    "       return False\n",
+    "    if S[0] in \"0123456789\":\n",
+    "        return False\n",
+    "    for char in S:\n",
+    "        # Разрешенные символы: \n",
+    "        # латинские буквы a-z, A-Z, цифры 0-9, и _\n",
+    "        if not (('a' <= char <= 'z') or \n",
+    "                ('A' <= char <= 'Z') or \n",
+    "                ('0' <= char <= '9') or \n",
+    "                (char == '_')):\n",
+    "            return False\n",
+    "    \n",
+    "    return True\n",
+    "print(IsIdent(\"GVhЛОРello\"))\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "5bfa951d-16a0-4357-a914-fbde6a24e14d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[0, 1, 0]\n",
+      "[1, 0, 1]\n",
+      "[0, 1, 0]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def Chessboard(M, N):\n",
+    "    matrix = []\n",
+    "    for i in range(M):\n",
+    "        row = []\n",
+    "        for j in range(N):\n",
+    "            # Если сумма индексов чётная - 0, нечётная - 1\n",
+    "            if (i + j) % 2 == 0:\n",
+    "                row.append(0)\n",
+    "            else:\n",
+    "                row.append(1)\n",
+    "        matrix.append(row)\n",
+    "    return matrix\n",
+    "result= Chessboard(3, 3)\n",
+    "for row in result:\n",
+    "    print(row)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "11fd3fd3-ba11-43d3-bfb5-d5396d1041b5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 4, 9, 12, 6, 2]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def Bell(L):\n",
+    "    if not L:\n",
+    "        return []\n",
+    "    \n",
+    "    sorted_L = sorted(L)  # сортируем от меньшего к большему\n",
+    "    result = [0] * len(L)  # создаём список нужной длины с нулями\n",
+    "    \n",
+    "    left_index = 0      # индекс для вставки слева (начало)\n",
+    "    right_index = len(L) - 1  # индекс для вставки справа (конец)\n",
+    "    \n",
+    "    # Берём элементы по очереди из отсортированного списка\n",
+    "    for i in range(len(sorted_L)):\n",
+    "        if i % 2 == 0:  # чётные индексы (0, 2, 4...) - вставляем слева\n",
+    "            result[left_index] = sorted_L[i]\n",
+    "            left_index += 1\n",
+    "        else:  # нечётные индексы (1, 3, 5...) - вставляем справа\n",
+    "            result[right_index] = sorted_L[i]\n",
+    "            right_index -= 1\n",
+    "    \n",
+    "    return result\n",
+    "L=[1,4,6,2,9,12]\n",
+    "print( Bell(L))   "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9d932094-4a24-4bce-bbc3-eabdc83cda34",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def RemoveCols(A, K1, K2):\n",
+    "    M = len(A)\n",
+    "    if M == 0:\n",
+    "        return A\n",
+    "    \n",
+    "    N = len(A[0])\n",
+    "    new_matrix = []\n",
+    "    \n",
+    "    # Если K1 > N, матрица не изменяется\n",
+    "    if K1 > N:\n",
+    "        return A\n",
+    "    \n",
+    "    # Корректируем K2, если он больше N\n",
+    "    if K2 > N:\n",
+    "        K2 = N\n",
+    "    \n",
+    "    for i in range(M):\n",
+    "        row = []\n",
+    "        for j in range(N):\n",
+    "            # Сохраняем столбцы, которые НЕ в диапазоне [K1, K2]\n",
+    "            if (j + 1) < K1 or (j + 1) > K2:\n",
+    "                row.append(A[i][j])\n",
+    "        new_matrix.append(row)\n",
+    "    \n",
+    "    return new_matrix\n",
+    "\n",
+    "matrix = [\n",
+    "    [1, 2, 3, 4, 5],\n",
+    "    [6, 7, 8, 9, 10],\n",
+    "    [11, 12, 13, 14, 15]\n",
+    "]\n",
+    "\n",
+    "result = RemoveCols(matrix, 2, 4)\n",
+    "for row in result"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
