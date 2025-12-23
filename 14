@@ -1,0 +1,393 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "76461de9-c7f8-486b-8d53-f780cb94218f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите x 1\n",
+      "введите y 1\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1.0, 1)\n"
+     ]
+    }
+   ],
+   "source": [
+    "def Mean (X,Y):\n",
+    "    AMean = (X + Y)/2\n",
+    "    GMean = X * Y\n",
+    "    return (AMean,GMean)\n",
+    "x=int(input('введите x'))\n",
+    "y=int(input('введите y'))\n",
+    "result =Mean (x,y)\n",
+    "print(result)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "2f7600a2-10c3-41c5-b3c3-5c3af644a35f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите r 1\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "площадь = 3.141592653589793\n",
+      "длина = 6.283185307179586\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "def Circle (R):\n",
+    "    pl=math.pi * R**2\n",
+    "    Dl=2*math.pi*R\n",
+    "    return (pl,Dl)\n",
+    "r=int(input('введите r'))\n",
+    "pl,Dl= Circle (r)\n",
+    "print ('площадь =',pl)\n",
+    "print('длина =',Dl)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "11aef7e2-b937-490c-9a84-a1a3cca58c01",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите а 2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "периметр = 6\n",
+      "площадь = 0.1875\n"
+     ]
+    }
+   ],
+   "source": [
+    "def TrianglePS (a):\n",
+    "    return(3*a , 3/(4*a**2))\n",
+    "a=int(input('введите а')) \n",
+    "c,d =TrianglePS (a)\n",
+    "print('периметр =',c)\n",
+    "print('площадь =',d )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "ddbacb1d-b60d-4b86-b9a6-4709350e4780",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите r1 3\n",
+      "введите r2 1\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "25.132741228718345\n"
+     ]
+    }
+   ],
+   "source": [
+    "def RingS (r1,r2):\n",
+    "    return (math.pi*(r1**2 - r2**2))\n",
+    "r1=int(input('введите r1'))\n",
+    "r2=int(input('введите r2'))\n",
+    "a=RingS (r1,r2)\n",
+    "print ('площадь = ',a)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "55612f60-a2e6-4ede-86be-39938cb6fadb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def RectPS(x1, y1, x2, y2):\n",
+    "    a = abs(x2 - x1)\n",
+    "    b = abs(y2 - y1)\n",
+    "    P = 2 * (a + b)\n",
+    "    S = a * b\n",
+    "    return P, S\n",
+    "\n",
+    "x1 = float(input('x1: '))\n",
+    "y1 = float(input('y1: '))\n",
+    "x2 = float(input('x2: '))\n",
+    "y2 = float(input('y2: '))\n",
+    "\n",
+    "P, S = RectPS(x1, y1, x2, y2)\n",
+    "print(f\"P = {P}, S = {S}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "345dfd8a-2e6e-41d6-ba37-4ba881cc92af",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите a 1\n",
+      "введите h 1\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "периметр = 3.23606797749979\n"
+     ]
+    }
+   ],
+   "source": [
+    "def TriangleP (a , h):\n",
+    "    b=math.sqrt((a/2)**2+h**2)\n",
+    "    p=b*2 + a\n",
+    "    return(p)\n",
+    "a=int(input('введите a'))\n",
+    "h=int(input('введите h'))    \n",
+    "p=TriangleP (a , h)\n",
+    "print('периметр =',p)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "3c5586a3-ab0a-43f0-86df-9b1124b8fb0c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите число 234\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "обратное = 432\n"
+     ]
+    }
+   ],
+   "source": [
+    "def InvertDigits (ch):\n",
+    "    return(str(ch)[::-1])\n",
+    "ch=int(input('введите число'))  \n",
+    "obr=InvertDigits (ch)\n",
+    "print('обратное =',int(obr))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "2a6c1ba8-9315-4236-b3cc-c2a9c4063b28",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "введите a 1\n",
+      "введите b 3\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "результат  = 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "def SumRange (A,B):\n",
+    "    res=0\n",
+    "    if A>B:\n",
+    "       res=0\n",
+    "    else:\n",
+    "       for i in range(A,B+1):\n",
+    "            res+=i\n",
+    "    return(res)\n",
+    "a=int(input('введите a'))\n",
+    "b=int(input('введите b')) \n",
+    "suma=SumRange (a,b)\n",
+    "print ('результат  =',suma)              "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a32987e9-b0a5-4eca-a7fe-ed2dde49a074",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def TypeTrl(x1, y1, x2, y2, x3, y3):\n",
+    "    a = ((x2-x1)**2 + (y2-y1)**2)**0.5\n",
+    "    b = ((x3-x2)**2 + (y3-y2)**2)**0.5\n",
+    "    c = ((x1-x3)**2 + (y1-y3)**2)**0.5\n",
+    "    \n",
+    "    if a == b == c:\n",
+    "        return \"равносторонний\"\n",
+    "    elif a == b or b == c or a == c:\n",
+    "        return \"равнобедренный\"\n",
+    "    elif a*a + b*b == c*c or a*a + c*c == b*b or b*b + c*c == a*a:\n",
+    "        return \"прямоугольный\"\n",
+    "    else:\n",
+    "        return \"обычный\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d7881319-ee1d-4969-b4bc-8f6011dd39c1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def Quarter(x, y):\n",
+    "    if x > 0 and y > 0:\n",
+    "        return 1\n",
+    "    elif x < 0 and y > 0:\n",
+    "        return 2\n",
+    "    elif x < 0 and y < 0:\n",
+    "        return 3\n",
+    "    elif x > 0 and y < 0:\n",
+    "        return 4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "629dcc40-866d-4497-bf7d-98bc6332eb64",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def DigitCountSum (k):\n",
+    "    s=0\n",
+    "    kol=0\n",
+    "    while k !=0:\n",
+    "        s+=k%10\n",
+    "        kol+=1\n",
+    "        k=k//10\n",
+    "    return( s , kol )\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e3554652-9241-4a95-a128-3bea441b387f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def Calc(A, B, Op):\n",
+    "    if Op == 1:\n",
+    "        return A - B\n",
+    "    elif Op == 2:\n",
+    "        return A * B\n",
+    "    elif Op == 3:\n",
+    "        return A / B\n",
+    "    else:\n",
+    "        return A + B"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e4cb2cba-ff5f-4744-b9be-03a0fe8d0594",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def LuckyNum(num):\n",
+    "    digit1 = num // 1000\n",
+    "    digit2 = (num // 100) % 10\n",
+    "    digit3 = (num // 10) % 10\n",
+    "    digit4 = num % 10\n",
+    "    return digit1 + digit2 == digit3 + digit4\n",
+    "\n",
+    "for num in range(1000, 10000):\n",
+    "    if LuckyNum(num):\n",
+    "        print(num)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4da3e1d8-01fd-4b33-90a8-bcf6451671c3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "def DegToRad(D):\n",
+    "    return D * math.pi / 180"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "253a5a46-f2a4-40e0-b429-b3d7b19fb7a1",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
